@@ -1,0 +1,6 @@
+src
+_selftest.mjs
+tsconfig.json
+*.tsbuildinfo
+node_modules
+.git

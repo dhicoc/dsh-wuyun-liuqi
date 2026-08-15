@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Self-evolve runtime data
+self-evolve/logs/**
+self-evolve/misses/**
+self-evolve/feedback/**
+self-evolve/reports/**
+self-evolve/stats/**
+self-evolve/rule-gaps.jsonl
+
+# Local Cursor MCP descriptors (not project source)
+mcps/
+
+# Local drafts
+推广帖-draft.md
+
+# Node.js
+node_modules/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+# Local caches
+.cache/
+
+# Output
+*.log
+reports/generated/**
+!reports/generated/.gitkeep
+reports/test-results/**
+!reports/test-results/.gitkeep
+!reports/snapshots/
+!reports/snapshots/**
+# reports/ 根目录散落的生成产物（HTML/MD），统一归入 generated/ 或 test-results/
+reports/*.html
+reports/*.md
+
+# 本地构建/临时产物
+artifacts/
+_distill_in/
+*.egg-info/
+dist/
+build/
+
+# 本地 Agent / IDE 数据（非项目源码，勿提交）
+.workbuddy/
+.inscode/
+
+# P10 Parquet / JSON 数据导出产物（由 generate_rag_index.py 生成，非源码）
+rag-knowledge-base/index.parquet
+rag-knowledge-base/rag_entries.json
+rag-knowledge-base/rag_entries.parquet
+rag-knowledge-base/yunqi_calendar.json
+rag-knowledge-base/yunqi_calendar.parquet

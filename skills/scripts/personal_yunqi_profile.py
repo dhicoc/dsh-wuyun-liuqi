@@ -1,0 +1,572 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+个人运气体质分析入口
+根据出生日期 + 所在地区，输出先天运气体质倾向与当前调理建议。
+
+用法:
+  python scripts/personal_yunqi_profile.py <出生日期YYYY-MM-DD> [地区]
+  python scripts/personal_yunqi_profile.py 1990-05-20 北京
+  python scripts/personal_yunqi_profile.py 1990-05-20 --json
+"""
+import sys
+import os
+import json
+import re
+from datetime import date
+
+from _common import setup_environment
+setup_environment(add_lib=False, add_scripts=True)  # 需要同目录 import constitution 等
+
+from constitution_assessment import assess_constitution, extract_scores_and_metadata, parse_input_payload  # noqa: E402
+from clinical_safety import sanitize_current_adjustment  # noqa: E402
+from _safety_text import CONTEXT_DISCLAIMERS  # noqa: E402
+from yunqi_susceptibility import congenital_susceptibility  # noqa: E402  # P11 激活：先天运气→易感性主动召回
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+RAG_DIR = os.path.join(BASE_DIR, 'rag-knowledge-base')
+
+
+def load_json(filename):
+    path = os.path.join(RAG_DIR, filename)
+    with open(path, 'r', encoding='utf-8') as f:
+        return json.load(f)
+
+
+def get_yunqi_year(date_str):
+    """直接调用 calculate_yunqi_api 获取运气年份（P0 优化：避免 subprocess）"""
+    # 延迟 import 避免启动时不必要的依赖
+    from calculate_yunqi_api import calculate_yunqi_api
+    data = calculate_yunqi_api(date_str)
+    return data['yunqi_year'], data['sui_yun']['code'], data['sui_yun']['name']
+
+
+def match_region(region_name):
+    """根据地区名匹配地域修正条目"""
+    if not region_name:
+        return None
+    regional = load_json('asset6_regional.json')
+    region_name = region_name.strip()
+    for entry in regional['entries']:
+        if region_name in entry['region_name'] or entry['region_name'] in region_name:
+            return entry
+    # 模糊匹配：按关键字
+    keywords = {
+        '东北': '东北地区（黑吉辽）', '华北': '华北地区（京津冀晋）',
+        '西北': '西北地区（陕甘宁青新）', '华东': '华东地区（江浙沪皖）',
+        '华南': '华南地区（粤桂闽琼）', '华中': '华中地区（鄂湘赣豫）',
+        '西南': '西南地区（川渝云贵）', '青藏': '青藏高原（青藏）',
+        '北京': '华北地区（京津冀晋）', '天津': '华北地区（京津冀晋）',
+        '河北': '华北地区（京津冀晋）', '山西': '华北地区（京津冀晋）',
+        '上海': '华东地区（江浙沪皖）', '江苏': '华东地区（江浙沪皖）',
+        '浙江': '华东地区（江浙沪皖）', '安徽': '华东地区（江浙沪皖）',
+        '杭州': '华东地区（江浙沪皖）', '南京': '华东地区（江浙沪皖）',
+        '苏州': '华东地区（江浙沪皖）', '合肥': '华东地区（江浙沪皖）',
+        '宁波': '华东地区（江浙沪皖）', '慈溪': '华东地区（江浙沪皖）',
+        '温州': '华东地区（江浙沪皖）', '无锡': '华东地区（江浙沪皖）',
+        '常州': '华东地区（江浙沪皖）', '绍兴': '华东地区（江浙沪皖）',
+        '嘉兴': '华东地区（江浙沪皖）', '金华': '华东地区（江浙沪皖）',
+        '台州': '华东地区（江浙沪皖）', '湖州': '华东地区（江浙沪皖）',
+        '徐州': '华东地区（江浙沪皖）', '南通': '华东地区（江浙沪皖）',
+        '扬州': '华东地区（江浙沪皖）', '芜湖': '华东地区（江浙沪皖）',
+        '广东': '华南地区（粤桂闽琼）', '广州': '华南地区（粤桂闽琼）',
+        '深圳': '华南地区（粤桂闽琼）', '广西': '华南地区（粤桂闽琼）',
+        '福建': '华南地区（粤桂闽琼）', '厦门': '华南地区（粤桂闽琼）',
+        '福州': '华南地区（粤桂闽琼）', '海南': '华南地区（粤桂闽琼）',
+        '四川': '西南地区（川渝云贵）', '重庆': '西南地区（川渝云贵）',
+        '云南': '西南地区（川渝云贵）', '贵州': '西南地区（川渝云贵）',
+        '湖北': '华中地区（鄂湘赣豫）', '湖南': '华中地区（鄂湘赣豫）',
+        '江西': '华中地区（鄂湘赣豫）', '河南': '华中地区（鄂湘赣豫）',
+        '陕西': '西北地区（陕甘宁青新）', '甘肃': '西北地区（陕甘宁青新）',
+        '宁夏': '西北地区（陕甘宁青新）', '青海': '西北地区（陕甘宁青新）',
+        '新疆': '西北地区（陕甘宁青新）', '辽宁': '东北地区（黑吉辽）',
+        '沈阳': '东北地区（黑吉辽）', '吉林': '东北地区（黑吉辽）',
+        '长春': '东北地区（黑吉辽）', '黑龙江': '东北地区（黑吉辽）',
+        '哈尔滨': '东北地区（黑吉辽）', '西藏': '青藏高原（青藏）',
+        '青海': '青藏高原（青藏）', '拉萨': '青藏高原（青藏）',
+        # ── 华北补充 ──
+        '石家庄': '华北地区（京津冀晋）', '唐山': '华北地区（京津冀晋）',
+        '保定': '华北地区（京津冀晋）', '太原': '华北地区（京津冀晋）',
+        '大同': '华北地区（京津冀晋）', '呼和浩特': '华北地区（京津冀晋）',
+        '包头': '华北地区（京津冀晋）',
+        # ── 东北补充 ──
+        '大连': '东北地区（黑吉辽）', '鞍山': '东北地区（黑吉辽）',
+        # ── 西北补充 ──
+        '西安': '西北地区（陕甘宁青新）', '兰州': '西北地区（陕甘宁青新）',
+        '西宁': '西北地区（陕甘宁青新）', '银川': '西北地区（陕甘宁青新）',
+        '乌鲁木齐': '西北地区（陕甘宁青新）',
+        # ── 华东补充 ──
+        '镇江': '华东地区（江浙沪皖）', '连云港': '华东地区（江浙沪皖）',
+        '衢州': '华东地区（江浙沪皖）', '舟山': '华东地区（江浙沪皖）',
+        '丽水': '华东地区（江浙沪皖）', '蚌埠': '华东地区（江浙沪皖）',
+        '安庆': '华东地区（江浙沪皖）', '黄山': '华东地区（江浙沪皖）',
+        # ── 华南补充 ──
+        '珠海': '华南地区（粤桂闽琼）', '佛山': '华南地区（粤桂闽琼）',
+        '东莞': '华南地区（粤桂闽琼）', '中山': '华南地区（粤桂闽琼）',
+        '汕头': '华南地区（粤桂闽琼）', '惠州': '华南地区（粤桂闽琼）',
+        '江门': '华南地区（粤桂闽琼）', '湛江': '华南地区（粤桂闽琼）',
+        '泉州': '华南地区（粤桂闽琼）', '漳州': '华南地区（粤桂闽琼）',
+        '南宁': '华南地区（粤桂闽琼）', '桂林': '华南地区（粤桂闽琼）',
+        '柳州': '华南地区（粤桂闽琼）', '海口': '华南地区（粤桂闽琼）',
+        '三亚': '华南地区（粤桂闽琼）',
+        # ── 华中补充 ──
+        '武汉': '华中地区（鄂湘赣豫）', '长沙': '华中地区（鄂湘赣豫）',
+        '南昌': '华中地区（鄂湘赣豫）', '郑州': '华中地区（鄂湘赣豫）',
+        '洛阳': '华中地区（鄂湘赣豫）', '襄阳': '华中地区（鄂湘赣豫）',
+        '宜昌': '华中地区（鄂湘赣豫）', '株洲': '华中地区（鄂湘赣豫）',
+        '岳阳': '华中地区（鄂湘赣豫）', '九江': '华中地区（鄂湘赣豫）',
+        '赣州': '华中地区（鄂湘赣豫）', '开封': '华中地区（鄂湘赣豫）',
+        # ── 西南补充 ──
+        '成都': '西南地区（川渝云贵）', '贵阳': '西南地区（川渝云贵）',
+        '遵义': '西南地区（川渝云贵）', '昆明': '西南地区（川渝云贵）',
+        '大理': '西南地区（川渝云贵）', '丽江': '西南地区（川渝云贵）',
+        '绵阳': '西南地区（川渝云贵）', '曲靖': '西南地区（川渝云贵）',
+        # ── 港澳台 ──
+        '香港': '华南地区（粤桂闽琼）', 'Hong Kong': '华南地区（粤桂闽琼）',
+        '澳门': '华南地区（粤桂闽琼）', 'Macau': '华南地区（粤桂闽琼）',
+        '台北': '华南地区（粤桂闽琼）', 'Taipei': '华南地区（粤桂闽琼）',
+        '高雄': '华南地区（粤桂闽琼）', '台中': '华南地区（粤桂闽琼）',
+    }
+    full_name = keywords.get(region_name)
+    if full_name:
+        for entry in regional['entries']:
+            if entry['region_name'] == full_name:
+                return entry
+    return None
+
+
+def match_birth_constitution(suiyun_code):
+    """根据出生年运代码匹配先天体质条目"""
+    constitution = load_json('asset7_constitution.json')
+    matches = []
+    for entry in constitution['entries']:
+        if entry.get('entry_type') != 'birth_yunqi_mapping':
+            continue
+        if suiyun_code in entry.get('birth_yunqi_keys', []):
+            matches.append(entry)
+    return matches
+
+
+def match_current_adjustment(suiyun_code):
+    """根据当前岁运代码匹配调理条目"""
+    constitution = load_json('asset7_constitution.json')
+    for entry in constitution['entries']:
+        if entry.get('entry_type') != 'suiyun_constitution_adjustment':
+            continue
+        if entry.get('suiyun_code') == suiyun_code:
+            return entry
+    return None
+
+
+def normalize_affected_constitutions(items):
+    codes = []
+    for item in items or []:
+        if isinstance(item, str):
+            codes.append(item)
+        elif isinstance(item, dict):
+            code = item.get('code') or item.get('constitution_code')
+            if code:
+                codes.append(code)
+    return codes
+
+
+def parse_weight_adjustment(text):
+    """把 '+20%' / '-10%' 之类文本转为乘法权重。"""
+    if not text:
+        return 1.0
+    nums = re.findall(r'([+-])\s*(\d+(?:\.\d+)?)\s*%', str(text))
+    weight = 1.0
+    for sign, num in nums:
+        value = float(num) / 100.0
+        weight += value if sign == '+' else -value
+    return round(max(weight, 0.1), 3)
+
+
+def build_regional_explainable_modifier(region_entry, birth_suiyun_code=None, current_suiyun_code=None, constitution_assessment=None):
+    if not region_entry:
+        return None
+    wuyun_weight = parse_weight_adjustment(region_entry.get('wuyun_modifier', {}).get('weight_adjustment', ''))
+    liuqi_weight = parse_weight_adjustment(region_entry.get('liuqi_modifier', {}).get('weight_adjustment', ''))
+    affected = []
+    text = ' '.join([
+        region_entry.get('wuyun_modifier', {}).get('effect', ''),
+        region_entry.get('liuqi_modifier', {}).get('effect', ''),
+        region_entry.get('wuyun_modifier', {}).get('description', ''),
+        region_entry.get('liuqi_modifier', {}).get('description', ''),
+    ])
+    for key in ['寒', '燥', '湿', '火', '热', '风', '水', '土', '金', '木']:
+        if key in text and key not in affected:
+            affected.append(key)
+
+    primary = constitution_assessment.get('primary_type') if constitution_assessment else None
+    overlap_notes = []
+    if primary and any(k in text for k in ['寒', '湿']) and primary in ('阳虚质', '气虚质', '痰湿质'):
+        overlap_notes.append(f'地域寒湿/湿重倾向与{primary}调理方向相关，应重视避寒湿与健脾温阳。')
+    if primary and any(k in text for k in ['火', '热']) and primary in ('阴虚质', '湿热质'):
+        overlap_notes.append(f'地域火热/湿热倾向与{primary}易感方向相关，应防热郁与伤津。')
+    if primary and '燥' in text and primary in ('阴虚质', '特禀质', '气虚质'):
+        overlap_notes.append(f'地域燥气倾向与{primary}易感方向相关，应重视润燥护肺。')
+
+    return {
+        'region_name': region_entry['region_name'],
+        'climate_characteristics': region_entry['climate_characteristics'],
+        'wuyun_effect': region_entry.get('wuyun_modifier', {}).get('effect', ''),
+        'liuqi_effect': region_entry.get('liuqi_modifier', {}).get('effect', ''),
+        'wuyun_weight': wuyun_weight,
+        'liuqi_weight': liuqi_weight,
+        'affected_factors': affected,
+        'explanation': f"{region_entry['region_name']}：{region_entry['climate_characteristics']}；{region_entry.get('wuyun_modifier', {}).get('description', '')}；{region_entry.get('liuqi_modifier', {}).get('description', '')}",
+        'constitution_tendency': region_entry.get('constitution_tendency', ''),
+        'clinical_notes': region_entry.get('clinical_notes', ''),
+        'overlap_notes': overlap_notes,
+        'source': region_entry.get('source', ''),
+    }
+
+
+def synthesize_innate_acquired(birth_constitutions, safe_current_adjustment, constitution_assessment):
+    """合成先天运气体质与后天量表体质。"""
+    if not constitution_assessment:
+        return None
+    birth_codes = [c['constitution_code'] for c in birth_constitutions if c.get('constitution_code')]
+    birth_names = [c['constitution_name'] for c in birth_constitutions if c.get('constitution_name')]
+    primary_code = constitution_assessment.get('primary_code')
+    secondary_codes = constitution_assessment.get('secondary_codes') or []
+    assessed_codes = [c for c in [primary_code] + secondary_codes if c]
+    current_affected = normalize_affected_constitutions((safe_current_adjustment or {}).get('most_affected_constitutions'))
+
+    innate_acquired_overlap = sorted(set(birth_codes) & set(assessed_codes))
+    acquired_suiyun_overlap = sorted(set(assessed_codes) & set(current_affected))
+    triple_overlap = sorted(set(birth_codes) & set(assessed_codes) & set(current_affected))
+
+    if triple_overlap:
+        level = 'high'
+        label = '先天运气、后天体质与当前岁运三重同向'
+        summary = '出生年运气体质倾向、量表评估体质与当前岁运易感体质出现同向叠加，调理应优先处理该体质偏性。'
+    elif innate_acquired_overlap:
+        level = 'medium_high'
+        label = '先天运气与后天体质同向'
+        summary = '出生年运气体质倾向与量表评估结果相合，提示先天后天同气相引。'
+    elif acquired_suiyun_overlap:
+        level = 'medium'
+        label = '后天体质受当前岁运牵动'
+        summary = '量表评估体质与当前岁运易感体质相合，调理以当前岁运与后天体质为主。'
+    else:
+        level = 'baseline'
+        label = '先天后天未见明显同向叠加'
+        summary = '出生年运气体质倾向与量表评估体质未见明显重合，建议分别参考，避免机械合并。'
+
+    focus_codes = triple_overlap or innate_acquired_overlap or acquired_suiyun_overlap or assessed_codes[:2] or birth_codes[:2]
+    code_to_name = {}
+    for c in birth_constitutions:
+        code_to_name[c.get('constitution_code')] = c.get('constitution_name')
+    if constitution_assessment:
+        code_to_name[constitution_assessment.get('primary_code')] = constitution_assessment.get('primary_type')
+        for name, code in zip(constitution_assessment.get('secondary_types') or [], constitution_assessment.get('secondary_codes') or []):
+            code_to_name[code] = name
+
+    return {
+        'level': level,
+        'label': label,
+        'summary': summary,
+        'birth_codes': birth_codes,
+        'birth_names': birth_names,
+        'assessed_codes': assessed_codes,
+        'assessed_primary': constitution_assessment.get('primary_type'),
+        'assessed_secondary': constitution_assessment.get('secondary_types') or [],
+        'current_suiyun_affected_codes': current_affected,
+        'innate_acquired_overlap': innate_acquired_overlap,
+        'acquired_suiyun_overlap': acquired_suiyun_overlap,
+        'triple_overlap': triple_overlap,
+        'focus_constitutions': [code_to_name.get(code, code) for code in focus_codes],
+        'care_priority': constitution_assessment.get('care_priority', ''),
+    }
+
+
+def generate_profile(birth_date, region=None, as_json=False, today=None, constitution_assessment=None,
+                     with_neijing_methodology=True):
+    birth_year, birth_suiyun_code, birth_suiyun_name = get_yunqi_year(birth_date)
+    if today is None:
+        today = date.today().isoformat()
+    current_year, current_suiyun_code, current_suiyun_name = get_yunqi_year(today)
+
+    # P11 激活：把先天运气（出生年 + 胎孕期）作为一等输入，主动召回 asset33 易感性
+    # 并套用 §5 文献映射规则产出体质倾向。不新增任何知识库数据。
+    congenital = congenital_susceptibility(birth_date)
+
+    birth_constitutions = match_birth_constitution(birth_suiyun_code)
+    safe_current_adjustment = match_current_adjustment(current_suiyun_code)
+    safe_current_adjustment, clinical_safety = sanitize_current_adjustment(safe_current_adjustment)
+    region_entry = match_region(region) if region else None
+    innate_acquired = synthesize_innate_acquired(birth_constitutions, safe_current_adjustment, constitution_assessment)
+    regional_explainable = build_regional_explainable_modifier(
+        region_entry,
+        birth_suiyun_code=birth_suiyun_code,
+        current_suiyun_code=current_suiyun_code,
+        constitution_assessment=constitution_assessment,
+    )
+
+    profile = {
+        'birth_date': birth_date,
+        'birth_yunqi_year': birth_year,
+        'birth_suiyun': {
+            'code': birth_suiyun_code,
+            'name': birth_suiyun_name,
+        },
+        'region': region,
+        'current_date': today,
+        'current_yunqi_year': current_year,
+        'current_suiyun': {
+            'code': current_suiyun_code,
+            'name': current_suiyun_name,
+        },
+        'birth_constitutions': [
+            {
+                'name': c['constitution_name'],
+                'code': c['constitution_code'],
+                'description': c['description'],
+                'birth_year_analysis': c['birth_year_analysis'],
+            }
+            for c in birth_constitutions
+        ],
+        'current_adjustment': safe_current_adjustment and {
+            'name': safe_current_adjustment['suiyun_name'],
+            'most_affected_constitutions': safe_current_adjustment.get('most_affected_constitutions', []),
+            'health_risks': safe_current_adjustment.get('health_risks', []),
+            'lifestyle_advice': safe_current_adjustment.get('lifestyle_advice', ''),
+            'dietary_herbs': safe_current_adjustment.get('dietary_herbs', ''),
+            'acupuncture_points': safe_current_adjustment.get('acupuncture_points', []),
+            'preventive_measures': safe_current_adjustment.get('preventive_measures', ''),
+        },
+        'clinical_safety': clinical_safety,
+        'regional_modifier': region_entry and {
+            'region_name': region_entry['region_name'],
+            'climate_characteristics': region_entry['climate_characteristics'],
+            'wuyun_modifier': region_entry['wuyun_modifier'],
+            'liuqi_modifier': region_entry['liuqi_modifier'],
+            'constitution_tendency': region_entry['constitution_tendency'],
+        },
+        'regional_explainable_modifier': regional_explainable,
+        'constitution_assessment': constitution_assessment,
+        'innate_acquired_synthesis': innate_acquired,
+        'congenital_yunqi': congenital['congenital'],
+        'congenital_susceptibility': {
+            'recall_keys': congenital['recall_keys'],
+            'susceptibility': congenital['susceptibility'],
+            'tendency': congenital['tendency'],
+        },
+    }
+
+    # 提供了地区但未匹配到内置区域时，给出明确提示（供用户 / AI Agent 决策）
+    if region and not region_entry:
+        profile['region_resolution'] = {
+            'region_provided': region,
+            'matched': False,
+            'hint': (
+                f'未在内置地域表（asset6_regional.json）中匹配到「{region}」。'
+                f'可改为传入省份名（如 浙江）、区域名（如 华东/华南），'
+                f'或由 AI Agent 联网搜索确认该城市所属气候区域后重试。'
+            ),
+        }
+
+    if as_json:
+        return json.dumps(profile, ensure_ascii=False, indent=2)
+
+    lines = [
+        f"# 个人运气体质分析报告",
+        f"",
+        f"**出生日期**: {birth_date}（运气年 {birth_year}）",
+        f"**先天岁运**: {birth_suiyun_name}（{birth_suiyun_code}）",
+    ]
+    if region:
+        lines.append(f"**所在地区**: {region}")
+    lines.append(f"**当前日期**: {today}（运气年 {current_year}，{current_suiyun_name}）")
+    lines.append("")
+
+    lines.append("## 一、先天体质倾向")
+    if birth_constitutions:
+        for c in birth_constitutions:
+            lines.append(f"\n### {c['constitution_name']}")
+            lines.append(f"{c['description']}")
+            lines.append(f"\n{c['birth_year_analysis'][:200]}...")
+    else:
+        lines.append("未找到明确对应体质，建议结合九种体质量表综合判断。")
+    lines.append("")
+
+    lines.append("## 二、当前岁运调理方向")
+    if safe_current_adjustment:
+        lines.append(f"当前为{safe_current_adjustment['suiyun_name']}。")
+        lines.append(f"\n**易发健康问题**：")
+        for risk in safe_current_adjustment.get('health_risks', []):
+            lines.append(f"- {risk}")
+        lines.append(f"\n**生活调养**：{safe_current_adjustment.get('lifestyle_advice', '')}")
+        lines.append(f"\n**饮食药膳**：{safe_current_adjustment.get('dietary_herbs', '')}")
+        if safe_current_adjustment.get('acupuncture_points'):
+            lines.append(f"\n**参考穴位**：{'、'.join(safe_current_adjustment['acupuncture_points'][:5])}")
+    else:
+        lines.append("未找到当前岁运调理条目。")
+    lines.append("")
+
+    if constitution_assessment:
+        lines.append("## 三、后天体质量表评估")
+        lines.append(f"**主要体质**: {constitution_assessment['primary_type']}（{constitution_assessment['primary_score']}分）")
+        secondaries = '、'.join(constitution_assessment.get('secondary_types') or []) or '无'
+        lines.append(f"**兼夹/倾向体质**: {secondaries}")
+        lines.append(f"**体质解释**: {constitution_assessment.get('interpretation', '')}")
+        lines.append(f"**调理重点**: {constitution_assessment.get('care_priority', '')}")
+        lines.append("")
+        if innate_acquired:
+            lines.append("## 四、先天运气体质 × 后天体质对比")
+            lines.append(f"**叠加判断**: {innate_acquired['label']}（{innate_acquired['level']}）")
+            lines.append(f"**重点体质**: {'、'.join(innate_acquired.get('focus_constitutions') or []) or '未指定'}")
+            lines.append(f"**摘要**: {innate_acquired['summary']}")
+            lines.append("")
+
+    if region_entry:
+        lines.append("## 地域运气修正")
+        lines.append(f"**地区**: {region_entry['region_name']}")
+        lines.append(f"**气候特征**: {region_entry['climate_characteristics']}")
+        lines.append(f"**五运修正**: {region_entry['wuyun_modifier']['description']}")
+        lines.append(f"**六气修正**: {region_entry['liuqi_modifier']['description']}")
+        lines.append(f"**体质倾向**: {region_entry['constitution_tendency']}")
+        if regional_explainable:
+            lines.append(f"**可解释权重**: 五运 {regional_explainable['wuyun_weight']}；六气 {regional_explainable['liuqi_weight']}")
+            lines.append(f"**影响因子**: {'、'.join(regional_explainable['affected_factors']) or '未提取'}")
+            if regional_explainable.get('overlap_notes'):
+                lines.append("**与体质量表交叉提示**：")
+                for note in regional_explainable['overlap_notes']:
+                    lines.append(f"- {note}")
+    elif region:
+        lines.append("## 地域运气修正")
+        lines.append(f"⚠️ 未在内置地域表（asset6_regional.json）中匹配到「{region}」。")
+        lines.append("可改为传入省份名（如 浙江）、区域名（如 华东/华南），")
+        lines.append("或由 AI Agent 联网搜索确认该城市所属气候区域后重试。")
+        lines.append("")
+
+    # P11 激活：先天运气 · 疾病易感性倾向（主动召回 asset33 + §5 体质倾向映射）
+    cb = congenital['congenital']['birth']
+    cf = congenital['congenital']['fetal']
+    lines.append("## 五、先天运气 · 疾病易感性倾向")
+    lines.append(f"**出生年运气**：{cb['suiyun_name']}（{cb['suiyun_code']}），{cb['sitian_name']}司天 / {cb['zaiquan_name']}在泉")
+    lines.append(f"**胎孕期运气**（受孕日 {congenital['congenital']['fetal_reference']}）：{cf['suiyun_name']}（{cf['suiyun_code']}），{cf['sitian_name']}司天 / {cf['zaiquan_name']}在泉")
+    lines.append("")
+    if congenital['tendency']:
+        lines.append("**体质倾向**（§5 文献映射，统计性关联，非因果）：")
+        for t in congenital['tendency']:
+            lines.append(f"- **{t['name']}**：{t['note']}（来源：{t['source']}）")
+        lines.append("")
+    susc = congenital['susceptibility']
+    if susc:
+        lines.append(f"**疾病易感性提示**（按先天运气维度主动召回 asset33，{len(susc)} 条）：")
+        for s in susc:
+            diseases = '、'.join(s.get('susceptible_diseases', [])) or '—'
+            lines.append(f"- [{s['dimension']}·{s['rag_key']}] 易感：{diseases}；调护方向：{s.get('regulation_direction', '')}")
+    else:
+        lines.append("**疾病易感性提示**：当前先天运气维度在 asset33 中无直接对应条目。")
+    lines.append("")
+    lines.append("> ⚠️ 先天运气 → 体质 → 疾病易感性为**统计性/关联性**证据，非因果，不替代临床诊断。")
+    lines.append("")
+
+    # P12：内经方法论章节（可选依赖；不可用时优雅降级，绝不阻断主流程）
+    if with_neijing_methodology:
+        try:
+            from neijing_bridge import (
+                build_methodology_for_ctx, neijing_available, yunqi_context_from_parts,
+            )
+            from yunqi_data import get_dayun, get_sitian, get_zaiquan, is_taiguo
+            if neijing_available():
+                _element = get_dayun(current_year)[0]
+                _taiguo = is_taiguo(current_year)
+                _sitian = get_sitian(current_year)
+                _zaiquan = get_zaiquan(current_year)
+                _constitution = []
+                for _t in (congenital.get('tendency') or []):
+                    _constitution.append(_t.get('name', ''))
+                for _c in birth_constitutions:
+                    _constitution.append(_c.get('constitution_name', ''))
+                _ctx = yunqi_context_from_parts(
+                    _element, _taiguo, _sitian, _zaiquan,
+                    constitution=_constitution, personalize=True,
+                )
+                _neijing_sec = build_methodology_for_ctx(_ctx, top_n=3, with_safety=True)
+                if _neijing_sec:
+                    lines.append(_neijing_sec)
+                    lines.append("")
+        except Exception:
+            # 任何异常都不应影响体质主报告
+            pass
+
+    lines.append(
+        "> ⚠️ " + CONTEXT_DISCLAIMERS['constitution']
+    )
+
+    return '\n'.join(lines)
+
+
+def load_constitution_assessment_from_args(args):
+    """解析 CLI 体质量表参数并返回评估结果。"""
+    if not any(k in args for k in ('--constitution-demo', '--constitution-file', '--constitution-scores')):
+        return None
+
+    class _Args:
+        pass
+
+    proxy = _Args()
+    proxy.demo = '--constitution-demo' in args
+    proxy.file = None
+    proxy.scores = None
+    if '--constitution-file' in args:
+        idx = args.index('--constitution-file')
+        if idx + 1 < len(args):
+            proxy.file = args[idx + 1]
+    if '--constitution-scores' in args:
+        idx = args.index('--constitution-scores')
+        if idx + 1 < len(args):
+            proxy.scores = args[idx + 1]
+    payload = parse_input_payload(proxy)
+    scores, metadata = extract_scores_and_metadata(payload)
+    return assess_constitution(scores, metadata=metadata)
+
+
+def main(argv=None):
+    if argv is None:
+        argv = sys.argv[1:]
+    import argparse
+    parser = argparse.ArgumentParser(
+        prog='personal_yunqi_profile.py',
+        description='根据出生日期（及可选地区）生成个人运气/体质档案，含先天运气·疾病易感性倾向。')
+    parser.add_argument('birth_date', nargs='?', help='出生日期 YYYY-MM-DD')
+    parser.add_argument('region', nargs='?', help='地区（可选，用于地域修正）')
+    parser.add_argument('--year', help='仅给出生年份（如 1980），将用年中代表日期 1980-06-15 并声明假设')
+    parser.add_argument('--json', action='store_true', help='以 JSON 输出')
+    parser.add_argument('--no-neijing', action='store_true', help='关闭「内经方法论」章节（P12）')
+    args, extra = parser.parse_known_args(argv)
+
+    if args.year and not args.birth_date:
+        birth_date = f"{args.year}-06-15"
+        year_assumed = True
+    elif args.birth_date:
+        birth_date = args.birth_date
+        year_assumed = False
+    else:
+        parser.print_help()
+        sys.exit(1)
+
+    region = args.region
+    as_json = args.json
+    constitution_assessment = load_constitution_assessment_from_args(extra) if extra else None
+    with_neijing_methodology = not args.no_neijing
+    output = generate_profile(
+        birth_date, region, as_json, today=None, constitution_assessment=constitution_assessment,
+        with_neijing_methodology=with_neijing_methodology,
+    )
+    if year_assumed and not as_json:
+        output += ("\n> ⚠️ 仅提供出生年份，已按年中代表日期 "
+                   f"{birth_date} 推算；先天运气与易感性随实际出生月日可能变化。\n")
+    sys.stdout.write(output)
+    if not output.endswith('\n'):
+        sys.stdout.write('\n')
+    sys.stdout.flush()
+
+
+if __name__ == '__main__':
+    main()
