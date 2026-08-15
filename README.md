@@ -1,8 +1,8 @@
 # dsh-wuyun-liuqi
 
-[![awesome · DSH plugin](https://awesome-dsh-plugin.com/badge.svg)](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin)
+![awesome · DSH plugin](https://awesome-dsh-plugin.com/badge.svg)
 
-> **五运六气（运气学）AI Agent 技能包的 DeepSeek Harness（dsh）插件版。**
+> **五运六气（运气学）AI Agent 技能包的 DeepSeek Harness（dsh）插件版。**  
 > 把 [`dhicoc/wuyun-liuqi-skills`](https://github.com/dhicoc/wuyun-liuqi-skills)（39★，MIT）完整封装成一个 dsh Cordis 插件，随包分发、随插件加载，无需手动维护候选清单。
 
 ---
@@ -61,6 +61,8 @@ dsh-wuyun-liuqi/
 └── package.json
 ```
 
+
+
 > 注：源仓库的 `.claude/`、`.cursor/` 跨工具副本与生成报告（`reports`）未打包进本插件以控制体积；但 **`rag-knowledge-base/`（跨书检索语料，约 28MB / 270+ 文件）已随包分发**——它才是这个技能包的「灵魂」，让 `rag_search.py` 能跨 68 书做运气学出处与医案实证检索。技能正文指令同样完整保留。
 
 ---
@@ -84,7 +86,6 @@ python rag_search.py --key gejue_cjk|sitian --json
 
 ```bash
 python skills/scripts/sync_kb.py            # 从 dhicoc/wuyun-liuqi-skills 重新拉取
-python skills/scripts/sync_kb.py --dry-run  # 只看源端规模，不改动本地
 ```
 
 ## License
