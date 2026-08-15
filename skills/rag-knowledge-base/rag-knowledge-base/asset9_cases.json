@@ -1,0 +1,4100 @@
+{
+  "asset_id": "asset9_cases",
+  "asset_name": "圣济总录六十甲子岁图医案库",
+  "asset_description": "宋《圣济总录》运气门六十甲子岁图蒸馏的逐年运气医案。每条含岁运/司天在泉/rag_keys/六步客气病机与治法/年病机/年治法/原文摘录。可按 rag_key 检索同类格局医案。",
+  "data_source": "宋·徽宗赵佶敕撰《政和圣济总录》卷第一、卷第二·运气（公版，rag-knowledge-base/literature/圣济总录运气门）",
+  "distill_method": "workflow 6 agent 并行蒸馏原文六十甲子岁图，逐条基于原文提取，不编造",
+  "entry_count": 60,
+  "lookup_fields": [
+    "rag_keys.suiyun",
+    "rag_keys.sitian",
+    "rag_keys.zaiquan",
+    "ganzhi",
+    "case_id"
+  ],
+  "entries": [
+    {
+      "case_id": "shengji_jiazi",
+      "ganzhi": "甲子",
+      "year_chart": "甲子岁图",
+      "suiyun": "土运太过",
+      "sitian": "少阴君火司天",
+      "zaiquan": "阳明燥金在泉",
+      "rag_keys": {
+        "suiyun": "earth_excess",
+        "sitian": "shaoyin_junhuo_sitian",
+        "zaiquan": "yangming_zaojin_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "太阳水",
+          "zhuqi": "太角木",
+          "bingji": "关节禁固，腰痛，炎暑将起，中外疮疡",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "厥阴木",
+          "zhuqi": "少徵火",
+          "bingji": "淋、目瞑、目赤，气郁于上而热",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "少阴火",
+          "zhuqi": "少徵火",
+          "bingji": "气厥心痛，寒热更作，咳喘目赤",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "太阴土",
+          "zhuqi": "太宫土",
+          "bingji": "寒热、嗌干、黄瘅、鼽衄饮发",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "少阳火",
+          "zhuqi": "少商金",
+          "bingji": "温",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸软之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "阳明金",
+          "zhuqi": "太羽水",
+          "bingji": "肿于上咳喘，甚则血溢，寒气数举，病生皮腠，内舍于胁，下连少腹而作寒中",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        }
+      ],
+      "year_pathogenesis": "热病生于上，清病生于下，寒热互作而争于中，民病咳喘、血溢血泄、鼽嚏、目赤疡，寒厥入胃，心痛、腰痛、腹大、嗌干肿上",
+      "year_treatment": "咸以软之而调其上，甚则以苦发之，以酸收之，而安其下，甚则以苦泄之，运同地气，当以温热化",
+      "source_quote": "民病咳喘、血溢血泄、鼽嚏、目赤疡，寒厥入胃，心痛、腰痛、腹大、嗌干肿上。咸以软之而调其上，甚则以苦发之，以酸收之，而安其下，甚则以苦泄之。",
+      "code": "earth_excess",
+      "sitian_key": "shaoyin_junhuo_sitian",
+      "zaiquan_key": "yangming_zaojin_zaiquan",
+      "rag_key": "shaoyin_junhuo_sitian",
+      "name": "甲子岁图",
+      "modern_reading": "甲子年是土运太过遇上少阴君火司天、阳明燥金在泉，上面火燥、下面寒清，寒热在中间相争。古人看到咳喘、血溢、目赤又夹杂腰痛腹大，不是矛盾，而是天地气机上下不调映在人身上——这正是天人合一的落地：人不是孤立运行，是被嵌进天地这盘气里的。当代启示是，遇到寒热错杂的复杂证，别急着单一归因，要看当年的气化格局。太过即偏，中和才是稳。",
+      "entry_id": "shengji_jiazi",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_yichou",
+      "ganzhi": "乙丑",
+      "year_chart": "乙丑岁图",
+      "suiyun": "金运不及",
+      "sitian": "太阴湿土司天",
+      "zaiquan": "太阳寒水在泉",
+      "rag_keys": {
+        "suiyun": "metal_deficient",
+        "sitian": "taiyin_shitu_sitian",
+        "zaiquan": "taiyang_hanshui_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "厥阴木",
+          "zhuqi": "太角木",
+          "bingji": "血溢筋络拘强，关节不利，身重筋痿",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "少阴火",
+          "zhuqi": "少徵火",
+          "bingji": "温厉大至，远近咸若",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "太阴土",
+          "zhuqi": "少徵火",
+          "bingji": "身重肿胸腹满",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "少阳火",
+          "zhuqi": "太宫土",
+          "bingji": "腠理热，血暴溢，疟、心腹满热胪胀，甚则肿",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸软之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "阳明金",
+          "zhuqi": "少商金",
+          "bingji": "皮腠病",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "太阳水",
+          "zhuqi": "太羽水",
+          "bingji": "关节禁固，腰痛，寒湿持于气交而为疾",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        }
+      ],
+      "year_pathogenesis": "阴凝于上，寒积于下，民病寒湿、腹满、身愤、肿、痞逆、寒厥拘急",
+      "year_treatment": "以苦热治其上，以甘热治其下，以酸和调其中，燥之温之，甚则发之泄之",
+      "source_quote": "民病寒湿、腹满、身愤、肿、痞逆、寒厥拘急。以苦热治其上，以甘热治其下，以酸和调其中，燥之温之，甚则发之泄之。",
+      "code": "metal_deficient",
+      "sitian_key": "taiyin_shitu_sitian",
+      "zaiquan_key": "taiyang_hanshui_zaiquan",
+      "rag_key": "taiyin_shitu_sitian",
+      "name": "乙丑岁图",
+      "modern_reading": "乙丑年金运不及，太阴湿土司天、太阳寒水在泉，阴寒凝于上、寒积于下，民病寒湿腹满、痞逆拘急。为什么古人这么看？因为运气学眼里湿与寒都是阴邪，今年天地气化的基调偏阴凝，人的气机也跟着滞——这就是气化思想，天地有什么气，人就活在什么场里。当代启示：寒湿之年养护重在温通，莫贪凉饮冷。寒湿不是病，是天地给的底色，听懂了就不慌。",
+      "entry_id": "shengji_yichou",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_bingyin",
+      "ganzhi": "丙寅",
+      "year_chart": "丙寅岁图",
+      "suiyun": "水运太过",
+      "sitian": "少阳相火司天",
+      "zaiquan": "厥阴风木在泉",
+      "rag_keys": {
+        "suiyun": "water_excess",
+        "sitian": "shaoyang_xianghuo_sitian",
+        "zaiquan": "jueyin_fengmu_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "少阴火",
+          "zhuqi": "太角木",
+          "bingji": "气怫于上，血溢目赤，咳逆头痛，血崩胁满，肤腠中疮",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "太阴土",
+          "zhuqi": "少徵火",
+          "bingji": "热郁于上，咳逆呕吐，疮发于中，胸嗌不利，头痛身热，昏愦脓疮",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "少阳火",
+          "zhuqi": "少徵火",
+          "bingji": "热中、聋瞑、血溢、脓疮、咳呕、鼽衄、嚏欠、喉痹、目赤，善暴死",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸软之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "阳明金",
+          "zhuqi": "太宫土",
+          "bingji": "满身重",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "太阳水",
+          "zhuqi": "少商金",
+          "bingji": "阳乃去，寒乃来，气门乃闭，刚木早雕",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "厥阴木",
+          "zhuqi": "太羽水",
+          "bingji": "关闭不禁心痛，阳气不藏而咳",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        }
+      ],
+      "year_pathogenesis": "民病寒中，外发疮疡，内为泄满，往复之作，民病寒热疟泄聋瞑呕吐，上怫肿色变",
+      "year_treatment": "以咸寒调上，以辛温调下，以咸温调中，渗之泄之，渍之发之",
+      "source_quote": "民病寒中，外发疮疡，内为泄满。往复之作，民病寒热疟泄聋瞑呕吐，上怫肿色变。以咸寒调上，以辛温调下，以咸温调中。",
+      "code": "water_excess",
+      "sitian_key": "shaoyang_xianghuo_sitian",
+      "zaiquan_key": "jueyin_fengmu_zaiquan",
+      "rag_key": "shaoyang_xianghuo_sitian",
+      "name": "丙寅岁图",
+      "modern_reading": "丙寅年水运太过，少阳相火司天、厥阴风木在泉，外发疮疡、内为泄满，寒热往复发作。上热下寒、外热内寒，看似矛盾，其实是气化节律里水火风三气交争的写照。古人把人放回天地气机里看，才看得清这种错杂——天人合一不是玄学，是把自己放回节律里去读。当代启示：反复寒热疮疡泄满同见时，想想当年的气机格局，别只盯局部。看懂气化，才看得懂错杂。",
+      "entry_id": "shengji_bingyin",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_dingmao",
+      "ganzhi": "丁卯",
+      "year_chart": "丁卯岁图",
+      "suiyun": "木运不及",
+      "sitian": "阳明燥金司天",
+      "zaiquan": "少阴君火在泉",
+      "rag_keys": {
+        "suiyun": "wood_deficient",
+        "sitian": "yangming_zaojin_sitian",
+        "zaiquan": "shaoyin_junhuo_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "太阴土",
+          "zhuqi": "少角木",
+          "bingji": "中热胀，面目浮肿，善眠，鼽衄嚏欠呕，小便黄赤，甚则淋（其病亦少）",
+          "zhifa": "调太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "少阳火",
+          "zhuqi": "太徵火",
+          "bingji": "厉大至，民善暴死（厉疾自微）",
+          "zhifa": "调少阳之客，以咸补之，以甘泻之，以咸软之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "阳明金",
+          "zhuqi": "太徵火",
+          "bingji": "寒热",
+          "zhifa": "调阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "太阳水",
+          "zhuqi": "太宫土",
+          "bingji": "暴仆、振栗、谵妄、少气、嗌干引饮，及为心痛、痈肿、疮疡、疟寒之疾，骨痿血便",
+          "zhifa": "调太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "厥阴木",
+          "zhuqi": "太商金",
+          "bingji": "民气和，自无疾病",
+          "zhifa": "调厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "少阴火",
+          "zhuqi": "少羽水",
+          "bingji": "温",
+          "zhifa": "调少阴之客，以咸补之，以甘泻之，以酸收之"
+        }
+      ],
+      "year_pathogenesis": "清热之气，持于气交，民病咳嗌塞，寒热发暴，振栗癃闭",
+      "year_treatment": "以苦辛温调上，以咸寒调下，以辛和调中，汗之清之散之",
+      "source_quote": "民病咳嗌塞，寒热发暴，振栗癃闭。以苦辛温调上，以咸寒调下，以辛和调中，汗之清之散之。",
+      "code": "wood_deficient",
+      "sitian_key": "yangming_zaojin_sitian",
+      "zaiquan_key": "shaoyin_junhuo_zaiquan",
+      "rag_key": "yangming_zaojin_sitian",
+      "name": "丁卯岁图",
+      "modern_reading": "丁卯年木运不及，阳明燥金司天、少阴君火在泉，清燥与热气持于气交，民病咳嗌塞、寒热发暴、振栗癃闭。木气弱则金燥乘、火气逆，古人看的是气机里克与被克的连锁，不是单个症状——这背后是气化思想，一气偏则诸气皆动。当代启示：咳塞伴突然寒热，别只治肺，要看今年气交里哪口气最拧。治病治的是气机的偏，调平即是养。",
+      "entry_id": "shengji_dingmao",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_wuchen",
+      "ganzhi": "戊辰",
+      "year_chart": "戊辰岁图",
+      "suiyun": "火运太过",
+      "sitian": "太阳寒水司天",
+      "zaiquan": "太阴湿土在泉",
+      "rag_keys": {
+        "suiyun": "fire_excess",
+        "sitian": "taiyang_hanshui_sitian",
+        "zaiquan": "taiyin_shitu_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "少阳火",
+          "zhuqi": "少角木",
+          "bingji": "温病乃作，身热头痛呕吐，肌腠疮疡",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸软之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "阳明金",
+          "zhuqi": "太徵火",
+          "bingji": "气郁中满，寒乃始",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "太阳水",
+          "zhuqi": "太徵火",
+          "bingji": "寒反热中，痈疽注下，心热瞀闷，不治者死",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "厥阴木",
+          "zhuqi": "少宫土",
+          "bingji": "大热少气，肌肉萎足痿，注下赤白",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "少阴火",
+          "zhuqi": "太商金",
+          "bingji": "民乃舒",
+          "zhifa": "调少阴之客，以咸补之，以苦泻之，以酸收之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "太阴土",
+          "zhuqi": "少羽水",
+          "bingji": "阴凝太虚，埃昏郊野，民乃惨凄，寒风以至，反者孕乃死",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        }
+      ],
+      "year_pathogenesis": "膺背肩胛间痛，两臂内痛，身热骨痛而为浸淫，收气不行，长气独明，雨水霜寒",
+      "year_treatment": "其治宜发之，经所谓火郁发之也",
+      "source_quote": "膺背肩胛间痛，两臂内痛，身热骨痛而为浸淫，收气不行，长气独明，雨水霜寒。天气刑运，岁运既郁，则火发待时，其治宜发之，经所谓火郁发之也。",
+      "code": "fire_excess",
+      "sitian_key": "taiyang_hanshui_sitian",
+      "zaiquan_key": "taiyin_shitu_zaiquan",
+      "rag_key": "taiyang_hanshui_sitian",
+      "name": "戊辰岁图",
+      "modern_reading": "戊辰年火运太过，太阳寒水司天、太阴湿土在泉，身热骨痛、肩臂痛而浸淫，长气独明、收气不行。火被寒水压着发不出来，古人说'火郁发之'——为什么这么看？因为气化之理，郁极必发，天地之气憋住就要找出口，人的气机也一样。这是天人合一在治法上的投影。当代启示：郁火不可硬折，要顺势透发。火郁不是错，是气机在找路。",
+      "entry_id": "shengji_wuchen",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_jisi",
+      "ganzhi": "己巳",
+      "year_chart": "己巳岁图",
+      "suiyun": "土运不及",
+      "sitian": "厥阴风木司天",
+      "zaiquan": "少阳相火在泉",
+      "rag_keys": {
+        "suiyun": "earth_deficient",
+        "sitian": "jueyin_fengmu_sitian",
+        "zaiquan": "shaoyang_xianghuo_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "阳明金",
+          "zhuqi": "少角木",
+          "bingji": "寒于右之下",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "太阳水",
+          "zhuqi": "太徵火",
+          "bingji": "热于中",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "厥阴木",
+          "zhuqi": "太徵火",
+          "bingji": "泣出，耳鸣掉眩",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "少阴火",
+          "zhuqi": "少宫土",
+          "bingji": "黄瘅而为肿",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "太阴土",
+          "zhuqi": "太商金",
+          "bingji": "沉阴乃布，寒气及体，风雨乃行",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "少阳火",
+          "zhuqi": "少羽水",
+          "bingji": "温厉",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸软之"
+        }
+      ],
+      "year_pathogenesis": "热病行于下，风病行于上，风燥胜复行于中，民病胃脘当心而痛，上支两胁，膈咽不通，饮食不下",
+      "year_treatment": "以辛凉调上，以咸寒调下，以甘和调中",
+      "source_quote": "民病胃脘当心而痛，上支两胁，膈咽不通，饮食不下，舌本强，食则呕，冷泄腹胀，溏泄瘕水闭。以辛凉调上，以咸寒调下，以甘和调中。",
+      "code": "earth_deficient",
+      "sitian_key": "jueyin_fengmu_sitian",
+      "zaiquan_key": "shaoyang_xianghuo_zaiquan",
+      "rag_key": "jueyin_fengmu_sitian",
+      "name": "己巳岁图",
+      "modern_reading": "己巳年土运不及，厥阴风木司天、少阳相火在泉，风燥胜复行于中，胃脘当心而痛、两胁支满、饮食不下。土弱则木乘、火助，古人看的是一脏弱而诸气皆动的连锁——气化思想里，没有孤立一脏的病，都是气机牵一发动全身。当代启示：胃痛胁满不只是胃，要看今年木火土三气的较量。气机和，则饮食自下。",
+      "entry_id": "shengji_jisi",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_gengwu",
+      "ganzhi": "庚午",
+      "year_chart": "庚午岁图",
+      "suiyun": "金运太过",
+      "sitian": "少阴君火司天",
+      "zaiquan": "阳明燥金在泉",
+      "rag_keys": {
+        "suiyun": "metal_excess",
+        "sitian": "shaoyin_junhuo_sitian",
+        "zaiquan": "yangming_zaojin_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "太阳水",
+          "zhuqi": "少角木",
+          "bingji": "关节禁固，腰痛，炎暑将起，中外疮疡",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "厥阴木",
+          "zhuqi": "太徵火",
+          "bingji": "淋，目瞑目赤，气郁于上而热",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "少阴火",
+          "zhuqi": "太徵火",
+          "bingji": "气厥心痛，寒热更作，咳喘目赤",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "太阴土",
+          "zhuqi": "少宫土",
+          "bingji": "寒热、嗌干、黄瘅、鼽衄、饮发",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "少阳火",
+          "zhuqi": "太商金",
+          "bingji": "温",
+          "zhifa": "调少阳之客，以咸补之，以甘泻之，以咸软之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "阳明金",
+          "zhuqi": "少羽水",
+          "bingji": "肿于上，咳喘，甚则血溢，病生皮腠，内舍于胁，下连少腹而作寒中",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        }
+      ],
+      "year_pathogenesis": "热病生于上，清病生于下，寒热争于中，民病咳喘、血溢、血泄、鼽嚏、目赤疡，寒厥入胃",
+      "year_treatment": "以咸寒调其上，以酸温安其下，以辛温调其中",
+      "source_quote": "民病咳喘、血溢、血泄、鼽嚏、目赤疡，寒厥入胃。以咸寒调其上，以酸温安其下，以辛温调其中。",
+      "code": "metal_excess",
+      "sitian_key": "shaoyin_junhuo_sitian",
+      "zaiquan_key": "yangming_zaojin_zaiquan",
+      "rag_key": "shaoyin_junhuo_sitian",
+      "name": "庚午岁图",
+      "modern_reading": "庚午年金运太过，少阴君火司天、阳明燥金在泉，热生于上、清生于下、寒热争于中，咳喘血溢、目赤疡而寒厥入胃。金燥遇火，上下各行其道却在中间交争。古人这么看，是因为天人合一里人随天地气机而动，今年火金相搏，人的气机也跟着在中间打架。当代启示：上热下寒同见时，想想火金格局，莫只清上或只温下。中和不在补，在调平。",
+      "entry_id": "shengji_gengwu",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_xinwei",
+      "ganzhi": "辛未",
+      "year_chart": "辛未岁图",
+      "suiyun": "水运不及",
+      "sitian": "太阴湿土司天",
+      "zaiquan": "太阳寒水在泉",
+      "rag_keys": {
+        "suiyun": "water_deficient",
+        "sitian": "taiyin_shitu_sitian",
+        "zaiquan": "taiyang_hanshui_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "厥阴木",
+          "zhuqi": "少角木",
+          "bingji": "血溢，筋络拘强，关节不利，身重筋痿",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "少阴火",
+          "zhuqi": "太徵火",
+          "bingji": "温历盛行，远近咸若",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "太阴土",
+          "zhuqi": "太徵火",
+          "bingji": "身重肿胸腹满",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "少阳火",
+          "zhuqi": "少宫土",
+          "bingji": "腠理热，血暴溢，疟、心腹满热、胪胀，甚则肿",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸软之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "阳明金",
+          "zhuqi": "太商金",
+          "bingji": "皮腠病",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "太阳水",
+          "zhuqi": "少羽水",
+          "bingji": "关节禁固，腰痛，寒湿持于气交而为疾",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        }
+      ],
+      "year_pathogenesis": "阴凝于上，寒积于下，民病寒湿，腹满、身愤、肿、痞逆、寒厥、拘急",
+      "year_treatment": "以苦热调上，以苦热调下，以苦和调中，燥之温之",
+      "source_quote": "民病寒湿，腹满、身愤、肿、痞逆、寒厥、拘急。以苦热调上，以苦热调下，以苦和调中，燥之温之。",
+      "code": "water_deficient",
+      "sitian_key": "taiyin_shitu_sitian",
+      "zaiquan_key": "taiyang_hanshui_zaiquan",
+      "rag_key": "taiyin_shitu_sitian",
+      "name": "辛未岁图",
+      "modern_reading": "辛未年水运不及，太阴湿土司天、太阳寒水在泉，阴凝于上、寒积于下，民病寒湿、腹满身肿、痞逆拘急。水弱则湿土乘之，寒湿同气相聚。古人这么看，是因为气化里同气相求，天地偏阴凝，人的阳气也容易被压——天人合一就是人随天地气机的偏而偏。当代启示：寒湿之年重在温阳化湿，护住那一点火。气化有节律，调平即养生。",
+      "entry_id": "shengji_xinwei",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_renshen",
+      "ganzhi": "壬申",
+      "year_chart": "壬申岁图",
+      "suiyun": "木运太过",
+      "sitian": "少阳相火司天",
+      "zaiquan": "厥阴风木在泉",
+      "rag_keys": {
+        "suiyun": "wood_excess",
+        "sitian": "shaoyang_xianghuo_sitian",
+        "zaiquan": "jueyin_fengmu_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "少阴火",
+          "zhuqi": "太角木",
+          "bingji": "气怫于上，血溢目赤，咳逆头痛，血崩胁满，肤腠中疮",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "太阴土",
+          "zhuqi": "少徵火",
+          "bingji": "热郁于上，咳逆呕吐，疮发于中，胸嗌不利，头痛身热，昏愦脓疮",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "少阳火",
+          "zhuqi": "少徵火",
+          "bingji": "热中，聋瞑，血溢、脓疮、咳、呕、鼽、衄、渴、嚏、欠、喉痹、目赤，善暴死",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸软之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "阳明金",
+          "zhuqi": "太宫土",
+          "bingji": "满身重",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "太阳水",
+          "zhuqi": "少商金",
+          "bingji": "阳乃去，寒乃来，气门乃闭，刚木早雕",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "厥阴木",
+          "zhuqi": "太羽水",
+          "bingji": "关闭不禁心痛，阳气不藏而咳",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        }
+      ],
+      "year_pathogenesis": "民病寒中，外发疮疡，内为泄满，往复之作，民病寒热、疟、泄、聋瞑、呕吐、上怫肿色变",
+      "year_treatment": "以咸寒调上，以辛凉调下，以酸和调中，渗之、泄之、渍之、发之",
+      "source_quote": "民病寒中，外发疮疡，内为泄满。往复之作，民病寒热、疟、泄、聋瞑、呕吐、上怫肿色变。以咸寒调上，以辛凉调下，以酸和调中。",
+      "code": "wood_excess",
+      "sitian_key": "shaoyang_xianghuo_sitian",
+      "zaiquan_key": "jueyin_fengmu_zaiquan",
+      "rag_key": "shaoyang_xianghuo_sitian",
+      "name": "壬申岁图",
+      "modern_reading": "壬申年木运太过，少阳相火司天、厥阴风木在泉，外发疮疡、内为泄满，寒热疟泄往复而作。风火同气相煽于外，寒湿留于内，看似矛盾，其实是气化节律里风火与寒湿各占一半的写照。古人把人放回天地气机里看，才看得清这种外热内寒——天人合一不是口号，是读病的方法。当代启示：反复疮疡又泄满，想想风火在泉的格局。看懂气机，才看得懂错杂。",
+      "entry_id": "shengji_renshen",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_guiyou",
+      "ganzhi": "癸酉",
+      "year_chart": "癸酉岁图",
+      "suiyun": "火运不及",
+      "sitian": "阳明燥金司天",
+      "zaiquan": "少阴君火在泉",
+      "rag_keys": {
+        "suiyun": "fire_deficient",
+        "sitian": "yangming_zaojin_sitian",
+        "zaiquan": "shaoyin_junhuo_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "太阴土",
+          "zhuqi": "太角木",
+          "bingji": "中热胀面目浮肿，善眠鼽衄嚏欠呕，小便黄赤，甚则淋",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "少阳火",
+          "zhuqi": "少徵火",
+          "bingji": "厉大至，民善暴死（火气平，厉虽至，民亦无害）",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸软之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "阳明金",
+          "zhuqi": "少徵火",
+          "bingji": "寒热",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "太阳水",
+          "zhuqi": "太宫土",
+          "bingji": "暴仆振栗谵妄少气，嗌干引饮，及为心痛痈肿疮疡疟寒之疾，骨痿血便",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "厥阴木",
+          "zhuqi": "少商金",
+          "bingji": "民气和",
+          "zhifa": "调厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "少阴火",
+          "zhuqi": "太羽水",
+          "bingji": "温",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        }
+      ],
+      "year_pathogenesis": "清热之气，持于气交，民病咳嗌塞，寒热发暴，振栗癃闭",
+      "year_treatment": "以苦心温调上，以咸寒调下，以咸温调中",
+      "source_quote": "民病咳嗌塞，寒热发暴，振栗癃闭。以苦心温调上，以咸寒调下，以咸温调中。",
+      "code": "fire_deficient",
+      "sitian_key": "yangming_zaojin_sitian",
+      "zaiquan_key": "shaoyin_junhuo_zaiquan",
+      "rag_key": "yangming_zaojin_sitian",
+      "name": "癸酉岁图",
+      "modern_reading": "癸酉年火运不及，阳明燥金司天、少阴君火在泉，清燥与热气持于气交，民病咳嗌塞、寒热发暴、振栗癃闭。火弱则金燥乘之，在泉之火又与司天燥金相争于气交。古人看的是一气弱而诸气皆动的连锁——气化思想里，没有孤立的咳塞，都是气机牵一发动全身。当代启示：咳塞伴骤发寒热，别只盯肺，要看气交里火金的较量。中和不在补，在调平。",
+      "entry_id": "shengji_guiyou",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_jiaxu",
+      "ganzhi": "甲戌",
+      "year_chart": "甲戌岁图",
+      "suiyun": "土运太过",
+      "sitian": "太阳寒水司天",
+      "zaiquan": "太阴湿土在泉",
+      "rag_keys": {
+        "suiyun": "earth_excess",
+        "sitian": "taiyang_hanshui_sitian",
+        "zaiquan": "taiyin_shitu_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "少阳火",
+          "zhuqi": "太角木",
+          "bingji": "民乃厉，温病乃作，身热头痛呕吐，肌腠疮疡",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以咸软之（岁谷宜玄，间谷宜豆，则火不为邪）"
+        },
+        {
+          "step": "二之气",
+          "keqi": "阳明金",
+          "zhuqi": "少徵火",
+          "bingji": "民病气郁中满，寒乃始",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之（岁谷宜玄，间谷宜黍，则燥不为邪）"
+        },
+        {
+          "step": "三之气",
+          "keqi": "太阳水",
+          "zhuqi": "少徵火",
+          "bingji": "民病寒反热中，痈疽注下，心热瞀闷，不治者死",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之（岁谷宜玄，间谷宜稷，则寒不为邪）"
+        },
+        {
+          "step": "四之气",
+          "keqi": "厥阴木",
+          "zhuqi": "太宫土",
+          "bingji": "民病大热少气，肌肉萎足痿，注下赤白",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之（岁谷宜黄，间谷宜稻，则风不为邪）"
+        },
+        {
+          "step": "五之气",
+          "keqi": "少阴火",
+          "zhuqi": "少商金",
+          "bingji": "民乃舒",
+          "zhifa": "调少阴之客，以咸补之，以甘泻之，以酸收之（岁谷宜黄，间谷宜豆，则热不为邪）"
+        },
+        {
+          "step": "终之气",
+          "keqi": "太阴土",
+          "zhuqi": "太羽水",
+          "bingji": "民乃惨凄，寒风以至，反者孕乃死",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之（岁谷宜黄，间谷宜麻，则湿不为邪；不可犯凉，司气以凉故也）"
+        }
+      ],
+      "year_pathogenesis": "寒湿之气持于气交，民病寒湿，发肌肉萎，足萎不收，濡泻血溢。",
+      "year_treatment": "以苦热调上，以苦温调下，运土在中亦以苦温调之；运同寒湿，化宜燥热，治之常也。",
+      "source_quote": "民病寒湿，发肌肉萎，足萎不收，濡泻血溢。以苦热调上，以苦温调下，运土在中，亦以苦温调之，运同寒湿，化宜燥热，治之常也。",
+      "code": "earth_excess",
+      "sitian_key": "taiyang_hanshui_sitian",
+      "zaiquan_key": "taiyin_shitu_zaiquan",
+      "rag_key": "taiyang_hanshui_sitian",
+      "name": "甲戌岁图",
+      "modern_reading": "甲戌土运太过，太阳寒水司天、太阴湿土在泉，寒湿之气持于气交，古人看的是天地同气相求——寒与湿同属阴邪，壅滞气交则肌肉痿、足不收、濡泻血溢。这其实是天人合一的注脚：外环境湿寒，人体气化亦随之困顿。今人遇湿冷年份若见类似痿弱、泄泻，宜顺势温燥、助阳化湿，不必一味攻伐。中和为本，方为长治。",
+      "entry_id": "shengji_jiaxu",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_yihai",
+      "ganzhi": "乙亥",
+      "year_chart": "乙亥岁图",
+      "suiyun": "金运不及",
+      "sitian": "厥阴风木司天",
+      "zaiquan": "少阳相火在泉",
+      "rag_keys": {
+        "suiyun": "metal_deficient",
+        "sitian": "jueyin_fengmu_sitian",
+        "zaiquan": "shaoyang_xianghuo_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "阳明金",
+          "zhuqi": "太角木",
+          "bingji": "民病寒于右之下",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之（岁谷宜苍，间谷宜黍；司气以凉，用凉无犯）"
+        },
+        {
+          "step": "二之气",
+          "keqi": "太阳水",
+          "zhuqi": "少徵火",
+          "bingji": "民病热于中",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之（岁谷宜苍，间谷宜稷）"
+        },
+        {
+          "step": "三之气",
+          "keqi": "厥阴木",
+          "zhuqi": "少徵火",
+          "bingji": "民病泣出，耳鸣掉眩",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之（岁谷宜苍，间谷宜稻）"
+        },
+        {
+          "step": "四之气",
+          "keqi": "少阴火",
+          "zhuqi": "太宫土",
+          "bingji": "民病黄瘅而为胕肿",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之（岁谷宜丹，间谷宜豆）"
+        },
+        {
+          "step": "五之气",
+          "keqi": "太阴土",
+          "zhuqi": "少商金",
+          "bingji": "沉阴乃布，寒气及体，风雨乃行",
+          "zhifa": "调太阴之客，以甘补之，以苦泻之，以甘缓之（岁谷宜丹，间谷宜麻）"
+        },
+        {
+          "step": "终之气",
+          "keqi": "少阳火",
+          "zhuqi": "太羽水",
+          "bingji": "其病温厉",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸软之（岁谷宜丹，间谷宜豆）"
+        }
+      ],
+      "year_pathogenesis": "热病行于下，风病行于上，风燥胜复形于中。风淫所胜则民病胃脘当心而痛，上支两胁，鬲咽不通，饮食不下，舌本强，食则呕，冷泄腹胀，溏泄瘕水闭。",
+      "year_treatment": "上治平以辛凉，佐以苦甘，以甘缓之，以酸泻之；下治以咸冷，佐以苦辛，以酸收之，以苦发之；中调以酸和。",
+      "source_quote": "热病行于下，风病行于上，风燥胜复形于中。民病胃脘当心而痛，上支两胁，鬲咽不通，饮食不下，舌本强，食则呕，冷泄腹胀，溏泄瘕水闭，病本于脾。",
+      "code": "metal_deficient",
+      "sitian_key": "jueyin_fengmu_sitian",
+      "zaiquan_key": "shaoyang_xianghuo_zaiquan",
+      "rag_key": "jueyin_fengmu_sitian",
+      "name": "乙亥岁图",
+      "modern_reading": "乙亥金运不及，厥阴风木司天、少阳相火在泉，风火上鼓、热邪下扰，中见风燥胜复，古人观的是上下相争、中气受困之象——胃脘当心而痛、两胁支满、饮食不下，皆风木犯脾之候。天人合一在于：风气通于肝，岁金虚则木失所制而横逆。今人若逢多风燥之年见胁痛呕泄，宜辛凉平上、咸清安下，以酸和缓中。气机得舒，中和自复。",
+      "entry_id": "shengji_yihai",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_bingzi",
+      "ganzhi": "丙子",
+      "year_chart": "丙子岁图",
+      "suiyun": "水运太过",
+      "sitian": "少阴君火司天",
+      "zaiquan": "阳明燥金在泉",
+      "rag_keys": {
+        "suiyun": "water_excess",
+        "sitian": "shaoyin_junhuo_sitian",
+        "zaiquan": "yangming_zaojin_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "太阳水",
+          "zhuqi": "太角木",
+          "bingji": "关节禁固，腰痛，炎暑将起，中外疮疡",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之（岁谷食丹，间谷食稷；用寒远寒）"
+        },
+        {
+          "step": "二之气",
+          "keqi": "厥阴木",
+          "zhuqi": "少徵火",
+          "bingji": "其病淋目瞑目赤，气郁于上而热",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之（岁谷食丹，间谷食稻）"
+        },
+        {
+          "step": "三之气",
+          "keqi": "少阴火",
+          "zhuqi": "少徵火",
+          "bingji": "民病气厥心痛，寒热更作，咳喘目赤",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之（岁谷食丹，间谷食豆）"
+        },
+        {
+          "step": "四之气",
+          "keqi": "太阴土",
+          "zhuqi": "太宫土",
+          "bingji": "民病寒热，嗌干黄瘅鼽衄饮发",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之（岁谷食白，间谷食麻）"
+        },
+        {
+          "step": "五之气",
+          "keqi": "少阳火",
+          "zhuqi": "少商金",
+          "bingji": "其病温，岁水制之，其病乃微",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸软之（岁谷食白，间谷食豆）"
+        },
+        {
+          "step": "终之气",
+          "keqi": "阳明金",
+          "zhuqi": "太羽水",
+          "bingji": "肿于上，咳喘，甚则血溢；病生皮腠，内舍于胁，下连少腹而作寒中",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之（岁谷食白，间谷食黍）"
+        }
+      ],
+      "year_pathogenesis": "热病生于上，清病生于下，寒热相犯而争于中，民病咳喘，血溢血泄鼽嚏目赤疡，寒厥入胃，心痛腰痛腹大嗌干肿上。",
+      "year_treatment": "以咸寒调上，以酸温安下，运同地气宜以温热化；食丹白之谷以全真气，食间气之谷以辟虚邪。",
+      "source_quote": "热病生于上，清病生于下，寒热相犯而争于中，民病咳喘，血溢血泄鼽嚏目赤疡，寒厥入胃，心痛腰痛腹大嗌干肿上。味宜以咸寒调上，以酸温安下。",
+      "code": "water_excess",
+      "sitian_key": "shaoyin_junhuo_sitian",
+      "zaiquan_key": "yangming_zaojin_zaiquan",
+      "rag_key": "shaoyin_junhuo_sitian",
+      "name": "丙子岁图",
+      "modern_reading": "丙子水运太过，少阴君火司天、阳明燥金在泉，上热下清、寒热争于中，故咳喘血溢、目赤疡与寒厥入胃并见。古人不把寒热看作对立，而是气化升降失序——火炎于上、寒沉于下，中焦受戕。天人合一之理：岁水太过则阴盛，与司天君火相激。今人遇寒热错杂之候，宜上咸寒、下酸温，食间气谷以调虚实。阴阳各归其位，乃得中和。",
+      "entry_id": "shengji_bingzi",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_dingchou",
+      "ganzhi": "丁丑",
+      "year_chart": "丁丑岁图",
+      "suiyun": "木运不及",
+      "sitian": "太阴湿土司天",
+      "zaiquan": "太阳寒水在泉",
+      "rag_keys": {
+        "suiyun": "wood_deficient",
+        "sitian": "taiyin_shitu_sitian",
+        "zaiquan": "taiyang_hanshui_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "厥阴木",
+          "zhuqi": "少角木",
+          "bingji": "民病血溢，筋络拘强，关节不利，身重筋痿",
+          "zhifa": "调厥阴之客，以辛补之，以酸泻之，以甘缓之（岁谷宜黄，间谷宜稻；司气以温，用温无犯）"
+        },
+        {
+          "step": "二之气",
+          "keqi": "少阴火",
+          "zhuqi": "太徵火",
+          "bingji": "其病温厉盛行，远近咸若",
+          "zhifa": "调少阴之客，以咸补之，以甘泻之，以酸收之（岁谷宜黄，间谷宜豆）"
+        },
+        {
+          "step": "三之气",
+          "keqi": "太阴土",
+          "zhuqi": "太徵火",
+          "bingji": "民病身重胕肿胸腹满",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之（岁谷宜黄，间谷宜麻）"
+        },
+        {
+          "step": "四之气",
+          "keqi": "少阳火",
+          "zhuqi": "少宫土",
+          "bingji": "民病腠理热，血暴溢，疟心腹满热胪胀，甚则胕肿",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸软之（岁谷宜玄，间谷宜豆）"
+        },
+        {
+          "step": "五之气",
+          "keqi": "阳明金",
+          "zhuqi": "太商金",
+          "bingji": "民病皮腠",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之（岁谷宜玄，间谷宜黍）"
+        },
+        {
+          "step": "终之气",
+          "keqi": "太阳水",
+          "zhuqi": "少羽水",
+          "bingji": "关节禁固，腰痛，寒湿持于气交而为疾",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之（岁谷宜玄，间谷宜稷）"
+        }
+      ],
+      "year_pathogenesis": "阴凝于上，寒积于下，民病寒湿腹满、身胕肿、痞逆、寒厥、拘急。",
+      "year_treatment": "以苦燥之温之，甚则发之泄之；必赞其阳火，令御甚寒，从气之异同，多少其判也。",
+      "source_quote": "民病寒湿腹满、身胕肿、痞逆、寒厥、拘急。以苦燥之温之，甚则发之泄之，不发不泄，则湿气外溢，肉溃皮拆而水血交流，必赞其阳火，令御甚寒。",
+      "code": "wood_deficient",
+      "sitian_key": "taiyin_shitu_sitian",
+      "zaiquan_key": "taiyang_hanshui_zaiquan",
+      "rag_key": "taiyin_shitu_sitian",
+      "name": "丁丑岁图",
+      "modern_reading": "丁丑木运不及，太阴湿土司天、太阳寒水在泉，阴凝于上、寒积于下，寒湿腹满、胕肿拘急并作。古人看的是木气不足则湿寒失于疏泄——木主生发，木弱则阳气不伸。天人合一在于：岁木虚则人体生发之气亦弱。今人若逢阴冷湿滞之年见痞逆寒厥，宜苦温燥湿、甚则发越阳气以御寒。扶阳助生，乃中和之道。",
+      "entry_id": "shengji_dingchou",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_wuyin",
+      "ganzhi": "戊寅",
+      "year_chart": "戊寅岁图",
+      "suiyun": "火运太过",
+      "sitian": "少阳相火司天",
+      "zaiquan": "厥阴风木在泉",
+      "rag_keys": {
+        "suiyun": "fire_excess",
+        "sitian": "shaoyang_xianghuo_sitian",
+        "zaiquan": "jueyin_fengmu_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "少阴火",
+          "zhuqi": "少角木",
+          "bingji": "温病乃起，其病气拂于上，血溢目赤，咳逆头痛，血伤胁满，肤腠中疮",
+          "zhifa": "调少阴之客，以咸补之，以甘泻之，以酸收之（岁谷宜丹，间谷宜豆）"
+        },
+        {
+          "step": "二之气",
+          "keqi": "太阴土",
+          "zhuqi": "太徵火",
+          "bingji": "其病热郁于上，咳逆呕吐，疮发于中，胸嗌不利，头痛身热，昏愦脓疮",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之（岁谷宜丹，间谷宜麻）"
+        },
+        {
+          "step": "三之气",
+          "keqi": "少阳火",
+          "zhuqi": "太徵火",
+          "bingji": "民病热中，聋瞑、血溢、脓疮、咳、呕、鼽、衄、渴、嚏、欠、喉痹、目赤，善暴死",
+          "zhifa": "调少阳之客，以咸补之，以甘泻之，以咸软之（岁谷宜丹，间谷宜豆；司气以热，用热远热）"
+        },
+        {
+          "step": "四之气",
+          "keqi": "阳明金",
+          "zhuqi": "少宫土",
+          "bingji": "其病满身重",
+          "zhifa": "调阳明之客，以酸补之，以辛泻之，以苦泄之（岁谷宜苍，间谷宜黍）"
+        },
+        {
+          "step": "五之气",
+          "keqi": "太阳水",
+          "zhuqi": "太商金",
+          "bingji": "民避寒邪，君子周密",
+          "zhifa": "调太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之（岁谷宜苍，间谷宜稷）"
+        },
+        {
+          "step": "终之气",
+          "keqi": "厥阴木",
+          "zhuqi": "少羽水",
+          "bingji": "其病关闭不禁心痛，阳气不藏而咳",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之（岁谷宜苍，间谷宜稻）"
+        }
+      ],
+      "year_pathogenesis": "风热参布，民病寒中，外发疮疡，内为泄满；往复之作，民病寒热、疟、泄、聋、瞑、呕吐，上怫肿色变。",
+      "year_treatment": "以咸寒调上，以辛凉调下，以甘和调中，渗之、泄之、渍之、发之；运同风热，宜多寒化，治之常也。",
+      "source_quote": "民病寒中，外发疮疡，内为泄满。往复之作，民病寒热、疟、泄、聋、瞑、呕吐。岁宜以咸寒调上，以辛凉调下，以甘和调中，渗之、泄之、渍之、发之。",
+      "code": "fire_excess",
+      "sitian_key": "shaoyang_xianghuo_sitian",
+      "zaiquan_key": "jueyin_fengmu_zaiquan",
+      "rag_key": "shaoyang_xianghuo_sitian",
+      "name": "戊寅岁图",
+      "modern_reading": "戊寅火运太过，少阳相火司天、厥阴风木在泉，风热参布、寒热往复，外发疮疡、内为泄满，疟泄聋瞑呕吐并见。古人观的是两火相煽、风火相煽之局——岁火太过则炎上作，与司天在泉同气。天人合一：外火盛则内火亦扰，气化失常则寒中而外疡。今人遇风热炽盛之年，宜咸寒清上、辛凉调下、甘和守中，渗泄发之。火归其位，中和自安。",
+      "entry_id": "shengji_wuyin",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_jimao",
+      "ganzhi": "己卯",
+      "year_chart": "己卯岁图",
+      "suiyun": "土运不及",
+      "sitian": "阳明燥金司天",
+      "zaiquan": "少阴君火在泉",
+      "rag_keys": {
+        "suiyun": "earth_deficient",
+        "sitian": "yangming_zaojin_sitian",
+        "zaiquan": "shaoyin_junhuo_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "太阴土",
+          "zhuqi": "少角木",
+          "bingji": "其病中热胀面目浮肿，善眠、鼽、衄、嚏、欠、呕，小便黄赤，甚则淋",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之（岁谷宜白，间谷宜麻；司气以凉，用凉无犯）"
+        },
+        {
+          "step": "二之气",
+          "keqi": "少阳火",
+          "zhuqi": "太徵火",
+          "bingji": "厉大至，民善暴死",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸软之（岁谷宜白，间谷宜豆）"
+        },
+        {
+          "step": "三之气",
+          "keqi": "阳明金",
+          "zhuqi": "太徵火",
+          "bingji": "民病寒热",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之（岁谷宜白，间谷宜黍）"
+        },
+        {
+          "step": "四之气",
+          "keqi": "太阳水",
+          "zhuqi": "少宫土",
+          "bingji": "病暴仆、振栗、谵妄、少气，嗌干引饮，及为心痛痈肿疮疡疟寒之疾，骨痿血便",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之（岁谷宜丹，间谷宜稷）"
+        },
+        {
+          "step": "五之气",
+          "keqi": "厥阴木",
+          "zhuqi": "太商金",
+          "bingji": "民气和",
+          "zhifa": "调厥阴之客，以辛补之，以酸泻之，以甘缓之（岁谷宜丹，间谷宜稻）"
+        },
+        {
+          "step": "终之气",
+          "keqi": "少阴火",
+          "zhuqi": "少羽水",
+          "bingji": "民乃康平，其病温",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之（岁谷宜丹，间谷宜豆）"
+        }
+      ],
+      "year_pathogenesis": "民病咳嗌塞，寒热发暴，振栗癃闭；清先而劲，毛虫乃死，热后而暴，介虫乃殃。",
+      "year_treatment": "岁宜以咸、以苦、以辛，汗之、清之、散之；运同清气，宜多地化，治之常也。",
+      "source_quote": "民病咳嗌塞，寒热发暴，振栗癃闭。岁宜以咸、以苦、以辛，汗之、清之、散之，运同清气，宜多地化，治之常也。",
+      "code": "earth_deficient",
+      "sitian_key": "yangming_zaojin_sitian",
+      "zaiquan_key": "shaoyin_junhuo_zaiquan",
+      "rag_key": "yangming_zaojin_sitian",
+      "name": "己卯岁图",
+      "modern_reading": "己卯土运不及，阳明燥金司天、少阴君火在泉，清燥先至、热邪后迫，咳嗌塞、寒热暴发、振栗癃闭并见。古人看的是金来乘木、火来复之的胜复之局——土虚则金燥乘之，火又随后而复。天人合一在于：岁土虚则运化失职，气化迟滞则寒热错出。今人遇燥热交替之年见咳塞癃闭，宜咸苦辛相伍，汗清散并举。气机得通，中和可复。",
+      "entry_id": "shengji_jimao",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_gengchen",
+      "ganzhi": "庚辰",
+      "year_chart": "庚辰岁图",
+      "suiyun": "金运太过",
+      "sitian": "太阳寒水司天",
+      "zaiquan": "太阴湿土在泉",
+      "rag_keys": {
+        "suiyun": "metal_excess",
+        "sitian": "taiyang_hanshui_sitian",
+        "zaiquan": "taiyin_shitu_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "少阳火",
+          "zhuqi": "少角木",
+          "bingji": "温病乃作，身热头痛呕吐，肌腠疮疡",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸软之（岁谷宜玄，间谷宜豆）"
+        },
+        {
+          "step": "二之气",
+          "keqi": "阳明金",
+          "zhuqi": "太徵火",
+          "bingji": "民病气郁中满，寒乃始",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之（岁谷宜玄，间谷宜黍；无犯司气之凉）"
+        },
+        {
+          "step": "三之气",
+          "keqi": "太阳水",
+          "zhuqi": "太徵火",
+          "bingji": "民病寒反热中，痈疽注下，心热瞀闷，不治者死",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之（岁谷宜玄，间谷宜稷）"
+        },
+        {
+          "step": "四之气",
+          "keqi": "厥阴木",
+          "zhuqi": "少宫土",
+          "bingji": "民病大热少气，肌肉萎足痿，注下赤白",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之（岁谷宜黄，间谷宜稻）"
+        },
+        {
+          "step": "五之气",
+          "keqi": "少阴火",
+          "zhuqi": "太商金",
+          "bingji": "民乃舒",
+          "zhifa": "调少阴之客，以咸补之，以甘泻之，以酸收之（岁谷宜黄，间谷宜豆）"
+        },
+        {
+          "step": "终之气",
+          "keqi": "太阴土",
+          "zhuqi": "少羽水",
+          "bingji": "民乃惨凄，寒风以至，反者孕乃死",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之（岁谷宜黄，间谷宜麻）"
+        }
+      ],
+      "year_pathogenesis": "寒湿之气持于气交，民病寒湿，发肌肉萎，足痿不收，濡泻血溢；岁金太过则燥气流行，肝木受邪，民病两胁下少腹痛，目赤痛。",
+      "year_treatment": "以苦热调上，以甘热调下，以辛温调中；运同寒湿，以燥热化，治之常也；中调悉以辛温。",
+      "source_quote": "民病寒湿，发肌肉萎，足痿不收，濡泻血溢。岁宜以苦热调上，以甘热调下，以辛温调中，运同寒湿，以燥热化，治之常也。",
+      "code": "metal_excess",
+      "sitian_key": "taiyang_hanshui_sitian",
+      "zaiquan_key": "taiyin_shitu_zaiquan",
+      "rag_key": "taiyang_hanshui_sitian",
+      "name": "庚辰岁图",
+      "modern_reading": "庚辰金运太过，太阳寒水司天、太阴湿土在泉，寒湿持于气交而燥气流行，肝木受邪则胁痛目赤，又见肌肉痿、足不收、濡泻。古人观的是岁金太过则燥胜、复与寒湿相搏——一岁之中燥与湿寒并存。天人合一：金亢则木受制，生发之气被抑。今人遇燥寒湿交织之年，宜苦热调上、甘热调下、辛温和中，以燥热化寒湿。刚柔相济，乃得中和。",
+      "entry_id": "shengji_gengchen",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_xinsi",
+      "ganzhi": "辛巳",
+      "year_chart": "辛巳岁图",
+      "suiyun": "水运不及",
+      "sitian": "厥阴风木司天",
+      "zaiquan": "少阳相火在泉",
+      "rag_keys": {
+        "suiyun": "water_deficient",
+        "sitian": "jueyin_fengmu_sitian",
+        "zaiquan": "shaoyang_xianghuo_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "阳明金",
+          "zhuqi": "少角木",
+          "bingji": "民病寒于右之下",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之（岁谷宜苍，间谷宜黍）"
+        },
+        {
+          "step": "二之气",
+          "keqi": "太阳水",
+          "zhuqi": "太徵火",
+          "bingji": "民病热于中",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之（岁谷宜苍，间谷宜稷；无犯司气之寒）"
+        },
+        {
+          "step": "三之气",
+          "keqi": "厥阴木",
+          "zhuqi": "太徵火",
+          "bingji": "民病泣出耳鸣掉眩",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之（岁谷宜苍，间谷宜稻）"
+        },
+        {
+          "step": "四之气",
+          "keqi": "少阴火",
+          "zhuqi": "少宫土",
+          "bingji": "民病黄瘅而为胕肿",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之（岁谷宜丹，间谷宜豆）"
+        },
+        {
+          "step": "五之气",
+          "keqi": "太阴土",
+          "zhuqi": "太商金",
+          "bingji": "沉阴乃布，寒气及体，风雨乃行",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之（岁谷宜丹，间谷宜麻）"
+        },
+        {
+          "step": "终之气",
+          "keqi": "少阳火",
+          "zhuqi": "少羽水",
+          "bingji": "其病温厉",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸软之（岁谷宜丹，间谷宜豆）"
+        }
+      ],
+      "year_pathogenesis": "热病行于下，风病行于上，风燥胜复形于中；岁水不及，藏令不举，化气乃昌，其病痿厥坚下。",
+      "year_treatment": "以辛凉调上，以咸寒调下；畏火之气无妄犯之；中皆以苦和调之。",
+      "source_quote": "热病行于下，风病行于上，风燥胜复形于中。以辛凉调上，以咸寒调下，畏火之气，无妄犯之。岁运之化，水不及，纪曰涸流，是谓反阳。",
+      "code": "water_deficient",
+      "sitian_key": "jueyin_fengmu_sitian",
+      "zaiquan_key": "shaoyang_xianghuo_zaiquan",
+      "rag_key": "jueyin_fengmu_sitian",
+      "name": "辛巳岁图",
+      "modern_reading": "辛巳水运不及，厥阴风木司天、少阳相火在泉，风行于上、热行于下，中见风燥胜复，藏令不举、化气乃昌，病痿厥坚下。古人所谓'涸流之纪，反阳'——水虚则阳失所制而浮越。天人合一在于：岁水虚则人体藏精之气亦弱，火风乘虚而入。今人遇风热偏盛而本气虚之年，宜辛凉平上、咸寒清下，畏火之气不可妄犯。守其不足，方合中和。",
+      "entry_id": "shengji_xinsi",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_renwu",
+      "ganzhi": "壬午",
+      "year_chart": "壬午岁图",
+      "suiyun": "木运太过",
+      "sitian": "少阴君火司天",
+      "zaiquan": "阳明燥金在泉",
+      "rag_keys": {
+        "suiyun": "wood_excess",
+        "sitian": "shaoyin_junhuo_sitian",
+        "zaiquan": "yangming_zaojin_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "太阳水",
+          "zhuqi": "太角木",
+          "bingji": "关节禁固腰痛，炎暑将起，中外疮疡",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之（岁谷宜丹，间谷宜稷）"
+        },
+        {
+          "step": "二之气",
+          "keqi": "厥阴木",
+          "zhuqi": "少徵火",
+          "bingji": "其病淋目瞑目赤，气郁于上而热",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之（岁谷宜丹，间谷宜稻）"
+        },
+        {
+          "step": "三之气",
+          "keqi": "少阴火",
+          "zhuqi": "少徵火",
+          "bingji": "民病气厥心痛，寒热更作，咳喘目赤",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之（岁谷宜丹，间谷食豆）"
+        },
+        {
+          "step": "四之气",
+          "keqi": "太阴土",
+          "zhuqi": "太宫土",
+          "bingji": "民病寒热嗌干，黄瘅鼽衄饮发",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之（岁谷宜白，间谷食麻）"
+        },
+        {
+          "step": "五之气",
+          "keqi": "少阳火",
+          "zhuqi": "少商金",
+          "bingji": "其病温",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸软之（岁谷宜白，间谷宜豆）"
+        },
+        {
+          "step": "终之气",
+          "keqi": "阳明金",
+          "zhuqi": "太羽水",
+          "bingji": "肿于上咳喘，甚则血溢；病生皮腠，内舍于胁，下连少腹而作寒中",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之（岁谷宜白，间谷宜黍）"
+        }
+      ],
+      "year_pathogenesis": "热病生于上，清病生于下，寒热相犯而争于中，民病咳喘，血溢血泄鼽嚏目赤疡，寒厥入胃，心痛腰痛腹大嗌干肿上；岁木太过则风气流行，脾土受邪，民病飧泄食减体重烦冤肠鸣腹支满。",
+      "year_treatment": "其化上咸寒，中酸凉，下酸温，药食宜也；甚则以苦发之、以酸收之、以苦泄之。",
+      "source_quote": "热病生于上，清病生于下，寒热相犯而争于中，民病咳喘，血溢血泄鼽嚏目赤疡。其化上咸寒，中酸凉，下酸温，药食宜也。",
+      "code": "wood_excess",
+      "sitian_key": "shaoyin_junhuo_sitian",
+      "zaiquan_key": "yangming_zaojin_zaiquan",
+      "rag_key": "shaoyin_junhuo_sitian",
+      "name": "壬午岁图",
+      "modern_reading": "壬午木运太过，少阴君火司天、阳明燥金在泉，上热下清争于中，咳喘血溢目赤与寒厥入胃并见；木亢则脾土受邪，飧泄食减、体重烦冤。古人观的是岁木太过与司天在泉交织——风火相煽于上、清燥承于下、木横克土于中。天人合一：风气通肝，木亢则生发太过反伤中土。今人遇风火燥并至之年，宜上咸寒、中酸凉、下酸温，甚则以苦发酸收。刚者柔之，中和乃成。",
+      "entry_id": "shengji_renwu",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_guiwei",
+      "ganzhi": "癸未",
+      "year_chart": "癸未岁图",
+      "suiyun": "火运不及",
+      "sitian": "太阴湿土司天",
+      "zaiquan": "太阳寒水在泉",
+      "rag_keys": {
+        "suiyun": "fire_deficient",
+        "sitian": "taiyin_shitu_sitian",
+        "zaiquan": "taiyang_hanshui_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "厥阴木",
+          "zhuqi": "太角木",
+          "bingji": "民病血溢、筋络拘强，关节不利，身重筋痿",
+          "zhifa": "调厥阴之客，以辛补之，以酸泻之，以甘缓之（岁谷宜黄，间谷宜稻）"
+        },
+        {
+          "step": "二之气",
+          "keqi": "少阴火",
+          "zhuqi": "少徵火",
+          "bingji": "其病温厉盛行，远近咸若",
+          "zhifa": "调少阴之客，以咸补之，以甘泻之，以酸收之（岁谷宜黄，间谷宜豆）"
+        },
+        {
+          "step": "三之气",
+          "keqi": "太阴土",
+          "zhuqi": "少徵火",
+          "bingji": "民病身重、胕肿、胸腹满",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之（岁谷宜黄，间谷宜麻）"
+        },
+        {
+          "step": "四之气",
+          "keqi": "少阳火",
+          "zhuqi": "太宫土",
+          "bingji": "民病腠理热，血暴溢，疟心腹满热胪胀，甚则胕肿",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸软之（岁谷宜玄，间谷宜豆；无犯司气之热）"
+        },
+        {
+          "step": "五之气",
+          "keqi": "阳明金",
+          "zhuqi": "少商金",
+          "bingji": "民病皮腠",
+          "zhifa": "调阳明之客，以酸补之，以辛泻之，以苦泄之（岁谷宜玄，间谷宜黍）"
+        },
+        {
+          "step": "终之气",
+          "keqi": "太阳水",
+          "zhuqi": "太羽水",
+          "bingji": "关节禁固腰痛，寒湿持于气交而为疾",
+          "zhifa": "调太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之（岁谷宜玄，间谷宜稷）"
+        }
+      ],
+      "year_pathogenesis": "阴凝于上，寒积于下，寒水胜火则为冰雹，阳光不治，杀气乃行；民病寒湿腹满、身胕肿、痞逆、寒厥、拘急。岁火不及则寒乃盛行，民病胸中痛、胁支满、两胁痛、膺背肩胛间及两臂内痛。",
+      "year_treatment": "其化上苦温，中咸温，下甘热，药食宜也；以苦燥之温之，甚者发之泄之；必赞其阳火，令御甚寒，运异寒湿，其化宜少用燥热。",
+      "source_quote": "民病寒湿腹满、身胕肿、痞逆、寒厥、拘急。其化上苦温，中咸温，下甘热，药食宜也。以苦燥之温之，甚者发之泄之，必赞其阳火，令御甚寒。",
+      "code": "fire_deficient",
+      "sitian_key": "taiyin_shitu_sitian",
+      "zaiquan_key": "taiyang_hanshui_zaiquan",
+      "rag_key": "taiyin_shitu_sitian",
+      "name": "癸未岁图",
+      "modern_reading": "癸未火运不及，太阴湿土司天、太阳寒水在泉，阴凝于上、寒积于下，寒水胜火则冰雹、阳光不治，寒湿腹满胕肿与胸胁肩臂痛并见。古人看的是火虚则寒乃盛行、阴凝阳微之局——岁火不及则温运之力弱。天人合一：火为阳之标，火虚则气化温煦不及。今人遇阴寒湿冷之年见痞逆寒厥，宜上苦温、中咸温、下甘热，苦燥温之、甚则发越阳气。扶阳以御寒，乃中和之本。",
+      "entry_id": "shengji_guiwei",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_jiashen",
+      "ganzhi": "甲申",
+      "year_chart": "甲申岁图",
+      "suiyun": "土运太过",
+      "sitian": "少阳相火司天",
+      "zaiquan": "厥阴风木在泉",
+      "rag_keys": {
+        "suiyun": "earth_excess",
+        "sitian": "shaoyang_xianghuo_sitian",
+        "zaiquan": "jueyin_fengmu_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "少阴火",
+          "zhuqi": "太角木",
+          "bingji": "温病乃起，其病气怫于上，血溢目赤，咳逆头痛，血伤胁满，肤腠中疮",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "太阴土",
+          "zhuqi": "少徵火",
+          "bingji": "热郁于上，咳逆呕吐，疮发于中，胸嗌不利，头痛身热，昏愦脓疮",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "少阳火",
+          "zhuqi": "少徵火",
+          "bingji": "热中聋瞑血溢脓疮咳呕鼽衄渴嚏欠喉痹目赤善暴死",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸软之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "阳明金",
+          "zhuqi": "太宫土",
+          "bingji": "满身重",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "太阳水",
+          "zhuqi": "少商金",
+          "bingji": "寒邪乃微",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "厥阴木",
+          "zhuqi": "太羽水",
+          "bingji": "关闭不禁心痛，阳气不藏而咳",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        }
+      ],
+      "year_pathogenesis": "民病寒中，外发疮疡，内为泄满，往复之作，民病寒热疟泄聋瞑呕吐，上怫肿色变；岁土太过，雨湿流行，肾水受邪，民病腹痛清厥意不乐体重烦冤。",
+      "year_treatment": "宜于年前先取化源以平天气之火，抑其运土，赞所不胜；岁宜咸宜辛宜酸，渗之泄之渍之发之；其化上咸寒，中咸和，下辛凉。",
+      "source_quote": "民病寒中，外发疮疡，内为泄满……往复之作，民病寒热疟泄聋瞑呕吐，上怫肿色变。岁宜咸宜辛宜酸，渗之泄之渍之发之，其化上咸寒，中咸和，下辛凉。",
+      "code": "earth_excess",
+      "sitian_key": "shaoyang_xianghuo_sitian",
+      "zaiquan_key": "jueyin_fengmu_zaiquan",
+      "rag_key": "shaoyang_xianghuo_sitian",
+      "name": "甲申岁图",
+      "modern_reading": "甲申年土运太过，少阳相火司天、厥阴风木在泉，湿热与风火相煽是全年底色。古人见'民病寒中、外发疮疡'，看似矛盾，实则天人合一的写照：岁土太盛则雨湿流行，肾水受压，人体气机被湿所困则中寒，火气郁于外则疮疡。湿与火一内一外，正是气化偏盛的两面。今人遇此类湿热年份，调养宜先顾中州、淡渗利湿，莫让脾胃困在湿里——土厚则自安。",
+      "entry_id": "shengji_jiashen",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_yiyou",
+      "ganzhi": "乙酉",
+      "year_chart": "乙酉岁图",
+      "suiyun": "金运不及",
+      "sitian": "阳明燥金司天",
+      "zaiquan": "少阴君火在泉",
+      "rag_keys": {
+        "suiyun": "metal_deficient",
+        "sitian": "yangming_zaojin_sitian",
+        "zaiquan": "shaoyin_junhuo_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "太阴土",
+          "zhuqi": "太角木",
+          "bingji": "中热胀，面目浮肿，善眠鼽衄嚏欠呕，小便黄赤甚则淋",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "少阳火",
+          "zhuqi": "少徵火",
+          "bingji": "厉大至，民善暴死",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸软之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "阳明金",
+          "zhuqi": "少徵火",
+          "bingji": "民病寒热",
+          "zhifa": "调阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "太阳水",
+          "zhuqi": "太宫土",
+          "bingji": "暴仆振栗谵妄少气嗌干引饮及心痛痈肿疮疡疟寒骨痿血便",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "厥阴木",
+          "zhuqi": "少商金",
+          "bingji": "民乃和",
+          "zhifa": "调厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "少阴火",
+          "zhuqi": "太羽水",
+          "bingji": "其病温",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        }
+      ],
+      "year_pathogenesis": "民病咳嗌塞，寒热发暴，振栗癃闭，清先而劲毛虫乃死，热后而暴介虫乃殃，其发躁。",
+      "year_treatment": "遇太一天符金气自平，不资化源，惟安其运金无使受邪；岁宜以咸以苦以辛汗之清之散之；其化上苦小温，中苦和，下咸寒。",
+      "source_quote": "民病咳嗌塞，寒热发暴，振栗癃闭……岁宜以咸以苦以辛，汗之清之散之，其化上苦小温，中苦和，下咸寒。",
+      "code": "metal_deficient",
+      "sitian_key": "yangming_zaojin_sitian",
+      "zaiquan_key": "shaoyin_junhuo_zaiquan",
+      "rag_key": "yangming_zaojin_sitian",
+      "name": "乙酉岁图",
+      "modern_reading": "乙酉年金运不及，又逢阳明燥金司天，燥气反助其弱而成平气，故经文称'太一天符金气自平'。民病咳嗌塞、寒热发暴，是燥与火在泉相争之象。为什么古人不主张取化源？因为此年金气得司天之助已趋中和，强泻反伤。这正体现运气学'中和为贵'的智慧——天地自能纠偏时，医者只须扶正安运。今人于燥金之年，润燥养金、勿妄攻伐，便是顺势而为。",
+      "entry_id": "shengji_yiyou",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_bingxu",
+      "ganzhi": "丙戌",
+      "year_chart": "丙戌岁图",
+      "suiyun": "水运太过",
+      "sitian": "太阳寒水司天",
+      "zaiquan": "太阴湿土在泉",
+      "rag_keys": {
+        "suiyun": "water_excess",
+        "sitian": "taiyang_hanshui_sitian",
+        "zaiquan": "taiyin_shitu_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "少阳火",
+          "zhuqi": "太角木",
+          "bingji": "温病乃作，身热头痛呕吐，肌腠疮疡",
+          "zhifa": "调少阳之客，以咸补之，以甘泻之，以咸软之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "阳明金",
+          "zhuqi": "少徵火",
+          "bingji": "气郁中满，寒乃始",
+          "zhifa": "调阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "太阳水",
+          "zhuqi": "少徵火",
+          "bingji": "寒反热中，痈疽注下，心热瞀闷，不治者死",
+          "zhifa": "调太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "厥阴木",
+          "zhuqi": "太宫土",
+          "bingji": "大热少气，肌肉萎足痿，注下赤白",
+          "zhifa": "调厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "少阴火",
+          "zhuqi": "少商金",
+          "bingji": "民乃舒",
+          "zhifa": "调少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "太阴土",
+          "zhuqi": "太羽水",
+          "bingji": "阴凝太虚埃昏郊野，民乃惨凄，寒风以至，反者孕乃死",
+          "zhifa": "调太阴之客，以甘补之，以苦泻之，以甘缓之"
+        }
+      ],
+      "year_pathogenesis": "寒湿之气持于气交，民病寒湿，发肌肉萎，足痿不收，濡泻血溢。",
+      "year_treatment": "不资化源，惟抑运水扶其不胜；岁宜以苦燥之温之；其化上苦热，中咸温，下甘热。",
+      "source_quote": "民病寒湿，发肌肉萎，足痿不收，濡泻血溢。岁宜以苦燥之温之，其化上苦热，中咸温，下甘热。",
+      "code": "water_excess",
+      "sitian_key": "taiyang_hanshui_sitian",
+      "zaiquan_key": "taiyin_shitu_zaiquan",
+      "rag_key": "taiyang_hanshui_sitian",
+      "name": "丙戌岁图",
+      "modern_reading": "丙戌年水运太过，太阳寒水司天、太阴湿土在泉，寒从天降、湿从地生，寒湿持于气交。民病肌肉痿、足痿不收、濡泻血溢，皆寒湿困阳、气化不行之候。古人只抑运水、扶其不胜，而不取化源，是因寒水本司天，泻之恐伤天令。这背后是气化思想——天地寒湿当令，人体阳气被遏，治当温燥以复中和。今人遇寒湿之年，护阳温中、避寒居暖，胜于事后补救。",
+      "entry_id": "shengji_bingxu",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_dinghai",
+      "ganzhi": "丁亥",
+      "year_chart": "丁亥岁图",
+      "suiyun": "木运不及",
+      "sitian": "厥阴风木司天",
+      "zaiquan": "少阳相火在泉",
+      "rag_keys": {
+        "suiyun": "wood_deficient",
+        "sitian": "jueyin_fengmu_sitian",
+        "zaiquan": "shaoyang_xianghuo_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "阳明金",
+          "zhuqi": "少角木",
+          "bingji": "民病寒于右之下",
+          "zhifa": "调阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "太阳水",
+          "zhuqi": "太徵火",
+          "bingji": "民病热于中",
+          "zhifa": "调太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "厥阴木",
+          "zhuqi": "太徵火",
+          "bingji": "民病泣出耳鸣掉眩",
+          "zhifa": "调厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "少阴火",
+          "zhuqi": "少宫土",
+          "bingji": "黄瘅而为胕肿",
+          "zhifa": "调少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "太阴土",
+          "zhuqi": "太商金",
+          "bingji": "燥湿更胜，沉阴乃布，寒气及体，风雨乃行",
+          "zhifa": "调太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "少阳火",
+          "zhuqi": "少羽水",
+          "bingji": "其病温厉",
+          "zhifa": "调少阳之客，以咸补之，以甘泻之，以咸软之"
+        }
+      ],
+      "year_pathogenesis": "热病行于下，风病行于上，风燥胜复形于中。",
+      "year_treatment": "不资化源，惟赞运木无使邪胜；岁宜以辛调上，以咸调下，畏火之气无妄犯之；其化上辛凉，中辛和，下咸寒。",
+      "source_quote": "热病行于下，风病行于上，风燥胜复形于中。岁宜以辛调上，以咸调下，畏火之气，无妄犯之。",
+      "code": "wood_deficient",
+      "sitian_key": "jueyin_fengmu_sitian",
+      "zaiquan_key": "shaoyang_xianghuo_zaiquan",
+      "rag_key": "jueyin_fengmu_sitian",
+      "name": "丁亥岁图",
+      "modern_reading": "丁亥年木运不及，恰逢厥阴风木司天，木气得助而近平；在泉少阳相火，则热行于下、风行于上，风燥胜复形于中。古人惟赞运木、不取化源，又嘱'畏火之气无妄犯之'——为何？因此年相火在泉本盛，妄泻火反损中和。这体现天人合一的精微：运不及得司天相助则自平，医者只需顺势调其上下。今人于此风火之年，辛凉调上、咸寒调下，护津息风即是养和。",
+      "entry_id": "shengji_dinghai",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_wuzi",
+      "ganzhi": "戊子",
+      "year_chart": "戊子岁图",
+      "suiyun": "火运太过",
+      "sitian": "少阴君火司天",
+      "zaiquan": "阳明燥金在泉",
+      "rag_keys": {
+        "suiyun": "fire_excess",
+        "sitian": "shaoyin_junhuo_sitian",
+        "zaiquan": "yangming_zaojin_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "太阳水",
+          "zhuqi": "少角木",
+          "bingji": "关节禁固腰痛，中外疮疡",
+          "zhifa": "调太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "厥阴木",
+          "zhuqi": "太徵火",
+          "bingji": "淋目瞑目赤，气郁于上而热",
+          "zhifa": "调厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "少阴火",
+          "zhuqi": "太徵火",
+          "bingji": "气厥心痛，寒热更作，咳喘目赤",
+          "zhifa": "调少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "太阴土",
+          "zhuqi": "少宫土",
+          "bingji": "寒热嗌干黄瘅鼽衄饮发",
+          "zhifa": "调太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "少阳火",
+          "zhuqi": "太商金",
+          "bingji": "其病温",
+          "zhifa": "调少阳之客，以咸补之，以甘泻之，以咸软之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "阳明金",
+          "zhuqi": "少羽水",
+          "bingji": "肿于上咳喘甚则血溢，病生皮腠内舍于胁下连少腹而作寒中",
+          "zhifa": "调阳明之客，以酸补之，以辛泻之，以苦泄之"
+        }
+      ],
+      "year_pathogenesis": "热病生于上，清病生于下，寒热相犯而争于中，民病咳喘血溢血泄鼽嚏目赤疮疡，寒厥入胃心痛腰痛腹大嗌干肿上。",
+      "year_treatment": "宜于年前先取化源平其火气，必抑其运火资其岁胜折其金之郁气；岁宜以咸软之调其上，以酸收之安其下；其化上咸寒，中甘寒，下酸温。",
+      "source_quote": "民病咳喘、血溢、血泄、鼽、嚏、目赤、疮疡，寒厥入胃，心痛、腰痛、腹大、嗌干、肿上。其化上咸寒，中甘寒，下酸温。",
+      "code": "fire_excess",
+      "sitian_key": "shaoyin_junhuo_sitian",
+      "zaiquan_key": "yangming_zaojin_zaiquan",
+      "rag_key": "shaoyin_junhuo_sitian",
+      "name": "戊子岁图",
+      "modern_reading": "戊子年火运太过，少阴君火司天，两火相煽；在泉阳明燥金，下承清气。故热病生于上、清病生于下，寒热争于中，咳喘血溢疮疡并见。古人于年前先取化源以平火气，正是气化思想的落地——火偏盛则泻其源，使天地之火不致焚灼。又以咸软调上、酸收安下，使火金各得其所而趋中和。今人遇此火盛之年，清上、收下、护金保津，便是与天地节奏同行。",
+      "entry_id": "shengji_wuzi",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_jichou",
+      "ganzhi": "己丑",
+      "year_chart": "己丑岁图",
+      "suiyun": "土运不及",
+      "sitian": "太阴湿土司天",
+      "zaiquan": "太阳寒水在泉",
+      "rag_keys": {
+        "suiyun": "earth_deficient",
+        "sitian": "taiyin_shitu_sitian",
+        "zaiquan": "taiyang_hanshui_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "厥阴木",
+          "zhuqi": "少角木",
+          "bingji": "血溢筋络拘强关节不利身重筋痿",
+          "zhifa": "调厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "少阴火",
+          "zhuqi": "太徵火",
+          "bingji": "温厉盛行远近咸若",
+          "zhifa": "调少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "太阴土",
+          "zhuqi": "太徵火",
+          "bingji": "身重胕肿胸腹满",
+          "zhifa": "调太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "少阳火",
+          "zhuqi": "少宫土",
+          "bingji": "腠理热血暴溢疟心腹满热胪胀甚则胕肿",
+          "zhifa": "调少阳之客，以咸补之，以甘泻之，以咸软之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "阳明金",
+          "zhuqi": "太商金",
+          "bingji": "民病皮腠",
+          "zhifa": "调阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "太阳水",
+          "zhuqi": "少羽水",
+          "bingji": "关节禁固腰痛，寒湿持于气交而为疾",
+          "zhifa": "调太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        }
+      ],
+      "year_pathogenesis": "阴凝于上寒积于下，寒湿腹满身胀愤胕肿痞逆寒厥拘急；寒湿持于气交而为疾。",
+      "year_treatment": "遇太一天符其气至平，不取化源，惟折其水郁益其岁气赞其阳火令御甚寒；岁宜以苦燥之温之；其化上苦热，中甘和，下甘热。",
+      "source_quote": "其病寒湿腹满、身胀愤、胕肿、痞逆、寒厥拘急。岁宜以苦燥之温之，其化上苦热，中甘和，下甘热。",
+      "code": "earth_deficient",
+      "sitian_key": "taiyin_shitu_sitian",
+      "zaiquan_key": "taiyang_hanshui_zaiquan",
+      "rag_key": "taiyin_shitu_sitian",
+      "name": "己丑岁图",
+      "modern_reading": "己丑年土运不及，却逢太阴湿土司天，湿气得助反盛；在泉太阳寒水，阴凝于上、寒积于下，寒湿腹满身胀胕肿。经文明言'太一天符其气至平'，故不取化源，惟折水郁、益岁气、赞阳火以御寒。为什么这么处理？因为运气学的中和不是机械补泻，是看天地自洽与否——此年湿土虽不及得助成平，寒水在泉仍是隐患。今人于寒湿之年，温阳化湿、苦燥扶中，护住一身阳气便是守住生机的根。",
+      "entry_id": "shengji_jichou",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_gengyin",
+      "ganzhi": "庚寅",
+      "year_chart": "庚寅岁图",
+      "suiyun": "金运太过",
+      "sitian": "少阳相火司天",
+      "zaiquan": "厥阴风木在泉",
+      "rag_keys": {
+        "suiyun": "metal_excess",
+        "sitian": "shaoyang_xianghuo_sitian",
+        "zaiquan": "jueyin_fengmu_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "少阴火",
+          "zhuqi": "少角木",
+          "bingji": "温病乃起，气怫于上血溢目赤咳逆头痛血伤胁满肤腠中疮",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "太阴土",
+          "zhuqi": "太徵火",
+          "bingji": "热郁于上咳逆呕吐疮发于中胸嗌不利头痛身热昏愦脓疮",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "少阳火",
+          "zhuqi": "太徵火",
+          "bingji": "热中聋瞑血溢脓疮咳呕鼽衄渴嚏欠喉痹目赤善暴死",
+          "zhifa": "调少阳之客，以咸补之，以甘泻之，以咸软之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "阳明金",
+          "zhuqi": "少宫土",
+          "bingji": "满身重",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "太阳水",
+          "zhuqi": "太商金",
+          "bingji": "民避寒邪",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "厥阴木",
+          "zhuqi": "少羽水",
+          "bingji": "关闭不禁心痛，阳气不藏而咳",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        }
+      ],
+      "year_pathogenesis": "民病寒中外发疮疡内为泄满，寒热疟泄聋瞑呕吐上怫肿色变；岁金太过燥气流行肝木受邪，民病两胁下少腹痛目赤痛疮疡耳无所闻甚则喘咳逆气。",
+      "year_treatment": "当于年前先取化源以平火气，次抑其运金赞所不胜无使木郁；岁宜咸宜辛宜酸渗之泄之渍之发之；其化上咸寒，中辛温，下辛凉。",
+      "source_quote": "民病寒中，外发疮疡，内为泄满……岁金太过，燥气流行，肝木受邪，民病两胁下少腹痛。其化上咸寒，中辛温，下辛凉。",
+      "code": "metal_excess",
+      "sitian_key": "shaoyang_xianghuo_sitian",
+      "zaiquan_key": "jueyin_fengmu_zaiquan",
+      "rag_key": "shaoyang_xianghuo_sitian",
+      "name": "庚寅岁图",
+      "modern_reading": "庚寅年金运太过，少阳相火司天、厥阴风木在泉。燥金偏盛则肝木受邪，两胁少腹痛、目赤疮疡、喘咳逆气；又火金相争于上，民病寒热疮疡泄满。古人先取化源平火，次抑运金、赞所不胜，使金不郁木——这正合天人合一之理：天地燥气盛则人木受困，泻金即所以护木。今人遇燥气流行之年，清润肺金、柔养肝木，使金木各安其位，气机自和。",
+      "entry_id": "shengji_gengyin",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_xinmao",
+      "ganzhi": "辛卯",
+      "year_chart": "辛卯岁图",
+      "suiyun": "水运不及",
+      "sitian": "阳明燥金司天",
+      "zaiquan": "少阴君火在泉",
+      "rag_keys": {
+        "suiyun": "water_deficient",
+        "sitian": "yangming_zaojin_sitian",
+        "zaiquan": "shaoyin_junhuo_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "太阴土",
+          "zhuqi": "少角木",
+          "bingji": "中热胀面目浮肿善眠鼽衄嚏欠呕小便黄赤甚则淋",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "少阳火",
+          "zhuqi": "太徵火",
+          "bingji": "厉大至民善暴死",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸软之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "阳明金",
+          "zhuqi": "太徵火",
+          "bingji": "民病寒热",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "太阳水",
+          "zhuqi": "少宫土",
+          "bingji": "暴仆振栗谵妄少气嗌干引饮及心痛痈肿疮疡疟寒骨痿血便",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "厥阴木",
+          "zhuqi": "太商金",
+          "bingji": "民气和",
+          "zhifa": "调厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "少阴火",
+          "zhuqi": "少羽水",
+          "bingji": "其病温",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        }
+      ],
+      "year_pathogenesis": "民病咳嗌塞寒热发暴振栗癃闭；岁水不及湿乃盛行，民病腹满身重濡泄寒疡流水腰股痛发股膝不便烦冤足痿清厥脚下痛甚则胕肿。",
+      "year_treatment": "宜资其化源以助金气安其运水无使受邪折其火气之郁；岁宜以咸以苦以辛汗之清之散之；其化上苦小温，中苦和，下咸寒。",
+      "source_quote": "民病咳嗌塞，寒热发暴，振栗癃闭……岁水不及，湿乃盛行，长气反用，其化乃速，暑雨数至，民病腹满身重濡泄。",
+      "code": "water_deficient",
+      "sitian_key": "yangming_zaojin_sitian",
+      "zaiquan_key": "shaoyin_junhuo_zaiquan",
+      "rag_key": "yangming_zaojin_sitian",
+      "name": "辛卯岁图",
+      "modern_reading": "辛卯年水运不及，阳明燥金司天、少阴君火在泉。金生水而火克金，本应水弱，然燥金司天反助母气，故治宜资化源助金、安运水、折火郁。民病咳嗌塞又见腹满身重濡泄足痿，是燥与湿并见、水火交争之象。为什么古人要分汗之清之散之？因为此年气化错综，上燥下湿、水火各偏，须分途调之方归中和。今人于此复杂之年，养阴润燥兼健脾利湿，分清上下，便是顺势养正之道。",
+      "entry_id": "shengji_xinmao",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_renchen",
+      "ganzhi": "壬辰",
+      "year_chart": "壬辰岁图",
+      "suiyun": "木运太过",
+      "sitian": "太阳寒水司天",
+      "zaiquan": "太阴湿土在泉",
+      "rag_keys": {
+        "suiyun": "wood_excess",
+        "sitian": "taiyang_hanshui_sitian",
+        "zaiquan": "taiyin_shitu_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "少阳火",
+          "zhuqi": "太角木",
+          "bingji": "温病乃作身热头痛呕吐肌腠疮疡",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸软之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "阳明金",
+          "zhuqi": "少徵火",
+          "bingji": "气郁中满寒乃始",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "太阳水",
+          "zhuqi": "少徵火",
+          "bingji": "寒反热中痈疽注下心热瞀闷不治者死",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "厥阴木",
+          "zhuqi": "太宫土",
+          "bingji": "大热少气肌肉萎足痿注下赤白",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "少阴火",
+          "zhuqi": "少商金",
+          "bingji": "民乃舒",
+          "zhifa": "调少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "太阴土",
+          "zhuqi": "太羽水",
+          "bingji": "阴凝太虚埃昏郊野民乃惨凄寒风以至反者孕乃死",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        }
+      ],
+      "year_pathogenesis": "寒湿之气持于气交，民病寒湿发肌肉萎足痿不收濡泻血溢；岁木太过风气流行脾土受邪，民病飧泄食减体重烦冤肠鸣腹支满。",
+      "year_treatment": "当资化源以助天气之水，必折郁土抑其运木扶其不胜；运与寒湿异宜以燥湿化；其化上苦温，中酸和，下甘温。",
+      "source_quote": "民病寒湿，发肌肉萎，足痿不收，濡泻血溢……岁木太过，风气流行，脾土受邪，民病飧泄、食减、体重、烦冤、肠鸣、腹支满。",
+      "code": "wood_excess",
+      "sitian_key": "taiyang_hanshui_sitian",
+      "zaiquan_key": "taiyin_shitu_zaiquan",
+      "rag_key": "taiyang_hanshui_sitian",
+      "name": "壬辰岁图",
+      "modern_reading": "壬辰年木运太过，太阳寒水司天、太阴湿土在泉。寒湿持于气交则痿弱濡泻，木盛克土则飧泄食减、肠鸣腹满——一为天气之寒湿，一为运木之乘土，两条病机并行。古人资化源助水以制木、折郁土抑运木，正体现气化思想的层次：天地之偏与运气之偏叠加，须分而治之。今人遇此木强土弱、寒湿交困之年，疏木扶土、温化寒湿，使中州得运，则天地人事皆归于中和。",
+      "entry_id": "shengji_renchen",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_guisi",
+      "ganzhi": "癸巳",
+      "year_chart": "癸巳岁图",
+      "suiyun": "火运不及",
+      "sitian": "厥阴风木司天",
+      "zaiquan": "少阳相火在泉",
+      "rag_keys": {
+        "suiyun": "fire_deficient",
+        "sitian": "jueyin_fengmu_sitian",
+        "zaiquan": "shaoyang_xianghuo_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "阳明金",
+          "zhuqi": "太角木",
+          "bingji": "民病寒于右之下，其邪乃微",
+          "zhifa": "调阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "太阳水",
+          "zhuqi": "少徵火",
+          "bingji": "民病热于中",
+          "zhifa": "调太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "厥阴木",
+          "zhuqi": "少徵火",
+          "bingji": "民病泣出耳鸣掉眩",
+          "zhifa": "调厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "少阴火",
+          "zhuqi": "太宫土",
+          "bingji": "黄瘅而为胕肿",
+          "zhifa": "调少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "太阴土",
+          "zhuqi": "少商金",
+          "bingji": "燥湿更胜沉阴乃布寒气及体风雨乃行",
+          "zhifa": "调太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "少阳火",
+          "zhuqi": "太羽水",
+          "bingji": "其病温厉",
+          "zhifa": "调少阳之客，以咸补之，以甘泻之，以咸软之"
+        }
+      ],
+      "year_pathogenesis": "热病行于下，风病行于上，风燥胜复形于中；中行令者其病徐而持。",
+      "year_treatment": "不资化源，惟赞运火无使邪胜；岁宜以辛调上以咸调下，畏火之气无妄犯之；其化上辛凉，中咸和，下咸寒。",
+      "source_quote": "热病行于下，风病行于上，风燥胜复形于中。岁宜以辛调上，以咸调下，畏火之气，无妄犯之，其化上辛凉，中咸和，下咸寒。",
+      "code": "fire_deficient",
+      "sitian_key": "jueyin_fengmu_sitian",
+      "zaiquan_key": "shaoyang_xianghuo_zaiquan",
+      "rag_key": "jueyin_fengmu_sitian",
+      "name": "癸巳岁图",
+      "modern_reading": "癸巳年火运不及，厥阴风木司天、少阳相火在泉。木能生火，司天助之；在泉同气相求，故火虽不及而得助近平。热病行于下、风病行于上、风燥胜复形于中，且'其病徐而持'。古人不取化源，惟赞运火无使邪胜，又嘱畏火无妄犯——此中和之妙用：火弱得助则自平，过泻反伤其生。今人于风火之年，辛凉调上、咸寒调下，顺势护津息风，便是不与天地之气争锋。",
+      "entry_id": "shengji_guisi",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_jiawu",
+      "ganzhi": "甲午",
+      "year_chart": "甲午岁图",
+      "suiyun": "土运太过",
+      "sitian": "少阴君火司天",
+      "zaiquan": "阳明燥金在泉",
+      "rag_keys": {
+        "suiyun": "earth_excess",
+        "sitian": "shaoyin_junhuo_sitian",
+        "zaiquan": "yangming_zaojin_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "太阳水",
+          "zhuqi": "太角木",
+          "bingji": "民反周密，关节禁固腰痛，炎暑将起，中外疮疡",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "厥阴木",
+          "zhuqi": "少徵火",
+          "bingji": "其病淋目瞑目赤，气郁于上而热",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "少阴火",
+          "zhuqi": "少徵火",
+          "bingji": "民病气厥心痛，寒热更作，咳喘目赤",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "太阴土",
+          "zhuqi": "太宫土",
+          "bingji": "民病寒热、嗌干、黄瘅、鼽、衄、饮发",
+          "zhifa": "调太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "少阳火",
+          "zhuqi": "少商金",
+          "bingji": "民乃康，其病温",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "阳明金",
+          "zhuqi": "太羽水",
+          "bingji": "余火内格，肿于上，咳喘甚则血溢，寒气数举，则雾翳，病生皮腠，内舍于胁，下连少腹而作寒中",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        }
+      ],
+      "year_pathogenesis": "寒热持于气交而为病始，热病生于上，清病生于下，寒热相犯而争于中，民病咳喘、血溢、血泄、鼽、嚏、目赤、疡，寒厥入胃，心痛、腰痛、腹大、嗌干、肿上",
+      "year_treatment": "岁宜以咸软之而调其上，甚则以苦发之，以酸收之，而安其下，甚则以苦泄之；其化上咸寒，中苦热，下酸热",
+      "source_quote": "民病咳喘、血溢、血泄、鼽、嚏、目赤、疡，寒厥入胃，心痛、腰痛、腹大、嗌干、肿上……岁宜以咸软之，而调其上，甚则以苦发之，以酸收之，而安其下，甚则以苦泄之",
+      "code": "earth_excess",
+      "sitian_key": "shaoyin_junhuo_sitian",
+      "zaiquan_key": "yangming_zaojin_zaiquan",
+      "rag_key": "shaoyin_junhuo_sitian",
+      "name": "甲午岁图",
+      "modern_reading": "甲午土运太过，少阴君火司天、阳明燥金在泉，上是火、下是燥、中是湿土壅盛，故古文说寒热争于中、咳喘血溢目赤并见。天人合一来看，岁土太过则湿气偏胜，又逢君火加临、燥金承之，一岁之中上热下清中湿交争，气化失于中和乃病。今人遇此格局，当顾护中焦、勿使湿热内蕴，调摄先于攻邪，平气即是养生。",
+      "entry_id": "shengji_jiawu",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_yiwei",
+      "ganzhi": "乙未",
+      "year_chart": "乙未岁图",
+      "suiyun": "金不及",
+      "sitian": "太阴湿土司天",
+      "zaiquan": "太阳寒水在泉",
+      "rag_keys": {
+        "suiyun": "metal_deficient",
+        "sitian": "taiyin_shitu_sitian",
+        "zaiquan": "taiyang_hanshui_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "厥阴木",
+          "zhuqi": "太角木",
+          "bingji": "风湿相搏，雨乃后，民病血溢筋络拘强，关节不利，身重筋痿",
+          "zhifa": "调厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "少阴火",
+          "zhuqi": "太徵火",
+          "bingji": "其病温厉盛行，远近咸若，湿蒸相搏，雨乃时降",
+          "zhifa": "调少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "太阴土",
+          "zhuqi": "太徵火",
+          "bingji": "感于寒湿，民病身重肿胸腹满",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "少阳火",
+          "zhuqi": "太宫土",
+          "bingji": "民病腠理热，血暴溢，疟心腹满热胪胀，甚则肿",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "阳明金",
+          "zhuqi": "少商金",
+          "bingji": "寒气及体，君子周密，民病皮腠",
+          "zhifa": "调阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "太阳水",
+          "zhuqi": "太羽水",
+          "bingji": "感于寒则病患关节禁固腰痛，寒湿持于气交而为疾也",
+          "zhifa": "调太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        }
+      ],
+      "year_pathogenesis": "阴凝于上，寒积于下，民病寒湿、腹满、身愤、肿、痞逆、寒厥拘急",
+      "year_treatment": "岁宜以苦燥之温之，甚者发之泄之，必赞其阳火，令御甚寒；其化上苦热，中酸和，下甘热",
+      "source_quote": "其病寒湿、腹满、身愤、肿、痞逆、寒厥拘急……岁宜以苦燥之温之，甚者发之泄之，不发不泄，则湿气外溢，肉溃皮拆而水血交流",
+      "code": "metal_deficient",
+      "sitian_key": "taiyin_shitu_sitian",
+      "zaiquan_key": "taiyang_hanshui_zaiquan",
+      "rag_key": "taiyin_shitu_sitian",
+      "name": "乙未岁图",
+      "modern_reading": "乙未金不及，太阴湿土司天、太阳寒水在泉，湿与寒叠于上下，阴凝寒积，民病腹满身肿、寒厥拘急。金虚则火气来乘、土气反侮，气化偏于寒湿凝滞，中和之道在扶阳以御其寒。今人体质若偏寒湿，遇此年易见关节拘急、脘腹胀满，宜温运脾阳、避居阴湿，知天时而不为寒湿所困，便是中和。",
+      "entry_id": "shengji_yiwei",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_bingshen",
+      "ganzhi": "丙申",
+      "year_chart": "丙申岁图",
+      "suiyun": "水运太过",
+      "sitian": "少阳相火司天",
+      "zaiquan": "厥阴风木在泉",
+      "rag_keys": {
+        "suiyun": "water_excess",
+        "sitian": "shaoyang_xianghuo_sitian",
+        "zaiquan": "jueyin_fengmu_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "少阴火",
+          "zhuqi": "太角木",
+          "bingji": "温病乃起，其病气怫于上，血溢目赤，咳逆头痛，血伤胁满，肤腠中疮",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "太阴土",
+          "zhuqi": "少徵火",
+          "bingji": "民乃康，其病热郁于上，咳逆呕吐，疮发于中，胸嗌不利，头痛身热，昏愦脓疮",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "少阳火",
+          "zhuqi": "少徵火",
+          "bingji": "民病热中、聋、瞑、血溢、脓疮、咳、呕、鼽、衄、渴、嚏、欠、喉痹目赤，善暴死",
+          "zhifa": "调少阳之客，以咸补之，以甘泻之，以咸之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "阳明金",
+          "zhuqi": "太宫土",
+          "bingji": "民气和平，其病满身重",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "太阳水",
+          "zhuqi": "少商金",
+          "bingji": "阳乃去，寒乃来，雨乃降，气门乃闭，刚木早雕，民避寒邪",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "厥阴木",
+          "zhuqi": "太羽水",
+          "bingji": "其病关闭，不禁心痛，阳气不藏而咳",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        }
+      ],
+      "year_pathogenesis": "民病寒热疟泄聋瞑呕吐，上怫肿色变；岁水太过，寒气流行，邪害心火，民病身热烦心躁悸，阴厥上下中寒，谵妄心痛",
+      "year_treatment": "岁宜咸宜辛宜酸渗之泄之渍之发之，观气寒温以调其过；其化上咸寒，中咸温，下辛温",
+      "source_quote": "民病寒热疟泄聋瞑呕吐，上怫肿色变……岁宜咸宜辛宜酸渗之泄之渍之发之，观气寒温以调其过",
+      "code": "water_excess",
+      "sitian_key": "shaoyang_xianghuo_sitian",
+      "zaiquan_key": "jueyin_fengmu_zaiquan",
+      "rag_key": "shaoyang_xianghuo_sitian",
+      "name": "丙申岁图",
+      "modern_reading": "丙申水运太过，少阳相火司天、厥阴风木在泉，上是相火、下是风木、中是寒水偏胜，寒热疟泄、身热烦心躁悸并见。岁水太过则寒气流行邪害心火，气化上寒火相搏、下风木扰动，中和被破。今人遇此，当知寒水凌心之象非单纯外感，调和水火、敛浮越之阳为先，气平则神安，是天人相合之道。",
+      "entry_id": "shengji_bingshen",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_dingyou",
+      "ganzhi": "丁酉",
+      "year_chart": "丁酉岁图",
+      "suiyun": "木不及",
+      "sitian": "阳明燥金司天",
+      "zaiquan": "少阴君火在泉",
+      "rag_keys": {
+        "suiyun": "wood_deficient",
+        "sitian": "yangming_zaojin_sitian",
+        "zaiquan": "shaoyin_junhuo_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "太阴土",
+          "zhuqi": "少角木",
+          "bingji": "民病中热胀，面目浮肿，善眠、鼽、衄、嚏、欠、呕，小便黄赤，甚则淋",
+          "zhifa": "调太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "少阳火",
+          "zhuqi": "太徵火",
+          "bingji": "厉大至，民善暴死",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "阳明金",
+          "zhuqi": "太徵火",
+          "bingji": "民病寒热",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "太阳水",
+          "zhuqi": "少宫土",
+          "bingji": "民病暴仆振栗，谵妄少气，嗌干引饮，及为心痛痈肿疮疡疟寒之疾，骨痿血便",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "厥阴木",
+          "zhuqi": "太商金",
+          "bingji": "春令反行，草乃生荣，民气和",
+          "zhifa": "调厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "少阴火",
+          "zhuqi": "少羽水",
+          "bingji": "候反温，蛰虫反见，流水不冰，民乃康平，其病温",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        }
+      ],
+      "year_pathogenesis": "清热之气，持于气交，民病咳嗌塞，寒热发暴，振栗癃；岁木不及，民病肩背瞀重、鼽、嚏，血便注下",
+      "year_treatment": "岁宜以咸以苦以辛汗之清之散之，运与热同，宜多天化；其化上苦小温，中辛和，下咸寒",
+      "source_quote": "民病咳嗌塞，寒热发暴，振栗癃……岁宜以咸以苦以辛汗之清之散之",
+      "code": "wood_deficient",
+      "sitian_key": "yangming_zaojin_sitian",
+      "zaiquan_key": "shaoyin_junhuo_zaiquan",
+      "rag_key": "yangming_zaojin_sitian",
+      "name": "丁酉岁图",
+      "modern_reading": "丁酉木不及，阳明燥金司天、少阴君火在泉，燥金加临则木愈受制，民病咳嗌塞、寒热发暴振栗、肩背瞀重鼽嚏血注。木虚逢燥金肃杀，气化失于生发，君火在泉又引内热，外寒内热相争。今人此年多见呼吸道敏感、过敏鼻鼽，当养木以应秋燥、和中以安君火，生发之气不可伐，便是守中和。",
+      "entry_id": "shengji_dingyou",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_wuxu",
+      "ganzhi": "戊戌",
+      "year_chart": "戊戌岁图",
+      "suiyun": "火运太过",
+      "sitian": "太阳寒水司天",
+      "zaiquan": "太阴湿土在泉",
+      "rag_keys": {
+        "suiyun": "fire_excess",
+        "sitian": "taiyang_hanshui_sitian",
+        "zaiquan": "taiyin_shitu_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "少阳火",
+          "zhuqi": "少角木",
+          "bingji": "民乃厉，温病乃作，身热头痛呕吐，肌腠疮疡",
+          "zhifa": "调少阳之客，以咸补之，以甘泻之，以咸之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "阳明金",
+          "zhuqi": "太徵火",
+          "bingji": "民病气郁中满，寒乃始",
+          "zhifa": "调阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "太阳水",
+          "zhuqi": "太徵火",
+          "bingji": "民病寒反热中，痈疽注下，心热瞀闷，不治者死",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "厥阴木",
+          "zhuqi": "少宫土",
+          "bingji": "民病大热少气，肌肉萎足痿，注下赤白",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "少阴火",
+          "zhuqi": "太商金",
+          "bingji": "阳复化，草乃长乃化乃成，民乃舒",
+          "zhifa": "调少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "太阴土",
+          "zhuqi": "少羽水",
+          "bingji": "阴凝太虚，埃昏郊野，民乃惨凄，寒风以至，反者孕乃死",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        }
+      ],
+      "year_pathogenesis": "寒湿之气，持于气交，民病寒湿，发肌肉萎，足痿不收，濡泻血溢",
+      "year_treatment": "岁宜苦以燥之温之，适气同异多少制之；其化上苦温，中甘和，下甘温",
+      "source_quote": "民病寒湿，发肌肉萎，足痿不收，濡泻血溢……岁宜苦以燥之温之，适气同异多少制之",
+      "code": "fire_excess",
+      "sitian_key": "taiyang_hanshui_sitian",
+      "zaiquan_key": "taiyin_shitu_zaiquan",
+      "rag_key": "taiyang_hanshui_sitian",
+      "name": "戊戌岁图",
+      "modern_reading": "戊戌火运太过，太阳寒水司天、太阴湿土在泉，上寒下湿中火亢，寒湿持于气交，肌肉萎、足痿不收、濡泻血溢。火运太过本易炎上，却被司天寒水折之、在泉湿土滞之，气化壅遏难伸。今人遇此，当知火郁于内、寒湿于外，调摄宜宣通气机、勿过寒凉伤中，气机一畅则火自归位，是天人合一之妙。",
+      "entry_id": "shengji_wuxu",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_jihai",
+      "ganzhi": "己亥",
+      "year_chart": "己亥岁图",
+      "suiyun": "土不及",
+      "sitian": "厥阴风木司天",
+      "zaiquan": "少阳相火在泉",
+      "rag_keys": {
+        "suiyun": "earth_deficient",
+        "sitian": "jueyin_fengmu_sitian",
+        "zaiquan": "shaoyang_xianghuo_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "阳明金",
+          "zhuqi": "少角木",
+          "bingji": "民病寒于右之下",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "太阳水",
+          "zhuqi": "太徵火",
+          "bingji": "民病热于中",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "厥阴木",
+          "zhuqi": "太徵火",
+          "bingji": "民病泣出耳鸣掉眩",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "少阴火",
+          "zhuqi": "少宫土",
+          "bingji": "民病黄瘅而为肿",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "太阴土",
+          "zhuqi": "太商金",
+          "bingji": "燥湿更胜，沉阴乃布，寒气及体，风雨乃行",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "少阳火",
+          "zhuqi": "少羽水",
+          "bingji": "畏火司令，阳乃大化，蛰虫出见，流水不冰，地气大发，草乃生，人乃舒，其病温厉",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸软之"
+        }
+      ],
+      "year_pathogenesis": "热病行于下，风病行于上，风燥胜复形于中；民病胃脘当心而痛，上支两胁，鬲咽不通，饮食不下",
+      "year_treatment": "岁宜以辛调上，以咸调下，畏火之气无妄犯之；其化上辛凉，中甘和，下咸寒",
+      "source_quote": "热病行于下，风病行于上，风燥胜复形于中……岁宜以辛调上，以咸调下，畏火之气，无妄犯之",
+      "code": "earth_deficient",
+      "sitian_key": "jueyin_fengmu_sitian",
+      "zaiquan_key": "shaoyang_xianghuo_zaiquan",
+      "rag_key": "jueyin_fengmu_sitian",
+      "name": "己亥岁图",
+      "modern_reading": "己亥土不及，厥阴风木司天、少阳相火在泉，风火相煽乘于中焦，民病胃脘当心而痛、上支两胁、鬲咽不通饮食不下。土虚则木乘火侮，气化上风下火中土受困，中和在于培土以御木火。今人此年多见肝胃不和、吞咽胸胁作痛，宜缓中培土、慎勿妄犯相火，养中央以安四方，正是天人合德。",
+      "entry_id": "shengji_jihai",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_gengzi",
+      "ganzhi": "庚子",
+      "year_chart": "庚子岁图",
+      "suiyun": "金运太过",
+      "sitian": "少阴君火司天",
+      "zaiquan": "阳明燥金在泉",
+      "rag_keys": {
+        "suiyun": "metal_excess",
+        "sitian": "shaoyin_junhuo_sitian",
+        "zaiquan": "yangming_zaojin_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "太阳水",
+          "zhuqi": "少角木",
+          "bingji": "民反周密，关节禁固，腰痛，炎暑将起，中外疮疡",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "厥阴木",
+          "zhuqi": "太徵火",
+          "bingji": "其病淋目瞑目赤，气郁于上而热",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "少阴火",
+          "zhuqi": "太徵火",
+          "bingji": "民病气厥心痛，寒热更作，咳喘目赤",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "太阴土",
+          "zhuqi": "少宫土",
+          "bingji": "民病寒热嗌干、黄瘅、鼽、衄饮发",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "少阳火",
+          "zhuqi": "太商金",
+          "bingji": "民乃康，其病温",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "阳明金",
+          "zhuqi": "少羽水",
+          "bingji": "燥令行，余火内格，民病肿于上咳喘，甚则血溢，寒气数举，病生皮腠，内舍于胁，下连少腹而作寒中",
+          "zhifa": "调阳明之客，以酸补之，以辛泻之，以苦泄之"
+        }
+      ],
+      "year_pathogenesis": "水火寒热，持于气交而为病始，热病生于上，清病生于下，寒热相犯而争于中，民病咳喘、血溢、血泄、鼽、嚏、目赤、疡，寒厥入胃，心痛、腰痛、腹大、嗌干、肿上",
+      "year_treatment": "是岁平金无胜复，不取化源，惟资岁胜，折其郁气；岁宜以咸寒调其上，以酸温安其下，以辛温调其中",
+      "source_quote": "民病咳喘、血溢、血泄、鼽、嚏、目赤、疡，寒厥入胃，心痛、腰痛、腹大、嗌干、肿上……岁宜以咸寒调其上，以酸温安其下，以辛温调其中",
+      "code": "metal_excess",
+      "sitian_key": "shaoyin_junhuo_sitian",
+      "zaiquan_key": "yangming_zaojin_zaiquan",
+      "rag_key": "shaoyin_junhuo_sitian",
+      "name": "庚子岁图",
+      "modern_reading": "庚子金运太过，少阴君火司天、阳明燥金在泉，乃平金之年无胜复，惟热病生于上、清病生于下、寒热争于中，咳喘血溢目赤疡并见。金运虽过而君火燥金相济，气化未至淫郁，重在折其郁气、安其上下。今人此年调摄宜清上温下、和中以平争，不取化源而资岁胜，顺天时以平为期，便是中和之法。",
+      "entry_id": "shengji_gengzi",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_xinchou",
+      "ganzhi": "辛丑",
+      "year_chart": "辛丑岁图",
+      "suiyun": "水不及",
+      "sitian": "太阴湿土司天",
+      "zaiquan": "太阳寒水在泉",
+      "rag_keys": {
+        "suiyun": "water_deficient",
+        "sitian": "taiyin_shitu_sitian",
+        "zaiquan": "taiyang_hanshui_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "厥阴木",
+          "zhuqi": "少角木",
+          "bingji": "风湿相搏，雨乃后，民病血溢筋络拘强，关节不利，身重筋痿",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "少阴火",
+          "zhuqi": "太徵火",
+          "bingji": "其病温厉盛行，远近咸若，湿蒸相搏，雨乃时降",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "太阴土",
+          "zhuqi": "太徵火",
+          "bingji": "感于寒湿，民病身重肿胸腹满",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "少阳火",
+          "zhuqi": "少宫土",
+          "bingji": "民病腠理热，血暴溢，疟心腹满热胪胀，甚则肿",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸软之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "阳明金",
+          "zhuqi": "太商金",
+          "bingji": "寒气及体，君子周密，民病皮腠",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "太阳水",
+          "zhuqi": "少羽水",
+          "bingji": "感于寒，则病人关节禁固，腰痛，寒湿持于气交而为疾也",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        }
+      ],
+      "year_pathogenesis": "阴凝于上，寒积于下，民病寒湿腹满、身、肿、痞逆、寒厥、拘急",
+      "year_treatment": "岁宜以苦热调上，以苦热调下，以苦和调中，燥之温之；是岁行平气之化，无淫气胜复",
+      "source_quote": "民病寒湿腹满、身、肿、痞逆、寒厥、拘急……岁宜以苦热调上，以苦热调下，以苦和调中，燥之温之",
+      "code": "water_deficient",
+      "sitian_key": "taiyin_shitu_sitian",
+      "zaiquan_key": "taiyang_hanshui_zaiquan",
+      "rag_key": "taiyin_shitu_sitian",
+      "name": "辛丑岁图",
+      "modern_reading": "辛丑水不及，太阴湿土司天、太阳寒水在泉，行平气之化无淫气胜复，唯阴凝于上、寒积于下，民病寒湿腹满身肿痞逆拘急。水虚本易涸，然此年得司天在泉相济，气化归于平和而寒湿犹存。今人遇此格局，调摄在温运中焦、宣通寒湿，虽无大淫亦须顺养，平气之年更见天人相安之道。",
+      "entry_id": "shengji_xinchou",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_renyin",
+      "ganzhi": "壬寅",
+      "year_chart": "壬寅岁图",
+      "suiyun": "木运太过",
+      "sitian": "少阳相火司天",
+      "zaiquan": "厥阴风木在泉",
+      "rag_keys": {
+        "suiyun": "wood_excess",
+        "sitian": "shaoyang_xianghuo_sitian",
+        "zaiquan": "jueyin_fengmu_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "少阴火",
+          "zhuqi": "太角木",
+          "bingji": "温病乃起，其病气怫于上，血溢目赤，咳逆头痛，血伤胁满，肤腠中疮",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "太阴土",
+          "zhuqi": "少徵火",
+          "bingji": "其病热郁于上，咳逆呕吐，疮发于中，胸嗌不利，头痛身热，昏愦脓疮",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "少阳火",
+          "zhuqi": "少徵火",
+          "bingji": "民病热中、聋、瞑、血溢、脓疮、咳、呕、鼽、衄、渴、嚏、欠、喉痹、目赤，善暴死",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "阳明金",
+          "zhuqi": "太宫土",
+          "bingji": "民气和平，其病满身重",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "太阳水",
+          "zhuqi": "少商金",
+          "bingji": "阳乃去，寒乃来，雨乃降，气门乃闭，刚木早雕，民避寒邪",
+          "zhifa": "治太阳之客，以辛补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "厥阴木",
+          "zhuqi": "太羽水",
+          "bingji": "其病关闭，不禁心痛，阳气不藏而咳",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        }
+      ],
+      "year_pathogenesis": "民病寒中，外发疮疡，内为泄满；往复之作，民病寒热、疟、泄、聋、瞑、呕吐，上怫肿色变",
+      "year_treatment": "是岁运化既平，不取化源，惟赞所不胜；岁宜以咸寒调上，以辛凉调下，以酸和调中，渗之泄之渍之发之",
+      "source_quote": "民病寒中，外发疮疡，内为泄满……民病寒热、疟、泄、聋、瞑、呕吐，上怫肿色变……岁宜以咸寒调上，以辛凉调下，以酸和调中",
+      "code": "wood_excess",
+      "sitian_key": "shaoyang_xianghuo_sitian",
+      "zaiquan_key": "jueyin_fengmu_zaiquan",
+      "rag_key": "shaoyang_xianghuo_sitian",
+      "name": "壬寅岁图",
+      "modern_reading": "壬寅木运太过，少阳相火司天、厥阴风木在泉，运与在泉同气，风火相煽，民病寒中、外发疮疡、内为泄满，复作则寒热疟泄聋瞑呕吐。木太过则生发过亢，风火上扰下迫，气化失于敛降，中和在泻火敛木、赞所不胜。今人此年易见肝火外发疮疡、脾胃受乘泄满，宜清上敛下、和中渗泄，风火平则身自安。",
+      "entry_id": "shengji_renyin",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_guimao",
+      "ganzhi": "癸卯",
+      "year_chart": "癸卯岁图",
+      "suiyun": "火不及",
+      "sitian": "阳明燥金司天",
+      "zaiquan": "少阴君火在泉",
+      "rag_keys": {
+        "suiyun": "fire_deficient",
+        "sitian": "yangming_zaojin_sitian",
+        "zaiquan": "shaoyin_junhuo_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "太阴土",
+          "zhuqi": "太角木",
+          "bingji": "其病中热胀，面目浮肿，善眠、鼽、衄、嚏、欠、呕，小便黄赤甚则淋",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "少阳火",
+          "zhuqi": "少徵火",
+          "bingji": "厉大至，民善暴死；是岁火气适平，厉无暴死",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸沃之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "阳明金",
+          "zhuqi": "少徵火",
+          "bingji": "民病寒热",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "太阳水",
+          "zhuqi": "太宫土",
+          "bingji": "病暴仆振栗，谵妄少气，嗌干引饮，及为心痛痈肿疮疡疟寒之疾，骨痿血便",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "厥阴木",
+          "zhuqi": "少商金",
+          "bingji": "春令反行，草乃生荣，民气和",
+          "zhifa": "调厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "少阴火",
+          "zhuqi": "太羽水",
+          "bingji": "候反温，蛰虫来见，流水不冰，民乃康平，其病温",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        }
+      ],
+      "year_pathogenesis": "清热之气，持于气交，民病咳溢塞，寒热发暴，振栗癃",
+      "year_treatment": "岁火适平，不资化源，唯安运气；岁宜以苦小温调上，以咸寒调下，以咸温调中",
+      "source_quote": "民病咳溢塞，寒热发暴，振栗癃……岁宜以苦小温调上，以咸寒调下，以咸温调中",
+      "code": "fire_deficient",
+      "sitian_key": "yangming_zaojin_sitian",
+      "zaiquan_key": "shaoyin_junhuo_zaiquan",
+      "rag_key": "yangming_zaojin_sitian",
+      "name": "癸卯岁图",
+      "modern_reading": "癸卯火不及，阳明燥金司天、少阴君火在泉，岁火适平不资化源，唯清热之气持于气交，民病咳溢塞、寒热发暴振栗癃。火不及则金无所畏而肃杀加临，气化外清内火相争，气机不利则寒热卒发。今人此年多见肺金咳嗽、小便癃闭，当温润以佐金、清下以和君火，气交得通则病自减，是守中和之意。",
+      "entry_id": "shengji_guimao",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_jiachen",
+      "ganzhi": "甲辰",
+      "year_chart": "甲辰岁图",
+      "suiyun": "土运太过",
+      "sitian": "太阳寒水司天",
+      "zaiquan": "太阴湿土在泉",
+      "rag_keys": {
+        "suiyun": "earth_excess",
+        "sitian": "taiyang_hanshui_sitian",
+        "zaiquan": "taiyin_shitu_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "少阳火",
+          "zhuqi": "太角木",
+          "bingji": "气乃大温，草乃早荣，民乃厉，温病乃作，身热头痛呕吐，肌腠疮疡",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸耎之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "阳明金",
+          "zhuqi": "少徵火",
+          "bingji": "大凉反至，民乃惨，草乃遇寒，火气遂抑，民病气郁中满，寒乃始",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "太阳水",
+          "zhuqi": "少徵火",
+          "bingji": "天政布，寒气行，雨乃降，民病寒反热中，痈疽注下，心热瞀闷，不治者死",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "厥阴木",
+          "zhuqi": "太宫土",
+          "bingji": "风湿交争，风化为雨，民病大热少气，肌肉萎足痿，注下赤白",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "少阴火",
+          "zhuqi": "少商金",
+          "bingji": "阳复化，草乃长乃化乃成，民乃舒",
+          "zhifa": "调少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "太阴土",
+          "zhuqi": "太羽水",
+          "bingji": "阴凝太虚，埃昏郊野，民乃惨凄，寒风以至，反者孕乃死",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        }
+      ],
+      "year_pathogenesis": "寒湿之气持于气交，民病寒湿发肌肉萎，足痿不收，濡泻血溢",
+      "year_treatment": "宜先资化源以助于水，抑其运气，扶其不胜；以苦热调上，以苦温调下，运同寒湿，化宜燥热",
+      "source_quote": "民病寒湿发肌肉萎，足痿不收，濡泻血溢……以苦热调上，以苦温调下，运同寒湿，化宜燥热，治之常也。",
+      "code": "earth_excess",
+      "sitian_key": "taiyang_hanshui_sitian",
+      "zaiquan_key": "taiyin_shitu_zaiquan",
+      "rag_key": "taiyang_hanshui_sitian",
+      "name": "甲辰岁图",
+      "modern_reading": "甲辰土运太过，寒水司天、湿土在泉，寒湿缠绵于气交。古人见肌肉萎、足痿、濡泻，知是寒湿困脾、阳气凝滞——天人合一处：天地气化窒塞，人身气机随之不行。治以苦热调上、苦温调下，燥热破凝，归于中和。今人遇湿冷之年倦怠泄泻，当思阳气是否被寒湿所遏。寒湿困顿，气化一行，诸症自消。",
+      "entry_id": "shengji_jiachen",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_yisi",
+      "ganzhi": "乙巳",
+      "year_chart": "乙巳岁图",
+      "suiyun": "金运不及",
+      "sitian": "厥阴风木司天",
+      "zaiquan": "少阳相火在泉",
+      "rag_keys": {
+        "suiyun": "metal_deficient",
+        "sitian": "jueyin_fengmu_sitian",
+        "zaiquan": "shaoyang_xianghuo_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "阳明金",
+          "zhuqi": "太角木",
+          "bingji": "寒始肃，杀气方至，民病寒于右之下",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "太阳水",
+          "zhuqi": "少徵火",
+          "bingji": "寒不去，华雪水冰，霜乃降，名草上焦，寒雨数至，阳复化，民病热于中",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "厥阴木",
+          "zhuqi": "少徵火",
+          "bingji": "天政布，风乃时举，民病泣出耳鸣掉眩",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "少阴火",
+          "zhuqi": "太宫土",
+          "bingji": "溽暑至，湿热相搏，争于左之上，民病黄瘅而为胕肿",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "太阴土",
+          "zhuqi": "少商金",
+          "bingji": "燥湿更胜，沉阴乃布，寒气及体，风雨乃行",
+          "zhifa": "调太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "少阳火",
+          "zhuqi": "太羽水",
+          "bingji": "畏火司令，阳乃大化，蛰虫出见，流水不冰，地气大发，草乃生，人乃舒，其病温厉",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸耎之"
+        }
+      ],
+      "year_pathogenesis": "热病行于下，风病行于上，风燥胜复形于中",
+      "year_treatment": "宜资化源以助木气，兼赞岁运；其化上辛凉，中酸和，下咸寒",
+      "source_quote": "热病行于下，风病行于上，风燥胜复形于中……其化上辛凉，中酸和，下咸寒，所谓药食宜也。",
+      "code": "metal_deficient",
+      "sitian_key": "jueyin_fengmu_sitian",
+      "zaiquan_key": "shaoyang_xianghuo_zaiquan",
+      "rag_key": "jueyin_fengmu_sitian",
+      "name": "乙巳岁图",
+      "modern_reading": "乙巳金运不及，风木司天、相火在泉，上风下热、中焦风燥胜复交错。金虚则制木无力，风火乃肆。天人合一处：天时风火偏胜，金气薄者先受困。治以上辛凉、中酸和、下咸寒，三焦分治归于中和。今人遇多风燥之年若见咳、咽干、头眩，当知气化升降失序。风火相煽，守中和便是护身。",
+      "entry_id": "shengji_yisi",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_bingwu",
+      "ganzhi": "丙午",
+      "year_chart": "丙午岁图",
+      "suiyun": "水运太过",
+      "sitian": "少阴君火司天",
+      "zaiquan": "阳明燥金在泉",
+      "rag_keys": {
+        "suiyun": "water_excess",
+        "sitian": "shaoyin_junhuo_sitian",
+        "zaiquan": "yangming_zaojin_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "太阳水",
+          "zhuqi": "太角木",
+          "bingji": "寒乃始，蛰复藏，风乃至，阳气郁，民反周密，关节禁固，腰腂痛，中外疮疡",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "厥阴木",
+          "zhuqi": "少徵火",
+          "bingji": "阳气布，风乃行，春气以正，其病淋、目瞑目赤，气郁于上而热",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "少阴火",
+          "zhuqi": "少徵火",
+          "bingji": "天政布，大火行，民病气厥心痛，寒热更作，咳喘目赤",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "太阴土",
+          "zhuqi": "太宫土",
+          "bingji": "溽暑至，大雨时行，寒热互至，民病寒热嗌干、黄瘅、鼽、衄、饮发",
+          "zhifa": "调太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "少阳火",
+          "zhuqi": "少商金",
+          "bingji": "畏火临，暑反至，阳乃化，万物乃生乃长荣，民乃康，其病温",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸耎之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "阳明金",
+          "zhuqi": "太羽水",
+          "bingji": "燥令行，余火内格，肿于上，咳喘甚则血溢，病生皮腠，内舍于胁，下连少腹而作寒中",
+          "zhifa": "调阳明之客，以酸补之，以辛泻之，以苦泄之"
+        }
+      ],
+      "year_pathogenesis": "热病生于上，清病生于下，寒热相犯而争于中，民病咳喘、血溢、血泄、鼽、嚏、目赤、胕疡",
+      "year_treatment": "抑其运水，资其岁胜；其化上咸寒，中咸热，下酸温",
+      "source_quote": "热病生于上，清病生于下，寒热相犯而争于中，民病咳喘、血溢、血泄、鼽、嚏、目赤、胕疡……其化上咸寒，中咸热，下酸温。",
+      "code": "water_excess",
+      "sitian_key": "shaoyin_junhuo_sitian",
+      "zaiquan_key": "yangming_zaojin_zaiquan",
+      "rag_key": "shaoyin_junhuo_sitian",
+      "name": "丙午岁图",
+      "modern_reading": "丙午水运太过，却逢君火司天、燥金在泉，上热下清、寒热争于中。古人所记咳喘血溢、鼽嚏目赤，皆寒热交争之象。天人合一者，天地水火相犯，人身亦阴阳相搏。治上咸寒、中咸热、下酸温，分经调气使寒热各归其位。今人遇寒热错杂之年，莫执一端。寒热争于中，调气胜于攻病。",
+      "entry_id": "shengji_bingwu",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_dingwei",
+      "ganzhi": "丁未",
+      "year_chart": "丁未岁图",
+      "suiyun": "木运不及",
+      "sitian": "太阴湿土司天",
+      "zaiquan": "太阳寒水在泉",
+      "rag_keys": {
+        "suiyun": "wood_deficient",
+        "sitian": "taiyin_shitu_sitian",
+        "zaiquan": "taiyang_hanshui_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "厥阴木",
+          "zhuqi": "少角木",
+          "bingji": "春气正，风乃来，风湿相搏，雨乃后，民病血溢，筋络拘强，关节不利，身重筋痿",
+          "zhifa": "调厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "少阴火",
+          "zhuqi": "太徵火",
+          "bingji": "大火正，物承化，民乃和，其病温厉盛行，远近咸若",
+          "zhifa": "调少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "太阴土",
+          "zhuqi": "太徵火",
+          "bingji": "天政布，湿气降，地气腾，雨乃时降，寒乃随之，民病身重胕肿胸腹满",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "少阳火",
+          "zhuqi": "少宫土",
+          "bingji": "畏火临，溽蒸化，民病腠理热，血暴溢，疟、心腹满热胪胀，甚则胕肿",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸耎之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "阳明金",
+          "zhuqi": "太商金",
+          "bingji": "惨令已行，寒露下，霜乃早降，草木黄落，寒气及体，民病皮腠",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "太阳水",
+          "zhuqi": "少羽水",
+          "bingji": "寒大举，湿大化，霜乃积，阴乃凝，水坚冰，感于寒则病患关节禁固，腰腂痛",
+          "zhifa": "调太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        }
+      ],
+      "year_pathogenesis": "民病寒湿、腹满、身愤、胕肿、痞逆、寒厥、拘急",
+      "year_treatment": "取化源以平土气，益其岁气；以苦燥之温之，甚者发之泄之，必赞其阳火令御甚寒",
+      "source_quote": "民病寒湿、腹满、身愤、胕肿、痞逆、寒厥、拘急……以苦燥之温之，甚者发之泄之……必赞其阳火，令御甚寒。",
+      "code": "wood_deficient",
+      "sitian_key": "taiyin_shitu_sitian",
+      "zaiquan_key": "taiyang_hanshui_zaiquan",
+      "rag_key": "taiyin_shitu_sitian",
+      "name": "丁未岁图",
+      "modern_reading": "丁未木运不及，湿土司天、寒水在泉，寒湿合围而木疲。古人见腹满、胕肿、寒厥拘急，知是湿困脾、寒抑阳、木失疏达。天人合一处：天地寒湿壅塞，气化亦迟滞。治以苦燥温之，甚则发之泄之，赞阳火以御甚寒，扶阳化阴归于中和。今人遇阴冷潮湿之年若见身重浮肿，当思阳气是否被困。寒湿困中，温阳即化气。",
+      "entry_id": "shengji_dingwei",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_wushen",
+      "ganzhi": "戊申",
+      "year_chart": "戊申岁图",
+      "suiyun": "火运太过",
+      "sitian": "少阳相火司天",
+      "zaiquan": "厥阴风木在泉",
+      "rag_keys": {
+        "suiyun": "fire_excess",
+        "sitian": "shaoyang_xianghuo_sitian",
+        "zaiquan": "jueyin_fengmu_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "少阴火",
+          "zhuqi": "少角木",
+          "bingji": "候乃大温，草木早荣，温病乃起，气怫于上，血溢目赤，咳逆头痛胁满，肤腠中疮",
+          "zhifa": "调少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "太阴土",
+          "zhuqi": "太徵火",
+          "bingji": "火反郁，白埃四起，雨乃零，民病热郁于上，咳逆呕吐，疮发于中，胸嗌不利，头痛身热昏愦脓疮",
+          "zhifa": "调太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "少阳火",
+          "zhuqi": "太徵火",
+          "bingji": "天政布，炎暑至，民病热中、聋、瞑、血溢、脓疮、咳、呕、鼽、衄、渴、嚏、欠、喉痹、目赤，善暴死",
+          "zhifa": "调少阳之客，以咸补之，以甘泻之，以咸耎之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "阳明金",
+          "zhuqi": "少宫土",
+          "bingji": "凉乃至，炎暑间化，白露降，民气和平，其病满身重",
+          "zhifa": "调阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "太阳水",
+          "zhuqi": "太商金",
+          "bingji": "阳乃去，寒乃来，雨乃降，气门乃闭，刚木早雕，民避寒邪",
+          "zhifa": "调太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "厥阴木",
+          "zhuqi": "少羽水",
+          "bingji": "风乃至，万物反生，雾以行，其病关闭，不禁心痛，阳气不藏而咳",
+          "zhifa": "调厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        }
+      ],
+      "year_pathogenesis": "民病寒中，外发疮疡，内为泄满；往复之作，民病寒热、疟、泄、聋、瞑、呕吐、上怫肿色变",
+      "year_treatment": "先取化源，抑其运火，赞其金气；岁宜咸宜辛宜酸，渗之泄之渍之发之；其化上咸寒，中甘和，下辛凉",
+      "source_quote": "民病寒中，外发疮疡，内为泄满……岁宜咸宜辛宜酸，渗之泄之渍之发之……其化上咸寒，中甘和，下辛凉，药食宜也。",
+      "code": "fire_excess",
+      "sitian_key": "shaoyang_xianghuo_sitian",
+      "zaiquan_key": "jueyin_fengmu_zaiquan",
+      "rag_key": "shaoyang_xianghuo_sitian",
+      "name": "戊申岁图",
+      "modern_reading": "戊申火运太过，相火司天、风木在泉，火风相煽。然古人记\"寒中、泄满\"与\"疮疡\"并见——火盛于外则疮疡，风中于内则脾胃受伤。天人合一妙处：气化偏胜反见其虚，火极似水。治以抑火赞金、渗泄渍发，使郁火有出路。今人遇燥火之年，莫见热即攻热，当察气机之郁与越。火郁发之，气顺则安。",
+      "entry_id": "shengji_wushen",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_jiyou",
+      "ganzhi": "己酉",
+      "year_chart": "己酉岁图",
+      "suiyun": "土运不及",
+      "sitian": "阳明燥金司天",
+      "zaiquan": "少阴君火在泉",
+      "rag_keys": {
+        "suiyun": "earth_deficient",
+        "sitian": "yangming_zaojin_sitian",
+        "zaiquan": "shaoyin_junhuo_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "太阴土",
+          "zhuqi": "少角木",
+          "bingji": "阴始凝，气始肃，水乃冰，寒雨化，其病中热胀，面目浮肿，善眠、鼽、衄、嚏、欠、呕，小便黄赤甚则淋",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "少阳火",
+          "zhuqi": "太徵火",
+          "bingji": "二火同治，阳乃布，民乃舒，物乃生荣，厉大至，民善暴死",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸耎之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "阳明金",
+          "zhuqi": "太徵火",
+          "bingji": "天政布，凉乃行，燥热交合，燥极而泽，民病寒热",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "太阳水",
+          "zhuqi": "少宫土",
+          "bingji": "寒雨降，病暴仆振栗，谵妄少气，嗌干引饮，及为心痛痈肿疮疡疟寒之疾，骨痿血便",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "厥阴木",
+          "zhuqi": "太商金",
+          "bingji": "春令反行，草乃生荣，民气和",
+          "zhifa": "调厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "少阴火",
+          "zhuqi": "少羽水",
+          "bingji": "阳气布，候反温，蛰虫来见，流水不冰，民乃康平，其病温",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        }
+      ],
+      "year_pathogenesis": "民病咳嗌塞，寒热发暴，振栗癃闭",
+      "year_treatment": "宜资化源以助金气，兼安其运土；岁宜以咸以苦以辛，汗之清之散之",
+      "source_quote": "民病咳嗌塞，寒热发暴，振栗癃闭……岁宜以咸以苦以辛，汗之清之散之。",
+      "code": "earth_deficient",
+      "sitian_key": "yangming_zaojin_sitian",
+      "zaiquan_key": "shaoyin_junhuo_zaiquan",
+      "rag_key": "yangming_zaojin_sitian",
+      "name": "己酉岁图",
+      "modern_reading": "己酉土运不及，燥金司天、君火在泉，金火相争而土虚于中。古人见咳嗌塞、寒热暴发、振栗癃闭，皆燥热伤气、开合失司之象。天人合一者，观天金火相克，知人身肺金与心火亦失和。治法助金安土，汗清散使邪有去路而中气不伤。今人遇燥火年份若见咳咽不利、寒热乍起，当知开合之权在肺金。金土相安，气化自和。",
+      "entry_id": "shengji_jiyou",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_gengxu",
+      "ganzhi": "庚戌",
+      "year_chart": "庚戌岁图",
+      "suiyun": "金运太过",
+      "sitian": "太阳寒水司天",
+      "zaiquan": "太阴湿土在泉",
+      "rag_keys": {
+        "suiyun": "metal_excess",
+        "sitian": "taiyang_hanshui_sitian",
+        "zaiquan": "taiyin_shitu_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "少阳火",
+          "zhuqi": "少角木",
+          "bingji": "气乃大温，草乃早荣，民乃厉，温病乃作，身热头痛呕吐，肤腠疮疡",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸耎之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "阳明金",
+          "zhuqi": "太徵火",
+          "bingji": "大凉反至，民乃惨，草乃遇寒，火气遂抑，民病气郁中满，寒乃始",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "太阳水",
+          "zhuqi": "太徵火",
+          "bingji": "天政布，寒乃行，雨乃降，民病寒反热中，痈疽注下，心热瞀闷",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "厥阴木",
+          "zhuqi": "少宫土",
+          "bingji": "风湿交争，风化为雨，民病大热少气，肌肉萎足痿，注下赤白",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "少阴火",
+          "zhuqi": "太商金",
+          "bingji": "阳复化，草乃长乃化乃成，民乃舒",
+          "zhifa": "调少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "太阴土",
+          "zhuqi": "少羽水",
+          "bingji": "湿令行，阴凝太虚，埃昏郊野，民乃惨凄，寒风以至，反者孕乃死",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        }
+      ],
+      "year_pathogenesis": "民病寒湿，发肌肉萎，足痿不收，濡泻血溢；岁金太过，燥气流行，肝木受邪",
+      "year_treatment": "先资化源，抑其运金，扶其木气；岁宜以苦热调上，以甘热调下，以辛温调中，运同寒湿以燥热化",
+      "source_quote": "民病寒湿，发肌肉萎，足痿不收，濡泻血溢……岁宜以苦热调上，以甘热调下，以辛温调中，运同寒湿，以燥热化，治之常也。",
+      "code": "metal_excess",
+      "sitian_key": "taiyang_hanshui_sitian",
+      "zaiquan_key": "taiyin_shitu_zaiquan",
+      "rag_key": "taiyang_hanshui_sitian",
+      "name": "庚戌岁图",
+      "modern_reading": "庚戌金运太过，寒水司天、湿土在泉，寒湿凝滞而燥金伐木。古人见肌肉萎、足痿、濡泻血溢，既寒湿困脾，又燥金伐木、肝失疏泄。天人合一处：天地寒湿而燥气独行，气机既凝且郁，木土同病。治以苦热调上、甘热调下、辛温调中，扶木抑金归于中和。今人遇寒燥交错之年，莫只祛湿或只润燥。燥湿同治，木土并调，方合气化。",
+      "entry_id": "shengji_gengxu",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_xinhai",
+      "ganzhi": "辛亥",
+      "year_chart": "辛亥岁图",
+      "suiyun": "水运不及",
+      "sitian": "厥阴风木司天",
+      "zaiquan": "少阳相火在泉",
+      "rag_keys": {
+        "suiyun": "water_deficient",
+        "sitian": "jueyin_fengmu_sitian",
+        "zaiquan": "shaoyang_xianghuo_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "阳明金",
+          "zhuqi": "少角木",
+          "bingji": "寒始肃，杀气方至，民病寒于右之下",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "太阳水",
+          "zhuqi": "太徵火",
+          "bingji": "寒不去，华雪水冰，霜乃降，名草上焦，寒雨数至，阳复化，民病热于中",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "厥阴木",
+          "zhuqi": "太徵火",
+          "bingji": "天政布，风乃时举，民病泣出耳鸣掉眩",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "少阴火",
+          "zhuqi": "少宫土",
+          "bingji": "溽暑湿热相搏，争于左之上，民病黄瘅而为胕肿",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "太阴土",
+          "zhuqi": "太商金",
+          "bingji": "燥湿更胜，沉阴乃布，寒气及体，风雨乃行",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "少阳火",
+          "zhuqi": "少羽水",
+          "bingji": "畏火司令，阳乃大化，蛰虫出见，流水不冰，地气大发，草乃生，人乃舒，其病温厉",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸耎之"
+        }
+      ],
+      "year_pathogenesis": "风病行于上，热病行于下，风燥胜复形于中；岁水不及，反阳，藏令不举",
+      "year_treatment": "资化源以助司天之木气；赞岁运之水，扶其不足，调上用辛，调下用咸",
+      "source_quote": "风病行于上，热病行于下，风燥胜复形于中……赞岁运之水，扶其不足，调上用辛，调下用咸。",
+      "code": "water_deficient",
+      "sitian_key": "jueyin_fengmu_sitian",
+      "zaiquan_key": "shaoyang_xianghuo_zaiquan",
+      "rag_key": "jueyin_fengmu_sitian",
+      "name": "辛亥岁图",
+      "modern_reading": "辛亥水运不及，风木司天、相火在泉，水虚则藏令不举而反见阳化。古人记风行于上、热行于下、风燥胜复于中，正是水不制火、木反肆行。天人合一处：天时水亏火风煽，肾水不足者先动。治法助木赞水，调上以辛、调下以咸，补水虚而平风火之亢。今人遇风火偏胜而本虚之年，当先固其根。藏令不举，养水即是养命。",
+      "entry_id": "shengji_xinhai",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_renzi",
+      "ganzhi": "壬子",
+      "year_chart": "壬子岁图",
+      "suiyun": "木运太过",
+      "sitian": "少阴君火司天",
+      "zaiquan": "阳明燥金在泉",
+      "rag_keys": {
+        "suiyun": "wood_excess",
+        "sitian": "shaoyin_junhuo_sitian",
+        "zaiquan": "yangming_zaojin_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "太阳水",
+          "zhuqi": "太角木",
+          "bingji": "寒乃始，蛰复藏，风乃至，阳气郁，民反周密，关节禁固，腰腂痛，中外疮疡",
+          "zhifa": "调太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "厥阴木",
+          "zhuqi": "少徵火",
+          "bingji": "阳气布，风乃行，春气以正，其病淋，目瞑目赤，气郁于上而热",
+          "zhifa": "调厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "少阴火",
+          "zhuqi": "少徵火",
+          "bingji": "天政布，大火行，民病气厥心痛，寒热更作，咳喘目赤",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "太阴土",
+          "zhuqi": "太宫土",
+          "bingji": "溽暑至，大雨时行，寒热互至，民病寒热、嗌干、黄瘅、鼽、衄、饮发",
+          "zhifa": "调太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "少阳火",
+          "zhuqi": "少商金",
+          "bingji": "畏火临，暑反至，阳乃化，万物乃生乃长荣，民乃康，其病温",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸耎之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "阳明金",
+          "zhuqi": "太羽水",
+          "bingji": "燥令行，余火内格，肿于上咳喘甚则血溢，病生皮腠，内舍于胁，下连少腹而作寒中",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        }
+      ],
+      "year_pathogenesis": "热病生于上，清病生于下，寒热相犯而争于中，民病咳喘、血溢、血泄、鼽、嚏、目赤、胕疡；岁木太过，脾土受邪",
+      "year_treatment": "先取火之化源，抑其运木，资其岁胜；其化上咸寒，中酸凉，下酸温",
+      "source_quote": "热病生于上，清病生于下，寒热相犯而争于中，民病咳喘、血溢、血泄、鼽、嚏、目赤、胕疡……其化上咸寒，中酸凉，下酸温。",
+      "code": "wood_excess",
+      "sitian_key": "shaoyin_junhuo_sitian",
+      "zaiquan_key": "yangming_zaojin_zaiquan",
+      "rag_key": "shaoyin_junhuo_sitian",
+      "name": "壬子岁图",
+      "modern_reading": "壬子木运太过，君火司天、燥金在泉，上热下清争于中，木亢而脾土受邪。古人见咳喘血溢、目赤，是寒热争于肺金；脾土受邪，是木亢乘土。天人合一处：天时风火偏胜，人身肝木过亢则脾胃先病。治以取火化源、抑木资岁胜，分经调气归于中和。今人遇木火偏亢之年，既防上热，又当顾护脾胃。木旺脾弱，调气即守中。",
+      "entry_id": "shengji_renzi",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_guichou",
+      "ganzhi": "癸丑",
+      "year_chart": "癸丑岁图",
+      "suiyun": "火运不及",
+      "sitian": "太阴湿土司天",
+      "zaiquan": "太阳寒水在泉",
+      "rag_keys": {
+        "suiyun": "fire_deficient",
+        "sitian": "taiyin_shitu_sitian",
+        "zaiquan": "taiyang_hanshui_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "厥阴木",
+          "zhuqi": "太角木",
+          "bingji": "春气正，风乃来，风湿相搏，雨乃后，民病血溢，筋络拘强，关节不利，身重筋痿",
+          "zhifa": "调厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "少阴火",
+          "zhuqi": "少徵火",
+          "bingji": "大火正，物承化，民乃和，其病温厉盛行，远近咸若",
+          "zhifa": "调少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "太阴土",
+          "zhuqi": "少徵火",
+          "bingji": "天政布，湿气降，地气腾，雨乃时降，寒乃随之，民病身重、胕肿、胸腹满",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "少阳火",
+          "zhuqi": "太宫土",
+          "bingji": "畏火临，溽蒸化，民病腠理热，血暴溢，疟、心腹满热、胪胀，甚则胕肿",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之，以咸耎之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "阳明金",
+          "zhuqi": "少商金",
+          "bingji": "燥令已行，寒露下，霜乃早降，草木黄落，寒气及体，民病皮腠",
+          "zhifa": "调阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "太阳水",
+          "zhuqi": "太羽水",
+          "bingji": "寒大举，湿大化，霜乃积，阴乃凝，水坚冰，感于寒则病患关节禁固，腰腂痛，寒湿持于气交",
+          "zhifa": "调太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        }
+      ],
+      "year_pathogenesis": "民病寒湿、腹满、身愤、胕肿、痞逆、寒厥拘急；岁火不及，寒乃盛行",
+      "year_treatment": "取化源以平土气，益其岁气；其化上苦温，中咸温，下甘热",
+      "source_quote": "民病寒湿、腹满、身愤、胕肿、痞逆、寒厥拘急……其化上苦温，中咸温，下甘热。",
+      "code": "fire_deficient",
+      "sitian_key": "taiyin_shitu_sitian",
+      "zaiquan_key": "taiyang_hanshui_zaiquan",
+      "rag_key": "taiyin_shitu_sitian",
+      "name": "癸丑岁图",
+      "modern_reading": "癸丑火运不及，湿土司天、寒水在泉，寒湿合围而火气衰微。古人见腹满、胕肿、寒厥拘急，是寒湿壅中、阳火不化；岁火不及则寒乃盛行，气虚则寒。天人合一处：天地阴盛阳微，心火亦易不振。治以苦温平上、咸温和中、甘热温下，温阳化湿护心火。今人遇阴寒湿冷之年若见身重肢冷，当思阳气是否不足。阳化气，火归位则寒湿自消。",
+      "entry_id": "shengji_guichou",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_jiayin",
+      "ganzhi": "甲寅",
+      "year_chart": "甲寅岁图",
+      "suiyun": "土运太过",
+      "sitian": "少阳相火司天",
+      "zaiquan": "厥阴风木在泉",
+      "rag_keys": {
+        "suiyun": "earth_excess",
+        "sitian": "shaoyang_xianghuo_sitian",
+        "zaiquan": "jueyin_fengmu_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "少阴君火",
+          "zhuqi": "厥阴风木",
+          "bingji": "气怫于上，血溢目赤，咳逆头痛胁满，肤腠中疮",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "太阴湿土",
+          "zhuqi": "少阴君火",
+          "bingji": "热郁于上，咳逆呕吐，疮发于中，胸嗌不利，头痛身热，昏愦脓疮",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "少阳相火",
+          "zhuqi": "少阳相火",
+          "bingji": "热中、聋、瞑、血溢、脓疮、咳、呕、鼽、衄、渴、嚏、欠、喉痹、目赤，善暴死",
+          "zhifa": "调少阳之客，以咸补之，以甘泻之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "阳明燥金",
+          "zhuqi": "太阴湿土",
+          "bingji": "满身重",
+          "zhifa": "调阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "太阳寒水",
+          "zhuqi": "阳明燥金",
+          "bingji": "民避寒邪",
+          "zhifa": "调太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "厥阴风木",
+          "zhuqi": "太阳寒水",
+          "bingji": "关闭，不禁心痛，阳气不藏而咳",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        }
+      ],
+      "year_pathogenesis": "岁土太过，雨湿流行，民病寒中，外发疮疡，内为泄满，往复作则寒热、疟、泄、聋、瞑、呕吐、上怫肿色变。",
+      "year_treatment": "宜先取化源以平火气，抑其运土，赞所不胜；岁宜咸宜辛宜酸，渗之泄之渍之发之。",
+      "source_quote": "少阳相火司天，厥阴风木在泉，中见太宫土运，岁土太过……民病寒中，外发疮疡，内为泄满……岁宜咸宜辛宜酸，渗之泄之渍之发之",
+      "code": "earth_excess",
+      "sitian_key": "shaoyang_xianghuo_sitian",
+      "zaiquan_key": "jueyin_fengmu_zaiquan",
+      "rag_key": "shaoyang_xianghuo_sitian",
+      "name": "甲寅岁图",
+      "modern_reading": "甲寅年土运太过，又逢少阳相火司天、厥阴风木在泉，火助土势、风木又疏泄不及，于是雨湿流行而寒中泄满并见。古人观天察地，看到的是气化过亢则中和自破——土本主湿，过则反寒于内、发疮疡于外，一气之偏便成一身之病。今人遇湿土偏盛之年，养生当先顾脾胃、节生冷，使中焦气机不滞，便是顺应天时。天人本是一气，气顺则人安。",
+      "entry_id": "shengji_jiayin",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_yimao",
+      "ganzhi": "乙卯",
+      "year_chart": "乙卯岁图",
+      "suiyun": "金运不及",
+      "sitian": "阳明燥金司天",
+      "zaiquan": "少阴君火在泉",
+      "rag_keys": {
+        "suiyun": "metal_deficient",
+        "sitian": "yangming_zaojin_sitian",
+        "zaiquan": "shaoyin_junhuo_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "太阴湿土",
+          "zhuqi": "厥阴风木",
+          "bingji": "中热胀，面目浮肿，善眠、鼽、衄、嚏、欠、呕，小便黄赤甚则淋",
+          "zhifa": "调太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "少阳相火",
+          "zhuqi": "少阴君火",
+          "bingji": "厉大至，民善暴死",
+          "zhifa": "调少阳之客，以咸补之，以甘泻之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "阳明燥金",
+          "zhuqi": "少阳相火",
+          "bingji": "寒热",
+          "zhifa": "调阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "太阳寒水",
+          "zhuqi": "太阴湿土",
+          "bingji": "暴仆振栗，谵妄少气，嗌干引饮，心痛痈肿疮疡疟寒，骨痿血便",
+          "zhifa": "调太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "厥阴风木",
+          "zhuqi": "阳明燥金",
+          "bingji": "民乃和",
+          "zhifa": "调厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "少阴君火",
+          "zhuqi": "太阳寒水",
+          "bingji": "温",
+          "zhifa": "调少阴之客，以咸补之，以甘泻之，以酸收之"
+        }
+      ],
+      "year_pathogenesis": "清先而劲，热后而暴，民病咳嗌塞，寒热发暴，振栗癃闭，邪中执法其病速而危。",
+      "year_treatment": "岁宜以咸以苦以辛，汗之清之散之；食白丹之谷以安其气，食间气之谷以去其邪。",
+      "source_quote": "阳明燥金司天，少阴君火在泉，中见少商金运，岁金不及……民病咳嗌塞，寒热发暴，振栗癃闭",
+      "code": "metal_deficient",
+      "sitian_key": "yangming_zaojin_sitian",
+      "zaiquan_key": "shaoyin_junhuo_zaiquan",
+      "rag_key": "yangming_zaojin_sitian",
+      "name": "乙卯岁图",
+      "modern_reading": "乙卯年金运不及，燥金司天而君火在泉，上有清劲之邪、下有暴热相迫，故咳嗌塞、寒热发暴、振栗癃闭皆见。古人立论，并非止于气候，而是看见气机有先有后、有上有下，胜复相召则病起猝然。今遇金气不足、火气易亢之年，当知肺金娇弱、上焦易扰，宜慎风寒、节辛燥，使清肃之气得安。气有胜复，人有调息，中和为本。",
+      "entry_id": "shengji_yimao",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_bingchen",
+      "ganzhi": "丙辰",
+      "year_chart": "丙辰岁图",
+      "suiyun": "水运太过",
+      "sitian": "太阳寒水司天",
+      "zaiquan": "太阴湿土在泉",
+      "rag_keys": {
+        "suiyun": "water_excess",
+        "sitian": "taiyang_hanshui_sitian",
+        "zaiquan": "taiyin_shitu_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "少阳相火",
+          "zhuqi": "厥阴风木",
+          "bingji": "温病乃作，身热头痛呕吐，肌腠疮疡",
+          "zhifa": "调少阳之客，以咸补之，以甘泻之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "阳明燥金",
+          "zhuqi": "少阴君火",
+          "bingji": "气郁中满，寒乃始",
+          "zhifa": "调阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "太阳寒水",
+          "zhuqi": "少阳相火",
+          "bingji": "寒反热中，痈疽注下，心热瞀闷，不治者死",
+          "zhifa": "调太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "厥阴风木",
+          "zhuqi": "太阴湿土",
+          "bingji": "大热少气，肌肉萎足痿，注下赤白",
+          "zhifa": "调厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "少阴君火",
+          "zhuqi": "阳明燥金",
+          "bingji": "民乃舒",
+          "zhifa": "调少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "太阴湿土",
+          "zhuqi": "太阳寒水",
+          "bingji": "阴凝太虚，埃昏郊野，寒风以至",
+          "zhifa": "调太阴之客，以甘补之，以苦泻之，以甘缓之"
+        }
+      ],
+      "year_pathogenesis": "寒湿之气持于气交，民病寒湿，发肌肉萎，足痿不收，濡泻血溢。",
+      "year_treatment": "岁宜以苦燥之温之；食玄黅之谷以全其真，避虚邪之气以安其正。",
+      "source_quote": "太阳寒水司天，太阴湿土在泉，中见太羽水运，岁水太过……民病寒湿，发肌肉萎，足痿不收，濡泻血溢",
+      "code": "water_excess",
+      "sitian_key": "taiyang_hanshui_sitian",
+      "zaiquan_key": "taiyin_shitu_zaiquan",
+      "rag_key": "taiyang_hanshui_sitian",
+      "name": "丙辰岁图",
+      "modern_reading": "丙辰年水运太过，寒水司天、湿土在泉，寒与湿持于气交，故肌肉痿、足痿不收、濡泻血溢。古人见寒湿同气相求，便知阳气被遏则筋肉失温、血脉失摄，此非一处之病，乃一气之郁。今人处寒湿偏盛之岁，当避阴冷、温阳气、助运化，使气交得通、湿邪得化。气化一通，形骸自和。",
+      "entry_id": "shengji_bingchen",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_dingsi",
+      "ganzhi": "丁巳",
+      "year_chart": "丁巳岁图",
+      "suiyun": "木运不及",
+      "sitian": "厥阴风木司天",
+      "zaiquan": "少阳相火在泉",
+      "rag_keys": {
+        "suiyun": "wood_deficient",
+        "sitian": "jueyin_fengmu_sitian",
+        "zaiquan": "shaoyang_xianghuo_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "阳明燥金",
+          "zhuqi": "厥阴风木",
+          "bingji": "寒于右之下",
+          "zhifa": "调阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "太阳寒水",
+          "zhuqi": "少阴君火",
+          "bingji": "热于中",
+          "zhifa": "调太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "厥阴风木",
+          "zhuqi": "少阳相火",
+          "bingji": "泣出耳鸣掉眩",
+          "zhifa": "调厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "少阴君火",
+          "zhuqi": "太阴湿土",
+          "bingji": "黄瘅而为胕肿",
+          "zhifa": "调少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "太阴湿土",
+          "zhuqi": "阳明燥金",
+          "bingji": "寒气及体，风雨乃行",
+          "zhifa": "调太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "少阳相火",
+          "zhuqi": "太阳寒水",
+          "bingji": "温厉",
+          "zhifa": "调少阳之客，以咸补之，以甘泻之"
+        }
+      ],
+      "year_pathogenesis": "风燥火热胜复更作，热病行于下，风病行于上，风燥胜复形于中。",
+      "year_treatment": "岁宜以辛调上，以咸调下，畏火之气无妄犯之。",
+      "source_quote": "厥阴风木司天，少阳相火在泉，中见少角木运，岁木不及……热病行于下，风病行于上，风燥胜复形于中",
+      "code": "wood_deficient",
+      "sitian_key": "jueyin_fengmu_sitian",
+      "zaiquan_key": "shaoyang_xianghuo_zaiquan",
+      "rag_key": "jueyin_fengmu_sitian",
+      "name": "丁巳岁图",
+      "modern_reading": "丁巳年木运不及，风木司天、相火在泉，风燥火热胜复更作，热病行下、风病行上、形于中。古人所重，是气有胜必有复，木弱则燥火乘之，上下交争而中州先病。今遇风气不足之年，养肝宜柔不宜伐，调上以辛、调下以咸，皆在守中和、不妄犯畏火。识得胜复，方知养藏之道。",
+      "entry_id": "shengji_dingsi",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_wuwu",
+      "ganzhi": "戊午",
+      "year_chart": "戊午岁图",
+      "suiyun": "火运太过",
+      "sitian": "少阴君火司天",
+      "zaiquan": "阳明燥金在泉",
+      "rag_keys": {
+        "suiyun": "fire_excess",
+        "sitian": "shaoyin_junhuo_sitian",
+        "zaiquan": "yangming_zaojin_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "太阳寒水",
+          "zhuqi": "厥阴风木",
+          "bingji": "关节禁固腰痛，中外疮疡",
+          "zhifa": "调太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "厥阴风木",
+          "zhuqi": "少阴君火",
+          "bingji": "淋目瞑目赤，气郁于上而热",
+          "zhifa": "调厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "少阴君火",
+          "zhuqi": "少阳相火",
+          "bingji": "气厥心痛，寒热更作，咳喘目赤",
+          "zhifa": "调少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "太阴湿土",
+          "zhuqi": "太阴湿土",
+          "bingji": "寒热、嗌干、黄瘅、鼽、衄、饮发",
+          "zhifa": "调太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "少阳相火",
+          "zhuqi": "阳明燥金",
+          "bingji": "温",
+          "zhifa": "调少阳之客，以咸补之，以甘泻之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "阳明燥金",
+          "zhuqi": "太阳寒水",
+          "bingji": "肿于上咳喘，甚则血溢，寒中",
+          "zhifa": "调阳明之客，以酸补之，以辛泻之，以苦泄之"
+        }
+      ],
+      "year_pathogenesis": "水火寒热持于气交，热病生于上，清病生于下，寒热争于中，民病咳喘、血溢、血泄、鼽嚏、目赤疡。",
+      "year_treatment": "宜于年前十二月先取化源平其火气，抑运火资岁胜；岁宜咸以调上，以酸收之安下。",
+      "source_quote": "少阴君火司天，阳明燥金在泉，中见太徵火运，岁火太过……热病生于上，清病生于下，寒热争于中",
+      "code": "fire_excess",
+      "sitian_key": "shaoyin_junhuo_sitian",
+      "zaiquan_key": "yangming_zaojin_zaiquan",
+      "rag_key": "shaoyin_junhuo_sitian",
+      "name": "戊午岁图",
+      "modern_reading": "戊午年火运太过，君火司天、燥金在泉，水火寒热持于气交，上热下清、中寒热争，故咳喘血溢、鼽嚏目赤并见。古人看火盛之年，必先于年前取化源以平火气，是知防患于未然、不待病成。今人遇火气偏亢之岁，宜清上以咸、收下以酸，使火不炎、金不燥，刚柔相济。气立则神安，过则害。",
+      "entry_id": "shengji_wuwu",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_jiwei",
+      "ganzhi": "己未",
+      "year_chart": "己未岁图",
+      "suiyun": "土运不及",
+      "sitian": "太阴湿土司天",
+      "zaiquan": "太阳寒水在泉",
+      "rag_keys": {
+        "suiyun": "earth_deficient",
+        "sitian": "taiyin_shitu_sitian",
+        "zaiquan": "taiyang_hanshui_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "厥阴风木",
+          "zhuqi": "厥阴风木",
+          "bingji": "血溢筋络拘强，关节不利，身重筋痿",
+          "zhifa": "调厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "少阴君火",
+          "zhuqi": "少阴君火",
+          "bingji": "温厉盛行，远近咸若",
+          "zhifa": "调少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "太阴湿土",
+          "zhuqi": "少阳相火",
+          "bingji": "身重胕肿胸腹满",
+          "zhifa": "调太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "少阳相火",
+          "zhuqi": "太阴湿土",
+          "bingji": "腠理热，血暴溢，疟心腹满热胪胀，甚则胕肿",
+          "zhifa": "调少阳之客，以咸补之，以甘泻之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "阳明燥金",
+          "zhuqi": "阳明燥金",
+          "bingji": "皮腠",
+          "zhifa": "调阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "太阳寒水",
+          "zhuqi": "太阳寒水",
+          "bingji": "关节禁固腰痛，寒湿持于气交",
+          "zhifa": "调太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        }
+      ],
+      "year_pathogenesis": "阴凝于上，寒积于下，寒湿合德，民病寒湿腹满、身愤胕肿、痞逆、寒厥、拘急。",
+      "year_treatment": "岁宜以苦燥之温之；折其水郁，益其岁胜，赞其阳火令御甚寒。",
+      "source_quote": "太阴湿土司天，太阳寒水在泉，中见少宫土运，岁土不及……民病寒湿腹满、身愤胕肿、痞逆、寒厥、拘急",
+      "code": "earth_deficient",
+      "sitian_key": "taiyin_shitu_sitian",
+      "zaiquan_key": "taiyang_hanshui_zaiquan",
+      "rag_key": "taiyin_shitu_sitian",
+      "name": "己未岁图",
+      "modern_reading": "己未年土运不及，湿土司天、寒水在泉，阴凝于上、寒积于下，寒湿合德而腹满胕肿、寒厥拘急。古人察土虚之岁，知中气不足则阴寒乘之，故宜苦以燥温、益阳火以御甚寒，是扶正以应天。今人遇土弱寒盛之年，当温中健脾、避寒就暖，使阳气得伸、湿邪得化。中气一立，寒湿自退。",
+      "entry_id": "shengji_jiwei",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_gengshen",
+      "ganzhi": "庚申",
+      "year_chart": "庚申岁图",
+      "suiyun": "金运太过",
+      "sitian": "少阳相火司天",
+      "zaiquan": "厥阴风木在泉",
+      "rag_keys": {
+        "suiyun": "metal_excess",
+        "sitian": "shaoyang_xianghuo_sitian",
+        "zaiquan": "jueyin_fengmu_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "少阴君火",
+          "zhuqi": "厥阴风木",
+          "bingji": "气怫于上，血溢目赤，咳逆头痛，血伤胁满，肤腠中疮",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "太阴湿土",
+          "zhuqi": "少阴君火",
+          "bingji": "热郁于上，咳逆呕吐，疮发于中，胸嗌不利，头痛身热昏愦脓疮",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "少阳相火",
+          "zhuqi": "少阳相火",
+          "bingji": "热中，聋瞑血溢脓疮咳呕鼽衄渴嚏欠，喉痹目赤，善暴死",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "阳明燥金",
+          "zhuqi": "太阴湿土",
+          "bingji": "满身重",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "太阳寒水",
+          "zhuqi": "阳明燥金",
+          "bingji": "民避寒邪",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "厥阴风木",
+          "zhuqi": "太阳寒水",
+          "bingji": "关闭，不禁心痛，阳气不藏而咳",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        }
+      ],
+      "year_pathogenesis": "岁金太过，燥气流行，肝木受邪；火木同德，民病寒中，外发疮疡，内为泄满，寒热疟泄聋瞑呕吐。",
+      "year_treatment": "年前先取化源以平火气，抑运金赞所不胜；岁宜咸宜辛宜酸，渗之泄之渍之发之。",
+      "source_quote": "少阳相火司天，厥阴风木在泉，中见太商金运，岁金太过……民病寒中，外发疮疡，内为泄满……岁宜咸宜辛宜酸",
+      "code": "metal_excess",
+      "sitian_key": "shaoyang_xianghuo_sitian",
+      "zaiquan_key": "jueyin_fengmu_zaiquan",
+      "rag_key": "shaoyang_xianghuo_sitian",
+      "name": "庚申岁图",
+      "modern_reading": "庚申年金运太过，燥气流行而肝木受邪，又少阳相火司天、厥阴风木在泉，火木同德则寒中泄满、疮疡呕吐并见。古人见金亢则木受其制，又虑火气相煽，故先取化源平火、抑金赞所不胜，皆是求中和之道。今遇燥金偏盛之年，宜润燥柔肝、清不宜伐，使金木相安、火不妄动。气得其平，病无所生。",
+      "entry_id": "shengji_gengshen",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_xinyou",
+      "ganzhi": "辛酉",
+      "year_chart": "辛酉岁图",
+      "suiyun": "水运不及",
+      "sitian": "阳明燥金司天",
+      "zaiquan": "少阴君火在泉",
+      "rag_keys": {
+        "suiyun": "water_deficient",
+        "sitian": "yangming_zaojin_sitian",
+        "zaiquan": "shaoyin_junhuo_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "太阴湿土",
+          "zhuqi": "厥阴风木",
+          "bingji": "中热胀，面目浮肿，善眠鼽衄嚏欠呕，小便黄赤甚则淋",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "少阳相火",
+          "zhuqi": "少阴君火",
+          "bingji": "厉大至，民善暴死",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "阳明燥金",
+          "zhuqi": "少阳相火",
+          "bingji": "寒热",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "太阳寒水",
+          "zhuqi": "太阴湿土",
+          "bingji": "暴仆振栗，谵妄少气，嗌干引饮，心痛痈肿疮疡疟寒，骨痿血便",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "厥阴风木",
+          "zhuqi": "阳明燥金",
+          "bingji": "民气和",
+          "zhifa": "调厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "少阴君火",
+          "zhuqi": "太阳寒水",
+          "bingji": "温",
+          "zhifa": "治少阴之客，以咸补之，以甘泻之，以酸收之"
+        }
+      ],
+      "year_pathogenesis": "岁水不及，湿乃盛行，长气反用；清先而劲，热后而暴，民病咳嗌塞，寒热发暴，振栗癃闭。",
+      "year_treatment": "宜资化源以助金气，安其运水；岁宜以咸以苦以辛，汗之清之散之。",
+      "source_quote": "阳明燥金司天，少阴君火在泉，中见少羽水运，岁水不及……民病咳嗌塞，寒热发暴，振栗癃闭",
+      "code": "water_deficient",
+      "sitian_key": "yangming_zaojin_sitian",
+      "zaiquan_key": "shaoyin_junhuo_zaiquan",
+      "rag_key": "yangming_zaojin_sitian",
+      "name": "辛酉岁图",
+      "modern_reading": "辛酉年水运不及，湿乃盛行、长气反用，又燥金司天、君火在泉，清先劲、热后暴，咳嗌塞、寒热发暴、振栗癊闭。古人察水虚之岁，知肾气不固则湿邪乘之、清热交争，故宜资化源助金、安其运水，汗之清之散之以去其邪。今遇水气不足之年，当节欲固肾、避湿就燥，使气化有源、邪无可乘。水得其养，火自归位。",
+      "entry_id": "shengji_xinyou",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_renxu",
+      "ganzhi": "壬戌",
+      "year_chart": "壬戌岁图",
+      "suiyun": "木运太过",
+      "sitian": "太阳寒水司天",
+      "zaiquan": "太阴湿土在泉",
+      "rag_keys": {
+        "suiyun": "wood_excess",
+        "sitian": "taiyang_hanshui_sitian",
+        "zaiquan": "taiyin_shitu_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "少阳相火",
+          "zhuqi": "厥阴风木",
+          "bingji": "温病乃作，身热头痛呕吐，肌腠疮疡",
+          "zhifa": "治少阳之客，以咸补之，以甘泻之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "阳明燥金",
+          "zhuqi": "少阴君火",
+          "bingji": "气郁中满，寒乃始",
+          "zhifa": "治阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "太阳寒水",
+          "zhuqi": "少阳相火",
+          "bingji": "寒反热中，痈疽注下，心热瞀闷",
+          "zhifa": "治太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "厥阴风木",
+          "zhuqi": "太阴湿土",
+          "bingji": "大热少气，肌肉萎足痿，注下赤白",
+          "zhifa": "治厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "少阴君火",
+          "zhuqi": "阳明燥金",
+          "bingji": "民乃舒",
+          "zhifa": "调少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "太阴湿土",
+          "zhuqi": "太阳寒水",
+          "bingji": "阴凝太虚，寒风以至",
+          "zhifa": "治太阴之客，以甘补之，以苦泻之，以甘缓之"
+        }
+      ],
+      "year_pathogenesis": "岁木太过，风气流行，脾土受邪；寒湿之气持于气交，民病寒湿发肌肉萎，足痿不收，濡泻血溢。",
+      "year_treatment": "宜折郁土，抑其运木，扶其不胜；运与寒湿异，宜以燥湿化。",
+      "source_quote": "太阳寒水司天，太阴湿土在泉，中见太角木运，岁木太过……民病寒湿发肌肉萎，足痿不收，濡泻血溢",
+      "code": "wood_excess",
+      "sitian_key": "taiyang_hanshui_sitian",
+      "zaiquan_key": "taiyin_shitu_zaiquan",
+      "rag_key": "taiyang_hanshui_sitian",
+      "name": "壬戌岁图",
+      "modern_reading": "壬戌年木运太过，风气流行而脾土受邪，又寒水司天、湿土在泉，寒湿持于气交而肌肉痿、足痿不收、濡泻血溢。古人见木亢则土受其制、寒湿又困中下，故折郁土、抑运木、扶不胜，兼以燥湿化。今遇风气偏盛之年，养肝宜柔、健脾为先，使木不乘土、寒湿得温。气化以平为期。",
+      "entry_id": "shengji_renxu",
+      "entry_type": "shengji_case"
+    },
+    {
+      "case_id": "shengji_guihai",
+      "ganzhi": "癸亥",
+      "year_chart": "癸亥岁图",
+      "suiyun": "火运不及",
+      "sitian": "厥阴风木司天",
+      "zaiquan": "少阳相火在泉",
+      "rag_keys": {
+        "suiyun": "fire_deficient",
+        "sitian": "jueyin_fengmu_sitian",
+        "zaiquan": "shaoyang_xianghuo_zaiquan"
+      },
+      "six_steps": [
+        {
+          "step": "初之气",
+          "keqi": "阳明燥金",
+          "zhuqi": "厥阴风木",
+          "bingji": "寒于右之下",
+          "zhifa": "调阳明之客，以酸补之，以辛泻之，以苦泄之"
+        },
+        {
+          "step": "二之气",
+          "keqi": "太阳寒水",
+          "zhuqi": "少阴君火",
+          "bingji": "热于中",
+          "zhifa": "调太阳之客，以苦补之，以咸泻之，以苦坚之，以辛润之"
+        },
+        {
+          "step": "三之气",
+          "keqi": "厥阴风木",
+          "zhuqi": "少阳相火",
+          "bingji": "泣出耳鸣掉眩",
+          "zhifa": "调厥阴之客，以辛补之，以酸泻之，以甘缓之"
+        },
+        {
+          "step": "四之气",
+          "keqi": "少阴君火",
+          "zhuqi": "太阴湿土",
+          "bingji": "黄瘅而为胕肿",
+          "zhifa": "调少阴之客，以咸补之，以甘泻之，以酸收之"
+        },
+        {
+          "step": "五之气",
+          "keqi": "太阴湿土",
+          "zhuqi": "阳明燥金",
+          "bingji": "寒气及体，风雨乃行",
+          "zhifa": "调太阴之客，以甘补之，以苦泻之，以甘缓之"
+        },
+        {
+          "step": "终之气",
+          "keqi": "少阳相火",
+          "zhuqi": "太阳寒水",
+          "bingji": "温厉",
+          "zhifa": "调少阳之客，以咸补之，以甘泻之"
+        }
+      ],
+      "year_pathogenesis": "风燥火热胜复更作，热病行于下，风病行于上，风燥胜复形于中；邪中行令其病徐而持。",
+      "year_treatment": "岁宜以辛调上，以咸调下，畏火之气无妄犯之。",
+      "source_quote": "厥阴风木司天，少阳相火在泉，中见少徵火运，岁火不及……热病行于下，风病行于上，风燥胜复形于中",
+      "code": "fire_deficient",
+      "sitian_key": "jueyin_fengmu_sitian",
+      "zaiquan_key": "shaoyang_xianghuo_zaiquan",
+      "rag_key": "jueyin_fengmu_sitian",
+      "name": "癸亥岁图",
+      "modern_reading": "癸亥年火运不及，风木司天、相火在泉，风燥火热胜复更作，热病行下、风病行上、形于中，邪中行令故病徐而持。古人观火弱之岁，知气化不及则胜复迟延、病势缠绵，故以辛调上、咸调下，畏火之气不可妄犯。今遇火气不足之年，养心宜温养不宜苦寒，调气以和为度，使胜复自归其位。气行有节，病去有期。",
+      "entry_id": "shengji_guihai",
+      "entry_type": "shengji_case"
+    }
+  ],
+  "asset_type": "yunqi_cases",
+  "description": "宋《圣济总录》运气门六十甲子岁图蒸馏的逐年运气医案。每条含岁运/司天在泉/rag_keys/六步客气病机与治法/年病机/年治法/原文摘录。可按 rag_key 检索同类格局医案。",
+  "total_entries": 60
+}

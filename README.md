@@ -55,12 +55,37 @@ dsh-wuyun-liuqi/
 │   ├── modules/              # 6 个子技能（ganzhi-basics, yunqi-calc, ...）
 │   ├── perspectives/         # 2 个注家视角（刘完素 / 张介宾）
 │   ├── scripts/lib/neijing_snapshot/  # 22 个《黄帝内经》推理模式技能
+│   ├── rag-knowledge-base/   # 跨书运气学检索语料（asset1~asset33 + index.json + 术语库）—— 插件的「灵魂」
 │   ├── routing.yaml, rules/, references/, workflows/, ...
 │   └── ...（其余支撑文件）
 └── package.json
 ```
 
-> 注：源仓库的 `.claude/`、`.cursor/` 跨工具副本、14M RAG 语料（`rag-knowledge-base`）与生成报告（`reports`）未打包进本插件，以控制体积；技能正文指令完整保留。
+> 注：源仓库的 `.claude/`、`.cursor/` 跨工具副本与生成报告（`reports`）未打包进本插件以控制体积；但 **`rag-knowledge-base/`（跨书检索语料，约 28MB / 270+ 文件）已随包分发**——它才是这个技能包的「灵魂」，让 `rag_search.py` 能跨 68 书做运气学出处与医案实证检索。技能正文指令同样完整保留。
+
+---
+
+## RAG 知识库（灵魂）
+
+插件内置 `skills/rag-knowledge-base/`，由 `scripts/rag_search.py` 检索。蒸馏技能（单书研读框架）与 RAG（跨书检索）互补：**蒸馏管单书通读效率，RAG 管跨书出处与临床实证**。
+
+```bash
+# 跨书检索示例（在 skills/scripts/ 下运行）
+python rag_search.py 壬寅 --json
+# -> 命中 asset9 等：壬寅岁图、木运太过、少阳相火司天...（含 score / ref / preview）
+
+# 取单书研读框架（book-to-skill 蒸馏产物）
+python rag_search.py --key gejue_cjk|sitian --json
+```
+
+### 同步上游语料
+
+你用 [book-to-skill](https://github.com/...) 蒸馏新文献、往源仓库 `wuyun-liuqi-skills/rag-knowledge-base/` 灌了新 asset / `distilled/` 之后，跑一下即可把最新 RAG 同步进本插件（稀疏克隆，只拉 `rag-knowledge-base/`）：
+
+```bash
+python skills/scripts/sync_kb.py            # 从 dhicoc/wuyun-liuqi-skills 重新拉取
+python skills/scripts/sync_kb.py --dry-run  # 只看源端规模，不改动本地
+```
 
 ## License
 

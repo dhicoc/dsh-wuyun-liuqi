@@ -1,0 +1,750 @@
+{
+  "asset_name": "wuyun-liuqi-rag-index",
+  "asset_type": "knowledge_base_index",
+  "description": "五运六气 RAG 知识库资产索引。用于说明各 asset 的用途、检索键和维护状态。",
+  "total_entries": 33,
+  "primary_api": "scripts/calculate_yunqi_api.py",
+  "entries": [
+    {
+      "entry_id": "rag_index_asset1_suiyun",
+      "entry_type": "asset_index",
+      "title": "岁运病机资产",
+      "file": "asset1_suiyun.json",
+      "asset_id": "asset1_suiyun",
+      "asset_name": "岁运病机数据库",
+      "asset_category": "suiyun_pathogenesis",
+      "description": "五运太过不及之病机、症状、治则、饮食调理。基于《素问·气交变大论》《素问·五常政大论》。",
+      "total_entries": 10,
+      "lookup_fields": [
+        "code"
+      ],
+      "example_keys": [
+        "wood_excess",
+        "wood_deficient",
+        "fire_excess"
+      ],
+      "rag_key": "asset1_suiyun"
+    },
+    {
+      "entry_id": "rag_index_asset2_sitian_zaiquan",
+      "entry_type": "asset_index",
+      "title": "司天在泉资产",
+      "file": "asset2_sitian_zaiquan.json",
+      "asset_id": "asset2_sitian_zaiquan",
+      "asset_name": "司天在泉病机数据库",
+      "asset_category": "sitian_zaiquan_pathogenesis",
+      "description": "六气司天在泉之病机、症状、治法。每年司天主上半年，在泉主下半年，共6组司天在泉配对，涵盖12个半年节段。基于《素问·至真要大论》。",
+      "total_entries": 6,
+      "lookup_fields": [
+        "sitian_key",
+        "zaiquan_key",
+        "rag_key"
+      ],
+      "example_keys": [
+        "jueyin_fengmu_sitian",
+        "shaoyang_xianghuo_zaiquan",
+        "shaoyin_junhuo_sitian"
+      ],
+      "rag_key": "asset2_sitian_zaiquan"
+    },
+    {
+      "entry_id": "rag_index_asset3_kezhujialin",
+      "entry_type": "asset_index",
+      "title": "客主加临资产",
+      "file": "asset3_kezhujialin.json",
+      "asset_id": "asset3_kezhujialin",
+      "asset_name": "客主加临病机库",
+      "asset_category": "kezhujialin_pathogenesis",
+      "description": "六气客主加临之顺逆、病机、临床关注重点。主气六步固定不变，客气逐年流转，6主气×6客气=36种组合。基于《素问·五运行大论》《素问·至真要大论》客主加临理论。",
+      "total_entries": 36,
+      "lookup_fields": [
+        "key",
+        "rag_key"
+      ],
+      "example_keys": [
+        "zhu_jueyin_ke_jueyin",
+        "zhu_jueyin_ke_shaoyin",
+        "zhu_jueyin_ke_taiyin"
+      ],
+      "rag_key": "asset3_kezhujialin"
+    },
+    {
+      "entry_id": "rag_index_asset4_formula",
+      "entry_type": "asset_index",
+      "title": "运气方资产",
+      "file": "asset4_formula.json",
+      "asset_id": "asset4_formula",
+      "asset_name": "三因司天方 — 运气方剂数据库",
+      "asset_category": "yunqi_formula",
+      "description": "陈无择《三因极一病证方论》运气时气方，包含五运时气方10首和六气时气方6首。每方对应特定运气格局，为运气辨证论治提供方药参考。（v2：蒸馏公版原文，补六步时令加减、六气病机推演，订正审平汤/升明汤组成）",
+      "total_entries": 16,
+      "lookup_fields": [
+        "rag_key"
+      ],
+      "example_keys": [
+        "wood_excess",
+        "fire_excess",
+        "earth_excess"
+      ],
+      "rag_key": "asset4_formula"
+    },
+    {
+      "entry_id": "rag_index_asset5_commentary",
+      "entry_type": "asset_index",
+      "title": "历代注家资产",
+      "file": "asset5_commentary.json",
+      "asset_id": "asset5_commentary",
+      "asset_name": "历代注家运气学说数据库",
+      "asset_category": "commentary",
+      "description": "唐代至清代主要医家对五运六气学说的核心贡献与独特见解，涵盖王冰、刘完素、张元素、李东垣、汪石山、张景岳、吴谦、缪问、徐灵胎、张志聪、陆懋修等。每条目包含医家简介、核心理论、经典原文、临床意义。",
+      "total_entries": 30,
+      "lookup_fields": [
+        "related_yunqi_keys",
+        "commentary_id"
+      ],
+      "example_keys": [
+        "tiangan_wuyun",
+        "dizhi_liuqi",
+        "sitian_zaiquan"
+      ],
+      "rag_key": "asset5_commentary"
+    },
+    {
+      "entry_id": "rag_index_asset6_regional",
+      "entry_type": "asset_index",
+      "title": "地域修正资产",
+      "file": "asset6_regional.json",
+      "asset_id": "asset6_regional",
+      "asset_name": "地域运气修正数据库",
+      "asset_category": "regional_modifier",
+      "description": "中国不同地理区域的运气推算修正系数。同一运气格局在不同地区的实际气候表现差异显著，本库提供纬度、海拔、地貌等因素的修正参考。",
+      "total_entries": 8,
+      "lookup_fields": [
+        "region_id",
+        "region_name"
+      ],
+      "example_keys": [
+        "regional_1",
+        "东北地区（黑吉辽）",
+        "regional_2"
+      ],
+      "rag_key": "asset6_regional"
+    },
+    {
+      "entry_id": "rag_index_asset7_constitution",
+      "entry_type": "asset_index",
+      "title": "运气体质资产",
+      "file": "asset7_constitution.json",
+      "asset_id": "asset7_constitution",
+      "asset_name": "运气与体质交叉分析数据库",
+      "asset_category": "constitution_alignment",
+      "description": "九种体质（王琦九分法）与五运六气格局的匹配关系。不同出生年运气格局影响先天体质倾向，不同运气岁气背景下各体质的发病倾向与调理要点。",
+      "total_entries": 108,
+      "lookup_fields": [
+        "birth_yunqi_keys",
+        "suiyun_code",
+        "constitution_code"
+      ],
+      "example_keys": [
+        "earth_deficient",
+        "metal_excess",
+        "qi_xu"
+      ],
+      "rag_key": "asset7_constitution"
+    },
+    {
+      "entry_id": "rag_index_asset9_cases",
+      "entry_type": "asset_index",
+      "title": "圣济总录六十甲子岁图医案库",
+      "file": "asset9_cases.json",
+      "asset_id": "asset9_cases",
+      "asset_name": "圣济总录六十甲子岁图医案库",
+      "asset_category": "yunqi_cases",
+      "description": "宋《圣济总录》运气门六十甲子岁图蒸馏的逐年运气医案。每条含岁运/司天在泉/rag_keys/六步客气病机与治法/年病机/年治法/原文摘录。可按 rag_key 检索同类格局医案。",
+      "total_entries": 60,
+      "lookup_fields": [
+        "code",
+        "rag_key",
+        "sitian_key",
+        "zaiquan_key"
+      ],
+      "example_keys": [
+        "earth_excess",
+        "shaoyin_junhuo_sitian",
+        "yangming_zaojin_zaiquan"
+      ],
+      "rag_key": "asset9_cases"
+    },
+    {
+      "entry_id": "rag_index_asset10_suiyi_zhifa",
+      "entry_type": "asset_index",
+      "title": "六气岁宜治法库",
+      "file": "asset10_suiyi_zhifa.json",
+      "asset_id": "asset10_suiyi_zhifa",
+      "asset_name": "六气岁宜治法库",
+      "asset_category": "suiyi_zhifa",
+      "description": "金·刘完素《素问病机气宜保命集·气宜论》录《内经》六气司天之政岁宜治法。六气司天各一条，为三因司天方背后的治则原文依据。仅作运气学理论参考，具体诊疗须遵医嘱。",
+      "total_entries": 6,
+      "lookup_fields": [
+        "sitian_key"
+      ],
+      "example_keys": [
+        "taiyang_hanshui_sitian",
+        "yangming_zaojin_sitian",
+        "shaoyang_xianghuo_sitian"
+      ],
+      "rag_key": "asset10_suiyi_zhifa"
+    },
+    {
+      "entry_id": "rag_index_asset11_mingyi_cases",
+      "entry_type": "asset_index",
+      "title": "名医类案 — 病证分类真实医案库",
+      "file": "asset11_mingyi_cases.json",
+      "asset_id": "asset11_mingyi_cases",
+      "asset_name": "名医类案 — 病证分类真实医案库",
+      "asset_category": "case_library",
+      "description": "明·江瓘《名医类案》公版蒸馏的真实医案库，按病证分类（中风/虚风/伤风/伤寒等）。每条含病证/医家/主诉/辨证/治法/方药/疗效/原文摘录。是 asset9（岁图医案，按格局检索）的补充——asset11 按病证检索，覆盖真实历史医案。",
+      "total_entries": 102,
+      "lookup_fields": [
+        "rag_key",
+        "entry_id"
+      ],
+      "example_keys": [
+        "中风",
+        "mingyi_001",
+        "mingyi_002"
+      ],
+      "rag_key": "asset11_mingyi_cases"
+    },
+    {
+      "entry_id": "rag_index_asset12_xumingyi_cases",
+      "entry_type": "asset_index",
+      "title": "续名医类案 — 病证分类真实医案库（续）",
+      "file": "asset12_xumingyi_cases.json",
+      "asset_id": "asset12_xumingyi_cases",
+      "asset_name": "续名医类案 — 病证分类真实医案库（续）",
+      "asset_category": "case_library",
+      "description": "清·魏之琇《续名医类案》公版蒸馏的真实医案库，按病证分类。魏之琇补《名医类案》之作，医案更详（万全/缪仲淳/许叔微/张子和等）。与 asset11（名医类案）同格式，按病证检索。",
+      "total_entries": 84,
+      "lookup_fields": [
+        "rag_key",
+        "entry_id"
+      ],
+      "example_keys": [
+        "伤寒",
+        "xumingyi_001",
+        "xumingyi_002"
+      ],
+      "rag_key": "asset12_xumingyi_cases"
+    },
+    {
+      "entry_id": "rag_index_asset13_gujin_an_cases",
+      "entry_type": "asset_index",
+      "title": "古今医案按 — 病证分类真实医案库（俞震精选）",
+      "file": "asset13_gujin_an_cases.json",
+      "asset_id": "asset13_gujin_an_cases",
+      "asset_name": "古今医案按 — 病证分类真实医案库（俞震精选）",
+      "asset_category": "case_library",
+      "description": "清·俞震《古今医案按》公版蒸馏的真实医案库。俞震精选历代医案并加'震按'评语，点评医家辨证思路，是医案按语类最高质量代表。按病证分类，与 asset11/12 同格式。",
+      "total_entries": 159,
+      "lookup_fields": [
+        "rag_key",
+        "entry_id"
+      ],
+      "example_keys": [
+        "中风",
+        "gujin_001",
+        "gujin_002"
+      ],
+      "rag_key": "asset13_gujin_an_cases"
+    },
+    {
+      "entry_id": "rag_index_asset14_dingganren_cases",
+      "entry_type": "asset_index",
+      "title": "丁甘仁医案 — 病证分类真实医案库（孟河医派）",
+      "file": "asset14_dingganren_cases.json",
+      "asset_id": "asset14_dingganren_cases",
+      "asset_name": "丁甘仁医案 — 病证分类真实医案库（孟河医派）",
+      "asset_category": "case_library",
+      "description": "民国·丁甘仁《丁甘仁医案》公版蒸馏的真实医案库。丁甘仁为孟河医派代表，医案辨证精详，每条带病机+治法+方药+多诊随访，最贴近现代临床。与 asset11/12/13 同格式，按病证检索。",
+      "total_entries": 177,
+      "lookup_fields": [
+        "rag_key",
+        "entry_id"
+      ],
+      "example_keys": [
+        "伤寒",
+        "dingganren_001",
+        "dingganren_002"
+      ],
+      "rag_key": "asset14_dingganren_cases"
+    },
+    {
+      "entry_id": "rag_index_asset16_ye_cases",
+      "entry_type": "asset_index",
+      "title": "临证指南医案 — 病证分类真实医案库（叶桂）",
+      "file": "asset16_ye_cases.json",
+      "asset_id": "asset16_ye_cases",
+      "asset_name": "临证指南医案 — 病证分类真实医案库（叶桂）",
+      "asset_category": "case_library",
+      "description": "清·叶桂《临证指南医案》公版蒸馏的真实医案库。叶天士，清代温病大家，医案以'识病之巧、立方之简'著称，每案精审病机（华岫云按语总括治法）。按病证分类，与 asset11-15 同格式。",
+      "total_entries": 330,
+      "lookup_fields": [
+        "rag_key",
+        "entry_id"
+      ],
+      "example_keys": [
+        "肝风",
+        "ye_001",
+        "ye_002"
+      ],
+      "rag_key": "asset16_ye_cases"
+    },
+    {
+      "entry_id": "rag_index_asset17_wenyi_yunqi",
+      "entry_type": "asset_index",
+      "title": "运气瘟疫防治资产",
+      "file": "asset17_wenyi_yunqi.json",
+      "asset_id": "asset17_wenyi_yunqi",
+      "asset_name": "松峰说疫·运气瘟疫防治库",
+      "asset_category": "wenyi_yunqi",
+      "description": "清·刘奎《松峰说疫》卷六运气专篇蒸馏。将运气格局与瘟疫防治对接：五运太过不及之瘟疫侧重、六气司天在泉之民病预警、五郁治法（郁之发/夺/泄/折/达/发）、以及刚柔失守对应疫病之专属防治方（五瘟丹等）。是现有病机资产未覆盖的『运气—疫病—防治专方』维度。",
+      "total_entries": 34,
+      "lookup_fields": [
+        "code",
+        "sitian_key",
+        "zaiquan_key",
+        "rag_key",
+        "ganzhi",
+        "category"
+      ],
+      "example_keys": [
+        "earth_excess",
+        "甲",
+        "五运太过"
+      ],
+      "rag_key": "asset17_wenyi_yunqi"
+    },
+    {
+      "entry_id": "rag_index_asset18_huichunlu_cases",
+      "entry_type": "asset_index",
+      "title": "回春录·王孟英湿热温病医案库",
+      "file": "asset18_huichunlu_cases.json",
+      "asset_id": "asset18_huichunlu_cases",
+      "asset_name": "回春录·王孟英湿热温病医案库",
+      "asset_category": "case_library",
+      "description": "清·王士雄（王孟英）《回春录》（王氏医案）蒸馏。王孟英为湿热温病大家，善辨伏气温病、湿热氤氲、痰气交阻，用药轻清流动，擅调升降出入气机。本库按病证分节蒸馏，覆盖外感温病（风温/春温/暑温/湿温/伏暑/冬温）、内科杂病（咳嗽/痰证/血证/胃脘痛/疟疾/霍乱/泄泻/痢疾/惊悸怔忡）、妇科（月经/产后）及儿科（痘疫/惊风）等病证。",
+      "total_entries": 40,
+      "lookup_fields": [
+        "category",
+        "physician",
+        "rag_key",
+        "case_id"
+      ],
+      "example_keys": [
+        "风温",
+        "王孟英",
+        "hc_001"
+      ],
+      "rag_key": "asset18_huichunlu_cases"
+    },
+    {
+      "entry_id": "rag_index_asset19_zhangyuqing_cases",
+      "entry_type": "asset_index",
+      "title": "张聿青医案库",
+      "file": "asset19_zhangyuqing_cases.json",
+      "asset_id": "asset19_zhangyuqing_cases",
+      "asset_name": "张聿青医案库",
+      "asset_category": "case_library",
+      "description": "清·张乃修（张聿青）医案蒸馏。张聿青精于辨证，善治湿温伏暑、痰饮肝风、虚损血证，用药轻灵，注重脾胃气化斡旋。本库按病证分节蒸馏，覆盖中风、风温、湿温、伏暑、疟、霍乱、咳嗽、吐血、痰饮、肝风、眩晕、脘痛、泄泻、痢、肿胀、风痹、遗精、不寐、调经、产后等病证。",
+      "total_entries": 138,
+      "lookup_fields": [
+        "category",
+        "physician",
+        "rag_key",
+        "case_id"
+      ],
+      "example_keys": [
+        "中风",
+        "张聿青",
+        "zyq_001"
+      ],
+      "rag_key": "asset19_zhangyuqing_cases"
+    },
+    {
+      "entry_id": "rag_index_asset20_wujutong_cases",
+      "entry_type": "asset_index",
+      "title": "吴鞠通医案库",
+      "file": "asset20_wujutong_cases.json",
+      "asset_id": "asset20_wujutong_cases",
+      "asset_name": "吴鞠通医案库",
+      "asset_category": "case_library",
+      "description": "清·吴瑭（吴鞠通）医案蒸馏。吴鞠通为温病学派三焦辨证大家，著《温病条辨》，善辨卫气营血、三焦传变，治温病重辛凉清透、养阴护液。本库按病证分节蒸馏，覆盖风温、温疫、暑温、伏暑、温毒、湿温、冬温、中风、肝风、吐血、便血、肿胀、滞下、泄泻、噎、呕吐、痹、痰饮、疟、伤寒、咳嗽等病证。",
+      "total_entries": 120,
+      "lookup_fields": [
+        "category",
+        "physician",
+        "rag_key",
+        "case_id"
+      ],
+      "example_keys": [
+        "风温",
+        "吴鞠通",
+        "wjt_001"
+      ],
+      "rag_key": "asset20_wujutong_cases"
+    },
+    {
+      "entry_id": "rag_index_asset21_yuyicao_cases",
+      "entry_type": "asset_index",
+      "title": "寓意草医案库",
+      "file": "asset21_yuyicao_cases.json",
+      "asset_id": "asset21_yuyicao_cases",
+      "asset_name": "寓意草医案库",
+      "asset_category": "case_library",
+      "description": "清·喻嘉言（喻昌）《寓意草》蒸馏。喻嘉言首创『议病式』医案（先议病后用药），辨证精审，善治伤寒危证、误治救逆、真阳上脱、血证、痢疾、肺痈、痰病等。其医案议论详尽，重病机辨析、病因求本与治法权衡，是中医辨证论治的高峰之作。本库精选议病式医案，覆盖伤寒、真阳上脱、痢疾、血症、肺痈、痰病、小儿惊风、膈气、危症救逆等。",
+      "total_entries": 17,
+      "lookup_fields": [
+        "category",
+        "physician",
+        "rag_key",
+        "case_id"
+      ],
+      "example_keys": [
+        "真阳上脱",
+        "喻嘉言",
+        "yyc_001"
+      ],
+      "rag_key": "asset21_yuyicao_cases"
+    },
+    {
+      "entry_id": "rag_index_asset22_huixi_cases",
+      "entry_type": "asset_index",
+      "title": "洄溪医案库",
+      "file": "asset22_huixi_cases.json",
+      "asset_id": "asset22_huixi_cases",
+      "asset_name": "洄溪医案库",
+      "asset_category": "case_library",
+      "description": "清·徐灵胎（徐大椿）《洄溪医案》蒸馏，王孟英（王士雄）编。徐灵胎辨证精审，善用经方（大承气、小青龙、抵当汤等），重病机求本，常附『雄按』（王孟英按语）补充辨证。本库按病证分节蒸馏，覆盖中风、周痹、伤寒、时证、温疫、疟痢、痰喘、翻胃、水肿、吐血、血痢、怔忡、亢阳、产后、肠痈、肺痈、流注、下疳、筋瘤等内伤外感与外科杂病。",
+      "total_entries": 23,
+      "lookup_fields": [
+        "category",
+        "physician",
+        "rag_key",
+        "case_id"
+      ],
+      "example_keys": [
+        "中风",
+        "徐灵胎",
+        "hx_001"
+      ],
+      "rag_key": "asset22_huixi_cases"
+    },
+    {
+      "entry_id": "rag_index_asset23_huayunlou_cases",
+      "entry_type": "asset_index",
+      "title": "花韵楼医案库",
+      "file": "asset23_huayunlou_cases.json",
+      "asset_id": "asset23_huayunlou_cases",
+      "asset_name": "花韵楼医案库",
+      "asset_category": "case_library",
+      "description": "清·顾德华（顾云女士）《花韵楼医案》蒸馏。顾德华为清代女医、妇科名医，专治妇人杂症，辨证透彻、立方平善。以妇科（崩漏、月经不调、产后、胎产、乳癖）为主，兼内科杂病（痢疾、疟疾、温病、咳嗽、肝风、痹痛）。",
+      "total_entries": 20,
+      "lookup_fields": [
+        "category",
+        "physician",
+        "rag_key",
+        "case_id"
+      ],
+      "example_keys": [
+        "崩漏",
+        "顾德华",
+        "hyl_001"
+      ],
+      "rag_key": "asset23_huayunlou_cases"
+    },
+    {
+      "entry_id": "rag_index_asset24_zhenyu_juji_cases",
+      "entry_type": "asset_index",
+      "title": "诊余举隅录医案库",
+      "file": "asset24_zhenyu_juji_cases.json",
+      "asset_id": "asset24_zhenyu_juji_cases",
+      "asset_name": "诊余举隅录医案库",
+      "asset_category": "case_library",
+      "description": "清·陈廷儒（匊生）《诊余举隅录》蒸馏。陈廷儒辨证精审，善辨阴阳寒热虚实、表里气血，治疑难杂证每举一隅而反三。本库按病证分节蒸馏，覆盖四时感冒、春温、冬月伤寒、咳嗽吐血、霍乱、痢疾、泄泻、中风、水肿、自汗、厥逆、眩晕、妇科经闭、痛经、崩漏、胎前、产后、小儿惊风等内伤外感与妇儿杂病。",
+      "total_entries": 14,
+      "lookup_fields": [
+        "category",
+        "physician",
+        "rag_key",
+        "case_id"
+      ],
+      "example_keys": [
+        "感冒",
+        "陈廷儒",
+        "zj_001"
+      ],
+      "rag_key": "asset24_zhenyu_juji_cases"
+    },
+    {
+      "entry_id": "rag_index_asset25_xushi_cases",
+      "entry_type": "asset_index",
+      "title": "许氏医案库",
+      "file": "asset25_xushi_cases.json",
+      "asset_id": "asset25_xushi_cases",
+      "asset_name": "许氏医案库",
+      "asset_category": "case_library",
+      "description": "清·许恩普《许氏医案》（一卷）蒸馏。许恩普断证如折狱，处方若用兵，言简意赅，善辨虚实真假，多救误治之案。本库按年代验案蒸馏，覆盖伤寒、瘟疫、痢疾、霍乱、中风、产后、胎产、妇科、喉痹、目疾、疟疾等病证。",
+      "total_entries": 15,
+      "lookup_fields": [
+        "category",
+        "physician",
+        "rag_key",
+        "case_id"
+      ],
+      "example_keys": [
+        "伤寒",
+        "许恩普",
+        "xs_001"
+      ],
+      "rag_key": "asset25_xushi_cases"
+    },
+    {
+      "entry_id": "rag_index_asset26_xingxuan_cases",
+      "entry_type": "asset_index",
+      "title": "杏轩医案库",
+      "file": "asset26_xingxuan_cases.json",
+      "asset_id": "asset26_xingxuan_cases",
+      "asset_name": "杏轩医案库",
+      "asset_category": "case_library",
+      "description": "清·程文囿（程杏轩）《杏轩医案》（初集/续录/辑录）蒸馏。程杏轩为新安医派代表，辨证精审，善辨寒热真假、虚实错杂，用药以古为师兼出新意。本库按治验标题蒸馏，覆盖产后感邪、先天不足、格阳证、大头时疫真热假寒、半产血晕、暑风惊证、中寒脱阳、肝郁气厥、单腹胀、休息痢等病证。",
+      "total_entries": 184,
+      "lookup_fields": [
+        "category",
+        "physician",
+        "rag_key",
+        "case_id"
+      ],
+      "example_keys": [
+        "产后",
+        "程文囿",
+        "xx_001"
+      ],
+      "rag_key": "asset26_xingxuan_cases"
+    },
+    {
+      "entry_id": "rag_index_asset27_sunwenyuan_cases",
+      "entry_type": "asset_index",
+      "title": "孙文垣医案库",
+      "file": "asset27_sunwenyuan_cases.json",
+      "asset_id": "asset27_sunwenyuan_cases",
+      "asset_name": "孙文垣医案库",
+      "asset_category": "case_library",
+      "description": "明·孙一奎（孙文垣，东宿）《孙文垣医案》（三吴/新都/宜兴治验）蒸馏。孙一奎为明代温补学派代表，重命门学说，辨证精审，善辨阴阳虚实、上盛下虚，用药灵活。本库按治验标题蒸馏，覆盖大头疫、目疾、痛风、疟痢、半身不遂、产后发热、脾胃疾、便血、白浊、妊娠吐血、耳鸣等病证。",
+      "total_entries": 390,
+      "lookup_fields": [
+        "category",
+        "physician",
+        "rag_key",
+        "case_id"
+      ],
+      "example_keys": [
+        "大头疫",
+        "孙一奎",
+        "swy_001"
+      ],
+      "rag_key": "asset27_sunwenyuan_cases"
+    },
+    {
+      "entry_id": "rag_index_asset28_conggui_cases",
+      "entry_type": "asset_index",
+      "title": "丛桂草堂医案库",
+      "file": "asset28_conggui_cases.json",
+      "asset_id": "asset28_conggui_cases",
+      "asset_name": "丛桂草堂医案库",
+      "asset_category": "case_library",
+      "description": "清·袁焯《丛桂草堂医案》（四卷）蒸馏。袁焯为近代医家，辨证精审，善治痰饮、温病、喉痧、孕产杂病，辨病机求本、立方切当。覆盖痰饮闭塞、温病、喉痧、孕妇寒痛漏血、肿胀呕吐、疟疾、产后等。",
+      "total_entries": 8,
+      "lookup_fields": [
+        "category",
+        "physician",
+        "rag_key",
+        "case_id"
+      ],
+      "example_keys": [
+        "痰饮",
+        "袁焯",
+        "cg_001"
+      ],
+      "rag_key": "asset28_conggui_cases"
+    },
+    {
+      "entry_id": "rag_index_asset29_waike_zhengzong",
+      "entry_type": "asset_index",
+      "title": "外科正宗·外用医案库",
+      "file": "asset29_waike_zhengzong.json",
+      "asset_id": "asset29_waike_zhengzong",
+      "asset_name": "外科正宗·外用医案库",
+      "asset_category": "case_library",
+      "description": "明·陈实功《外科正宗》蒸馏。陈实功为明代外科大家，其治验以内服方药配合外治诸法（艾灸、火针、针刺放血、蟾酥饼贴、琥珀膏、冰蛳散、金箍散箍围等）为特色，内外兼施，是中医外治法医案的典范。本库精选含外用治法的治验医案，覆盖痈疽、疔疮、瘰疬、脱疽等病证。",
+      "total_entries": 70,
+      "lookup_fields": [
+        "category",
+        "physician",
+        "rag_key",
+        "case_id",
+        "internal_key",
+        "external_key"
+      ],
+      "example_keys": [
+        "脱疽",
+        "陈实功",
+        "wk_001"
+      ],
+      "rag_key": "asset29_waike_zhengzong"
+    },
+    {
+      "entry_id": "rag_index_asset30_lizhai_waike",
+      "entry_type": "asset_index",
+      "title": "立斋外科发挥·内外联动医案库",
+      "file": "asset30_lizhai_waike.json",
+      "asset_id": "asset30_lizhai_waike",
+      "asset_name": "立斋外科发挥·内外联动医案库",
+      "asset_category": "case_library",
+      "description": "明·薛己（薛立斋）《立斋外科发挥》（八卷）蒸馏。薛己为明代外科大家，主张『痈疽以气血为本，最忌攻伐』，辨内因（气血虚实、脏腑寒热）以决外候（痈疽起发/溃脓/收敛），内外并治。本库精选治验医案，覆盖痈疽、溃疡、发背、疔疮、脱疽、瘰疬、流注、乳痈等，每条含内因病机与外候症候联动字段。",
+      "total_entries": 108,
+      "lookup_fields": [
+        "category",
+        "physician",
+        "rag_key",
+        "case_id",
+        "internal_key",
+        "external_key"
+      ],
+      "example_keys": [
+        "痈疽",
+        "薛己",
+        "lz_001"
+      ],
+      "rag_key": "asset30_lizhai_waike"
+    },
+    {
+      "entry_id": "rag_index_asset31_zuihuachuang_cases",
+      "entry_type": "asset_index",
+      "title": "醉花窗医案库",
+      "file": "asset31_zuihuachuang_cases.json",
+      "asset_id": "asset31_zuihuachuang_cases",
+      "asset_name": "醉花窗医案库",
+      "asset_category": "case_library",
+      "description": "清·王堉（醉花窗主人）《醉花窗医案》蒸馏。王堉辨证精审、善辨脉理，长于鉴别误治与病机本源（阴虚/实热/脾虚/肝郁/寒湿），医案多含脉证互参、四问鉴别、溯源求本之论，并常记载误治救逆案例。本库按病证标题蒸馏，覆盖阴热目痛、中风臂痛、脾虚便秘、阴虚发热、食积致痢、邪风中府、肝热郁血、寒湿关节痛、产后瘀血、湿热遗精等病证。",
+      "total_entries": 64,
+      "lookup_fields": [
+        "category",
+        "physician",
+        "rag_key",
+        "case_id"
+      ],
+      "example_keys": [
+        "目疾",
+        "王堉",
+        "zhc_001"
+      ],
+      "rag_key": "asset31_zuihuachuang_cases"
+    },
+    {
+      "entry_id": "rag_index_asset32_yiyan_suibi",
+      "entry_type": "asset_index",
+      "title": "医验随笔医案库",
+      "file": "asset32_yiyan_suibi.json",
+      "asset_id": "asset32_yiyan_suibi",
+      "asset_name": "医验随笔医案库",
+      "asset_category": "case_library",
+      "description": "近代·沈奉江（孟河马培之高足）《医验随笔》蒸馏，门人周逢儒笔记。沈氏诊断精确、用药工稳，内外兼治：内科善治温病、痰喘、便秘、伏暑，外科善治温毒发痘、疙瘩瘟、痧疹，每能辨病机本源、坚持主见驳误治。本库按验案蒸馏，覆盖气虚胃弱、攻下救急、痰火扰神、肝阴不足、温病、痰喘、便秘、温毒发痘、疙瘩瘟、伏暑、白痦透发等病证。",
+      "total_entries": 12,
+      "lookup_fields": [
+        "category",
+        "physician",
+        "rag_key",
+        "case_id"
+      ],
+      "example_keys": [
+        "脾胃",
+        "沈奉江",
+        "ysb_001"
+      ],
+      "rag_key": "asset32_yiyan_suibi"
+    },
+    {
+      "entry_id": "rag_index_asset33_disease_susceptibility",
+      "entry_type": "asset_index",
+      "title": "疾病易感性数据库",
+      "file": "asset33_disease_susceptibility.json",
+      "asset_id": "asset33_disease_susceptibility",
+      "asset_name": "疾病易感性数据库",
+      "asset_category": "disease_susceptibility",
+      "description": "出生运气格局与疾病易感性的临床数据挖掘结果。基于公版学术文献中出生时间五运六气与疾病相关性的流行病学研究，提供运气格局对应的先天体质倾向与易感疾病方向。仅供研究参考，不构成医学诊断。",
+      "total_entries": 33,
+      "lookup_fields": [
+        "code",
+        "rag_key",
+        "entry_id"
+      ],
+      "example_keys": [
+        "taiyin_shitu_susceptibility",
+        "taiyin_shitu_sitian",
+        "ds_001"
+      ],
+      "rag_key": "asset33_disease_susceptibility"
+    },
+    {
+      "entry_id": "rag_index_asset15_shanghan90_cases",
+      "entry_type": "asset_index",
+      "title": "伤寒九十论 — 经方病证真实医案库",
+      "file": "asset15_shanghan90_cases.json",
+      "asset_id": "asset15_shanghan90_cases",
+      "asset_name": "伤寒九十论 — 经方病证真实医案库",
+      "asset_category": "case_library",
+      "description": "宋·许叔微《伤寒九十论》公版蒸馏的伤寒经方医案库。90 则伤寒医案，每案一个经方证治（桂枝/麻黄/青龙/承气等），附'论曰'评注，是最精准的经方辨证医案源。",
+      "total_entries": 49,
+      "lookup_fields": [
+        "rag_key",
+        "entry_id"
+      ],
+      "example_keys": [
+        "伤寒",
+        "sh90_001",
+        "sh90_002"
+      ],
+      "rag_key": "asset15_shanghan90_cases"
+    },
+    {
+      "entry_id": "rag_index_terminology",
+      "entry_type": "asset_index",
+      "title": "术语解释资产",
+      "file": "terminology.json",
+      "asset_id": "asset8_terminology",
+      "asset_name": "五运六气术语解释库",
+      "asset_category": "terminology",
+      "description": "统一的中医运气学专业术语白话解释库，用于 --explain 模式和学生版报告。涵盖基础概念、天干地支、五行学说、五运、六气、节气时令、脏腑经络、病因病机、治则治法、方药、针灸养生、经典文献与医家等12大类。",
+      "total_entries": 700,
+      "lookup_fields": [
+        "term",
+        "pinyin",
+        "entry_id"
+      ],
+      "example_keys": [
+        "五运六气",
+        "wuyun_liuqi",
+        "term_wuyun_liuqi"
+      ],
+      "rag_key": "terminology"
+    }
+  ],
+  "maintenance": {
+    "generate": "python scripts/generate_rag_index.py",
+    "check": "python scripts/generate_rag_index.py --check",
+    "validate": "python scripts/validate_knowledge_base.py",
+    "full_regression": "python scripts/full_regression_test.py",
+    "ingest": "python scripts/ingest_literature.py"
+  }
+}
