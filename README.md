@@ -76,7 +76,7 @@ dsh-wuyun-liuqi/
 python rag_search.py 壬寅 --json
 # -> 命中 asset9 等：壬寅岁图、木运太过、少阳相火司天...（含 score / ref / preview）
 
-# 取单书研读框架（book-to-skill 蒸馏产物）
+# 取单书研读框架（内置的蒸馏研读产物）
 python rag_search.py --key gejue_cjk|sitian --json
 ```
 
