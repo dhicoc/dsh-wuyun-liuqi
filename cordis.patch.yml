@@ -5,4 +5,4 @@
 # `name` = the npm package name (resolved from node_modules after install)
 - insert:
     - id: wuyun-liuqi
-      name: "@wuyun-liuqi/dsh-wuyun-liuqi"
+      name: "@dhicoc/dsh-wuyun-liuqi"
