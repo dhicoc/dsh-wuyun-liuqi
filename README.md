@@ -28,6 +28,8 @@
 dsh plugin add github:dhicoc/dsh-wuyun-liuqi
 ```
 
+> 本插件也已发布到 npm（包名 `@dhicoc/dsh-wuyun-liuqi`），但**激活仍需上面这行 `dsh plugin add`**——它从 GitHub 拉取并写入 dsh profile；单独 `npm install` 不会把技能注册进 dsh。
+
 安装后 harness 即可通过 `ctx.skills` 发现全部 31 个五运六气技能；让 agent 调用示例：
 
 > "用 wuyun-liuqi 这个 skill，给我 2026 年的五运六气年度分析（调用 yunqi_report.py 风格的输出）"
