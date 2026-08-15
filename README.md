@@ -80,14 +80,6 @@ python rag_search.py 壬寅 --json
 python rag_search.py --key gejue_cjk|sitian --json
 ```
 
-### 同步上游语料
-
-你用 [book-to-skill](https://github.com/...) 蒸馏新文献、往源仓库 `wuyun-liuqi-skills/rag-knowledge-base/` 灌了新 asset / `distilled/` 之后，跑一下即可把最新 RAG 同步进本插件（稀疏克隆，只拉 `rag-knowledge-base/`）：
-
-```bash
-python skills/scripts/sync_kb.py            # 从 dhicoc/wuyun-liuqi-skills 重新拉取
-```
-
 ## License
 
 MIT — 与源仓库 [`dhicoc/wuyun-liuqi-skills`](https://github.com/dhicoc/wuyun-liuqi-skills) 一致。
