@@ -26,7 +26,7 @@ jobs:
           node-version: 22
           registry-url: https://registry.npmjs.org
 
-      # lib/ 已预编译并随仓库提交，npm install 仅安装 devDependencies（typescript）以便 prepare 重跑；
+      # lib/ 已预编译并随仓库提交；npm install 仅装 devDependencies（typescript），不跑构建脚本。
       # 本仓库无 package-lock.json，故用 npm install 而非 npm ci。
       - name: Install dependencies
         run: npm install
