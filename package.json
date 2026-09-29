@@ -1,6 +1,6 @@
 {
   "name": "@dhicoc/dsh-wuyun-liuqi",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "五运六气（运气学）AI Agent 技能包，封装为 DeepSeek Harness（dsh）Cordis 插件：干支推算、病机分析、经典文献、思想解读与自进化。",
   "license": "MIT",
   "type": "module",
@@ -13,7 +13,17 @@
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.1.7-rc.2": "compatible",
+        "0.2.0-rc.1": "compatible",
+        "0.2.0-rc.2": "compatible"
+      }
     }
+  },
+  "engines": {
+    "node": ">=20.0.0"
   },
   "keywords": [
     "wuyun-liuqi",
@@ -32,7 +42,13 @@
     "build": "tsc",
     "test": "node _selftest.mjs"
   },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.4",
+    "@deepseek-ai/dsh-skill": "^0.2.0-rc.2"
+  },
   "devDependencies": {
+    "@deepseek-ai/cordis": "~4.0.4",
+    "@deepseek-ai/dsh-skill": "^0.2.0-rc.2",
     "typescript": "^5.4.0"
   },
   "repository": {
