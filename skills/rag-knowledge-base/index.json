@@ -2,7 +2,7 @@
   "asset_name": "wuyun-liuqi-rag-index",
   "asset_type": "knowledge_base_index",
   "description": "五运六气 RAG 知识库资产索引。用于说明各 asset 的用途、检索键和维护状态。",
-  "total_entries": 38,
+  "total_entries": 40,
   "primary_api": "scripts/calculate_yunqi_api.py",
   "entries": [
     {
@@ -334,7 +334,7 @@
       "asset_name": "回春录·王孟英湿热温病医案库",
       "asset_category": "case_library",
       "description": "清·王士雄（王孟英）《回春录》（王氏医案）蒸馏。王孟英为湿热温病大家，善辨伏气温病、湿热氤氲、痰气交阻，用药轻清流动，擅调升降出入气机。本库按病证分节蒸馏，覆盖外感温病（风温/春温/暑温/湿温/伏暑/冬温）、内科杂病（咳嗽/痰证/血证/胃脘痛/疟疾/霍乱/泄泻/痢疾/惊悸怔忡）、妇科（月经/产后）及儿科（痘疫/惊风）等病证。",
-      "total_entries": 40,
+      "total_entries": 476,
       "lookup_fields": [
         "category",
         "physician",
@@ -357,7 +357,7 @@
       "asset_name": "张聿青医案库",
       "asset_category": "case_library",
       "description": "清·张乃修（张聿青）医案蒸馏。张聿青精于辨证，善治湿温伏暑、痰饮肝风、虚损血证，用药轻灵，注重脾胃气化斡旋。本库按病证分节蒸馏，覆盖中风、风温、湿温、伏暑、疟、霍乱、咳嗽、吐血、痰饮、肝风、眩晕、脘痛、泄泻、痢、肿胀、风痹、遗精、不寐、调经、产后等病证。",
-      "total_entries": 138,
+      "total_entries": 944,
       "lookup_fields": [
         "category",
         "physician",
@@ -380,7 +380,7 @@
       "asset_name": "吴鞠通医案库",
       "asset_category": "case_library",
       "description": "清·吴瑭（吴鞠通）医案蒸馏。吴鞠通为温病学派三焦辨证大家，著《温病条辨》，善辨卫气营血、三焦传变，治温病重辛凉清透、养阴护液。本库按病证分节蒸馏，覆盖风温、温疫、暑温、伏暑、温毒、湿温、冬温、中风、肝风、吐血、便血、肿胀、滞下、泄泻、噎、呕吐、痹、痰饮、疟、伤寒、咳嗽等病证。",
-      "total_entries": 120,
+      "total_entries": 317,
       "lookup_fields": [
         "category",
         "physician",
@@ -403,7 +403,7 @@
       "asset_name": "寓意草医案库",
       "asset_category": "case_library",
       "description": "清·喻嘉言（喻昌）《寓意草》蒸馏。喻嘉言首创『议病式』医案（先议病后用药），辨证精审，善治伤寒危证、误治救逆、真阳上脱、血证、痢疾、肺痈、痰病等。其医案议论详尽，重病机辨析、病因求本与治法权衡，是中医辨证论治的高峰之作。本库精选议病式医案，覆盖伤寒、真阳上脱、痢疾、血症、肺痈、痰病、小儿惊风、膈气、危症救逆等。",
-      "total_entries": 17,
+      "total_entries": 21,
       "lookup_fields": [
         "category",
         "physician",
@@ -426,7 +426,7 @@
       "asset_name": "洄溪医案库",
       "asset_category": "case_library",
       "description": "清·徐灵胎（徐大椿）《洄溪医案》蒸馏，王孟英（王士雄）编。徐灵胎辨证精审，善用经方（大承气、小青龙、抵当汤等），重病机求本，常附『雄按』（王孟英按语）补充辨证。本库按病证分节蒸馏，覆盖中风、周痹、伤寒、时证、温疫、疟痢、痰喘、翻胃、水肿、吐血、血痢、怔忡、亢阳、产后、肠痈、肺痈、流注、下疳、筋瘤等内伤外感与外科杂病。",
-      "total_entries": 23,
+      "total_entries": 43,
       "lookup_fields": [
         "category",
         "physician",
@@ -449,7 +449,7 @@
       "asset_name": "花韵楼医案库",
       "asset_category": "case_library",
       "description": "清·顾德华（顾云女士）《花韵楼医案》蒸馏。顾德华为清代女医、妇科名医，专治妇人杂症，辨证透彻、立方平善。以妇科（崩漏、月经不调、产后、胎产、乳癖）为主，兼内科杂病（痢疾、疟疾、温病、咳嗽、肝风、痹痛）。",
-      "total_entries": 20,
+      "total_entries": 30,
       "lookup_fields": [
         "category",
         "physician",
@@ -472,7 +472,7 @@
       "asset_name": "诊余举隅录医案库",
       "asset_category": "case_library",
       "description": "清·陈廷儒（匊生）《诊余举隅录》蒸馏。陈廷儒辨证精审，善辨阴阳寒热虚实、表里气血，治疑难杂证每举一隅而反三。本库按病证分节蒸馏，覆盖四时感冒、春温、冬月伤寒、咳嗽吐血、霍乱、痢疾、泄泻、中风、水肿、自汗、厥逆、眩晕、妇科经闭、痛经、崩漏、胎前、产后、小儿惊风等内伤外感与妇儿杂病。",
-      "total_entries": 14,
+      "total_entries": 34,
       "lookup_fields": [
         "category",
         "physician",
@@ -564,7 +564,7 @@
       "asset_name": "丛桂草堂医案库",
       "asset_category": "case_library",
       "description": "清·袁焯《丛桂草堂医案》（四卷）蒸馏。袁焯为近代医家，辨证精审，善治痰饮、温病、喉痧、孕产杂病，辨病机求本、立方切当。覆盖痰饮闭塞、温病、喉痧、孕妇寒痛漏血、肿胀呕吐、疟疾、产后等。",
-      "total_entries": 8,
+      "total_entries": 26,
       "lookup_fields": [
         "category",
         "physician",
@@ -587,7 +587,7 @@
       "asset_name": "外科正宗·外用医案库",
       "asset_category": "case_library",
       "description": "明·陈实功《外科正宗》蒸馏。陈实功为明代外科大家，其治验以内服方药配合外治诸法（艾灸、火针、针刺放血、蟾酥饼贴、琥珀膏、冰蛳散、金箍散箍围等）为特色，内外兼施，是中医外治法医案的典范。本库精选含外用治法的治验医案，覆盖痈疽、疔疮、瘰疬、脱疽等病证。",
-      "total_entries": 70,
+      "total_entries": 162,
       "lookup_fields": [
         "category",
         "physician",
@@ -800,6 +800,48 @@
         "lunao_wuyun"
       ],
       "rag_key": "asset38_suwen_rushi_yunqi_lunao"
+    },
+    {
+      "entry_id": "rag_index_asset39_yixue_qiongyuanji_yunqi",
+      "entry_type": "asset_index",
+      "title": "医学穷源集·卷二 运气专论（明·王肯堂 撰，殷宅心 辑释）蒸馏研读框架",
+      "file": "asset39_yixue_qiongyuanji_yunqi.json",
+      "asset_id": "asset39_yixue_qiongyuanji_yunqi",
+      "asset_name": "医学穷源集·卷二 运气专论（明·王肯堂 撰，殷宅心 辑释）蒸馏研读框架",
+      "asset_category": "custom_asset",
+      "description": "从《医学穷源集·卷二》运气专论（明·王肯堂 撰，殷宅心 辑释；herbtcm.com 逐字转录本，公有领域）经 book-to-skill 风格蒸馏出的运气「专论·灾变纵深层」框架：系统讲刚柔失守三年化疫（甲子/丙寅/庚辰/壬午/戊申五年详例＋先补脏次泄气次第）、疫由人事论（人定胜天）、太乙移宫九宫八风、升降不前/不迁正不退位、化数生成、流年灾宫、方月图说（运气不验因方月）、山川方隅气候不同论、六气本标中从化解、药法摘录、十二经配天干歌。与三因《运气诸方》(asset36·方源)/王旭高《运气证治歌诀》(asset34·歌诀)/医宗金鉴《运气要诀》(asset35·推算框架广度)/类经图翼·运气(asset37·象数基础)/刘温舒《素问入式运气论奥》(asset38·专论机制纵深) 六书互补，非替代。",
+      "total_entries": 7,
+      "lookup_fields": [
+        "rag_key",
+        "entry_id"
+      ],
+      "example_keys": [
+        "qiongyuanji_zonglun",
+        "qiongyuanji_taiyi_shengjiang",
+        "qiongyuanji_sanshinian_huayi"
+      ],
+      "rag_key": "asset39_yixue_qiongyuanji_yunqi"
+    },
+    {
+      "entry_id": "rag_index_asset40_shiyi_wenbing_yunqi",
+      "entry_type": "asset_index",
+      "title": "《时疫温病气运徵验论》瘟疫运气专库",
+      "file": "asset40_shiyi_wenbing_yunqi.json",
+      "asset_id": "asset40",
+      "asset_name": "《时疫温病气运徵验论》瘟疫运气专库",
+      "asset_category": "custom_asset",
+      "description": "清·李兆贞《时疫温病气运徵验论》逐字蒸馏专库：论五运六气与瘟疫温病起止、十二岁气运生瘟疫温病之时序，及世道兴衰影响疫病盛衰。纯 RAG 检索，不计入医案总数。",
+      "total_entries": 9,
+      "lookup_fields": [
+        "rag_key",
+        "entry_id"
+      ],
+      "example_keys": [
+        "五季五运",
+        "shiyi_001",
+        "六气时序"
+      ],
+      "rag_key": "asset40_shiyi_wenbing_yunqi"
     },
     {
       "entry_id": "rag_index_asset15_shanghan90_cases",

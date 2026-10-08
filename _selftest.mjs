@@ -3,7 +3,7 @@ import * as plugin from './lib/index.js';
 /** Hard validation the DSH core applies to every candidate name. */
 const SKILL_NAME = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 /** Expected candidate count; bump together with skills/ / README.md / package.json description. */
-const EXPECTED_COUNT = 36;
+const EXPECTED_COUNT = 37;
 
 let failures = 0;
 function check(label, ok, detail = '') {

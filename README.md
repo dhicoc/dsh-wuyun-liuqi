@@ -9,7 +9,7 @@
 
 ## 这是什么
 
-- **完整移植**：把源仓库的全部 **SKILL.md**（去重后 36 个）原样封装为 dsh 技能候选，包括主技能 `wuyun-liuqi`、6 个 `modules/*` 子技能、2 个 `perspectives/*` 注家视角、22 个 `scripts/lib/neijing_snapshot/*` 《黄帝内经》推理模式技能，以及若干 `rag-knowledge-base/distilled/*` 单书蒸馏研读技能（五书五层互补链）。
+- **完整移植**：把源仓库的全部 **SKILL.md**（去重后 37 个）原样封装为 dsh 技能候选，包括主技能 `wuyun-liuqi`、6 个 `modules/*` 子技能、2 个 `perspectives/*` 注家视角、22 个 `scripts/lib/neijing_snapshot/*` 《黄帝内经》推理模式技能，以及若干 `rag-knowledge-base/distilled/*` 单书蒸馏研读技能（六书六层互补链）。
 - **插件形态**：以 dsh 一等公民的 `skill` seam（`ctx.skills`）注册一个 provider，harness 启动时自动把全部技能注入可用技能库。
 - **相对资源解析**：每个技能的 `resourceBase` 指向其自身目录，技能正文里引用的 `routing.yaml`、`rules/`、`scripts/` 等配套文件随包分发，相对路径可解析。
 
@@ -30,7 +30,7 @@ dsh plugin add github:dhicoc/dsh-wuyun-liuqi
 
 > 本插件也已发布到 npm（包名 `@dhicoc/dsh-wuyun-liuqi`），但**激活仍需上面这行 `dsh plugin add`**——它从 GitHub 拉取并写入 dsh profile；单独 `npm install` 不会把技能注册进 dsh。
 
-安装后 harness 即可通过 `ctx.skills` 发现全部 36 个五运六气技能；让 agent 调用示例：
+安装后 harness 即可通过 `ctx.skills` 发现全部 37 个五运六气技能；让 agent 调用示例：
 
 > "用 wuyun-liuqi 这个 skill，给我 2026 年的五运六气年度分析（调用 yunqi_report.py 风格的输出）"
 
@@ -40,7 +40,7 @@ dsh plugin add github:dhicoc/dsh-wuyun-liuqi
 
 ```bash
 node _selftest.mjs
-# 输出：36 个候选、无重名、userInvocable / modelInvocable 计数、get() 取正文验证
+# 输出：37 个候选、无重名、userInvocable / modelInvocable 计数、get() 取正文验证
 ```
 
 ---

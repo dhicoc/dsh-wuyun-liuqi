@@ -165,6 +165,18 @@ ASSET_FILES = {
     "suwen_rushi_yunqi_lunao": "asset38_suwen_rushi_yunqi_lunao.json",
     "yunqi_lunao": "asset38_suwen_rushi_yunqi_lunao.json",
     "lunao": "asset38_suwen_rushi_yunqi_lunao.json",
+    # —— 蒸馏研读框架 #6：明·王肯堂/殷宅心《医学穷源集·卷二》运气专论（专论·灾变纵深层）——
+    "asset39": "asset39_yixue_qiongyuanji_yunqi.json",
+    "asset39_yixue_qiongyuanji_yunqi": "asset39_yixue_qiongyuanji_yunqi.json",
+    "yixue_qiongyuanji_yunqi": "asset39_yixue_qiongyuanji_yunqi.json",
+    "qiongyuanji": "asset39_yixue_qiongyuanji_yunqi.json",
+    "qiongyuanji_yunqi": "asset39_yixue_qiongyuanji_yunqi.json",
+    # —— 瘟疫运气专库：清·李兆贞《时疫温病气运徵验论》（逐字蒸馏，custom_asset）——
+    "asset40": "asset40_shiyi_wenbing_yunqi.json",
+    "asset40_shiyi_wenbing_yunqi": "asset40_shiyi_wenbing_yunqi.json",
+    "shiyi": "asset40_shiyi_wenbing_yunqi.json",
+    "shiyiwenbing": "asset40_shiyi_wenbing_yunqi.json",
+    "shiyiwenbing_yunqi": "asset40_shiyi_wenbing_yunqi.json",
 }
 
 # 模块级缓存：避免重复 open + json.load
@@ -615,9 +627,12 @@ def score_entry(entry: Dict[str, Any], terms: Sequence[str]) -> Tuple[int, List[
 
 
 def _default_asset_keys() -> List[str]:
-    """默认检索范围：核心病机 asset1-7 + 岁图医案 asset9 + 六部历代名家医案库 asset11-16 + 疾病易感性 asset33 + 术语。
+    """默认检索范围：核心病机 asset1-7 + 岁图医案 asset9 + 历代名家医案库 asset11-32（含 asset17 松峰说疫·瘟疫运气）+ 疾病易感性 asset33 + 术语。
 
-    包含 asset11-16 医案库，使默认关键词/语义检索即可命中临证真实医案。
+    包含 asset11-32 全部医案库（名医类案/续名医类案/古今医案按/丁甘仁/伤寒九十论/临证指南/
+    松峰说疫瘟疫运气/回春录/张聿青/吴鞠通/寓意草/洄溪/花韵楼/诊余举隅录/许氏/杏轩/孙文垣/
+    丛桂草堂/外科正宗/立斋外科发挥/醉花窗/医验随笔），使默认关键词/语义检索即可命中全部
+    临证真实医案（此前 asset17-32 不在白名单，约 57% 医案内容默认摸不到，2026-08-16 修复）。
     包含 asset33 疾病易感性，使按日期检索时自动附带疾病易感性提示。
     """
     seen_files = set()
@@ -627,12 +642,16 @@ def _default_asset_keys() -> List[str]:
             "asset1", "asset2", "asset3", "asset4", "asset5", "asset6", "asset7",
             "asset9", "asset10",
             "asset11", "asset12", "asset13", "asset14", "asset15", "asset16",
+            "asset17", "asset18", "asset19", "asset20", "asset21", "asset22", "asset23", "asset24",
+            "asset25", "asset26", "asset27", "asset28", "asset29", "asset30", "asset31", "asset32",
             "asset33",
             "asset34",  # 蒸馏研读框架（book-to-skill 风格，源自《运气证治歌诀》）
             "asset35",  # 蒸馏研读框架（book-to-skill 风格，源自《医宗金鉴·运气要诀》）
             "asset36",  # 蒸馏研读框架（book-to-skill 风格，源自《三因》卷五运气诸方·陈无择）
             "asset37",  # 蒸馏研读框架（book-to-skill 风格，源自《类经图翼》卷一·卷二运气·张介宾）
             "asset38",  # 蒸馏研读框架（book-to-skill 风格，源自《素问入式运气论奥》·刘温舒）
+            "asset39",  # 蒸馏研读框架（book-to-skill 风格，源自《医学穷源集·卷二》运气专论·王肯堂/殷宅心）
+            "asset40",  # 瘟疫运气专库（清·李兆贞《时疫温病气运徵验论》逐字蒸馏，custom_asset）
             "terminology",
         ):
             seen_files.add(f)
